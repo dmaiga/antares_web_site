@@ -1,0 +1,49 @@
+<!-- site_web/jobs/partials/_cta.html -->
+{% load i18n static %}
+
+<section class="max-w-7xl mx-auto px-6 mb-20">
+    <div class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-antares-blue rounded-[3rem] p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-900/20">
+        
+        <!-- Décorations abstraites en arrière-plan -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-antares-orange/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full blur-2xl -ml-10 -mb-10"></div>
+
+        <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+            
+            <!-- Texte d'appel -->
+            <div class="max-w-xl text-center lg:text-left">
+                <h2 class="text-3xl md:text-5xl font-black text-white italic tracking-tighter leading-none mb-6">
+                    {% trans "Ne ratez plus aucune" %}<br>
+                    <span class="text-antares-orange font-black">{% trans "Opportunité" %}</span>
+                </h2>
+                <p class="text-blue-100 text-lg font-medium opacity-80 leading-relaxed">
+                    {% trans "Inscrivez-vous pour recevoir les dernières offres par email et propulsez votre carrière avec Antarès." %}
+                </p>
+                
+                <!-- Lien mail direct (optionnel mais pro) -->
+                <div class="mt-6 flex items-center justify-center lg:justify-start gap-2 text-antares-orange font-bold">
+                    <i class="bi bi-envelope-at text-xl"></i>
+                    <a href="mailto:jobs@antares-rh.com" class="hover:underline">jobs@antares-rh.com</a>
+                </div>
+            </div>
+
+            <!-- Formulaire d'inscription -->
+            <div class="w-full max-w-md">
+                <form action="#" class="bg-white/10 backdrop-blur-md p-2 rounded-[2rem] border border-white/20 flex flex-col sm:flex-row gap-2">
+                    <input type="email" 
+                           placeholder="{% trans 'Votre adresse email...' %}" 
+                           class="flex-grow h-14 px-6 bg-transparent border-none text-white placeholder:text-blue-200 focus:ring-0 font-bold"
+                           required>
+                    
+                    <button type="submit" class="h-14 px-8 bg-white text-antares-blue hover:bg-antares-orange hover:text-white rounded-full font-black uppercase tracking-widest text-xs transition-all duration-300 shadow-xl active:scale-95">
+                        {% trans "M’inscrire" %}
+                    </button>
+                </form>
+                <p class="mt-4 text-[10px] text-blue-300 text-center lg:text-left px-4">
+                    <i class="bi bi-shield-check mr-1"></i> {% trans "ADPD & RGPD : Vos données sont sécurisées et vous pouvez vous désinscrire à tout moment." %}
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

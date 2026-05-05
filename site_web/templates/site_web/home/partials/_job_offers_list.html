@@ -1,0 +1,122 @@
+{% load i18n static %}
+
+<section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4 border-l-4 border-antares-orange pl-4">
+            <div>
+                <h2 class="text-antares-blue font-bold uppercase tracking-tighter text-xs">{% trans "Opportunités" %}</h2>
+                <p class="text-2xl md:text-3xl font-black text-slate-800">{% trans "Offres d'emploi récentes" %}</p>
+            </div>
+            <a href="#" class="text-sm font-bold text-slate-500 hover:text-antares-blue transition-colors underline decoration-antares-orange underline-offset-4">
+                {% trans "Toutes nos offres" %} →
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded bg-green-50 text-green-600 text-[10px] font-bold border border-green-100 uppercase">{% trans "Ouvert" %}</span>
+                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Mines & Énergie</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2 leading-tight min-h-[3rem]">Chef de Chantier Photovoltaïque</h3>
+                <div class="flex items-center text-slate-500 text-xs mb-3 gap-1">
+                    <svg class="w-3.5 h-3.5 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Kayes, Mali
+                </div>
+                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Supervision des équipes d'installation et respect des normes de sécurité sur site industriel.</p>
+                <div class="mt-auto bg-slate-50 rounded-md p-2 flex justify-between items-center mb-4">
+                    <div class="text-center border-r border-slate-200 flex-1"><p class="text-[9px] uppercase text-slate-400">Publication</p><p class="text-[11px] font-bold text-slate-700">22 Avr. 2026</p></div>
+                    <div class="text-center flex-1"><p class="text-[9px] uppercase text-slate-400">Limite</p><p class="text-[11px] font-bold text-antares-orange">10 Mai 2026</p></div>
+                </div>
+                <a href="#" class="w-full py-2 bg-slate-900 hover:bg-antares-blue text-white text-center text-xs font-bold rounded transition-colors uppercase">{% trans "Consulter" %}</a>
+            </div>
+
+            <div class="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded bg-blue-50 text-antares-blue text-[10px] font-bold border border-blue-100 uppercase">{% trans "Urgent" %}</span>
+                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Banque & Finance</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2 leading-tight min-h-[3rem]">Analyste de Crédit Senior</h3>
+                <div class="flex items-center text-slate-500 text-xs mb-3 gap-1">
+                    <svg class="w-3.5 h-3.5 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Bamako, Mali
+                </div>
+                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Analyse de risques financiers pour les comptes entreprises et structuration de dossiers de crédit.</p>
+                <div class="mt-auto bg-slate-50 rounded-md p-2 flex justify-between items-center mb-4">
+                    <div class="text-center border-r border-slate-200 flex-1"><p class="text-[9px] uppercase text-slate-400">Publication</p><p class="text-[11px] font-bold text-slate-700">20 Avr. 2026</p></div>
+                    <div class="text-center flex-1"><p class="text-[9px] uppercase text-slate-400">Limite</p><p class="text-[11px] font-bold text-antares-orange">05 Mai 2026</p></div>
+                </div>
+                <a href="#" class="w-full py-2 bg-slate-900 hover:bg-antares-blue text-white text-center text-xs font-bold rounded transition-colors uppercase">{% trans "Consulter" %}</a>
+            </div>
+
+            <div class="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-500 text-[10px] font-bold border border-gray-200 uppercase">{% trans "Fermé" %}</span>
+                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Transport & Logistique</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2 leading-tight min-h-[3rem]">Responsable Supply Chain</h3>
+                <div class="flex items-center text-slate-500 text-xs mb-3 gap-1">
+                    <svg class="w-3.5 h-3.5 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Sikasso, Mali
+                </div>
+                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Optimisation des flux de marchandises et gestion des entrepôts pour une multinationale agroalimentaire.</p>
+                <div class="mt-auto bg-slate-50 rounded-md p-2 flex justify-between items-center mb-4">
+                    <div class="text-center border-r border-slate-200 flex-1"><p class="text-[9px] uppercase text-slate-400">Publication</p><p class="text-[11px] font-bold text-slate-700">15 Avr. 2026</p></div>
+                    <div class="text-center flex-1"><p class="text-[9px] uppercase text-slate-400">Limite</p><p class="text-[11px] font-bold text-red-500">Expiré</p></div>
+                </div>
+                <button disabled class="w-full py-2 bg-slate-200 text-slate-400 text-center text-xs font-bold rounded cursor-not-allowed uppercase">{% trans "Clôturé" %}</button>
+            </div>
+
+            <div class="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded bg-green-50 text-green-600 text-[10px] font-bold border border-green-100 uppercase">{% trans "Ouvert" %}</span>
+                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Ressources Humaines</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2 leading-tight min-h-[3rem]">Chargé de Recrutement IT</h3>
+                <div class="flex items-center text-slate-500 text-xs mb-3 gap-1">
+                    <svg class="w-3.5 h-3.5 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Bamako, Mali
+                </div>
+                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Sourcing et évaluation de profils développeurs et ingénieurs data pour le compte d'un client majeur.</p>
+                <div class="mt-auto bg-slate-50 rounded-md p-2 flex justify-between items-center mb-4">
+                    <div class="text-center border-r border-slate-200 flex-1"><p class="text-[9px] uppercase text-slate-400">Publication</p><p class="text-[11px] font-bold text-slate-700">25 Avr. 2026</p></div>
+                    <div class="text-center flex-1"><p class="text-[9px] uppercase text-slate-400">Limite</p><p class="text-[11px] font-bold text-antares-orange">20 Mai 2026</p></div>
+                </div>
+                <a href="#" class="w-full py-2 bg-slate-900 hover:bg-antares-blue text-white text-center text-xs font-bold rounded transition-colors uppercase">{% trans "Consulter" %}</a>
+            </div>
+
+            <div class="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded bg-green-50 text-green-600 text-[10px] font-bold border border-green-100 uppercase">{% trans "Ouvert" %}</span>
+                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Administration</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2 leading-tight min-h-[3rem]">Directeur Administratif & Financier</h3>
+                <div class="flex items-center text-slate-500 text-xs mb-3 gap-1">
+                    <svg class="w-3.5 h-3.5 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Mopti, Mali
+                </div>
+                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Pilotage de la stratégie financière, gestion budgétaire et supervision des services généraux.</p>
+                <div class="mt-auto bg-slate-50 rounded-md p-2 flex justify-between items-center mb-4">
+                    <div class="text-center border-r border-slate-200 flex-1"><p class="text-[9px] uppercase text-slate-400">Publication</p><p class="text-[11px] font-bold text-slate-700">18 Avr. 2026</p></div>
+                    <div class="text-center flex-1"><p class="text-[9px] uppercase text-slate-400">Limite</p><p class="text-[11px] font-bold text-antares-orange">15 Mai 2026</p></div>
+                </div>
+                <a href="#" class="w-full py-2 bg-slate-900 hover:bg-antares-blue text-white text-center text-xs font-bold rounded transition-colors uppercase">{% trans "Consulter" %}</a>
+            </div>
+
+            <div class="flex flex-col bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded bg-blue-50 text-antares-blue text-[10px] font-bold border border-blue-100 uppercase">{% trans "Nouveau" %}</span>
+                    <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Télécoms</span>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mb-2 leading-tight min-h-[3rem]">Ingénieur Réseaux et Sécurité</h3>
+                <div class="flex items-center text-slate-500 text-xs mb-3 gap-1">
+                    <svg class="w-3.5 h-3.5 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg> Bamako, Mali
+                </div>
+                <p class="text-gray-500 text-sm mb-4 line-clamp-2">Mise en œuvre des protocoles de sécurité et maintenance de l'infrastructure réseau fibre optique.</p>
+                <div class="mt-auto bg-slate-50 rounded-md p-2 flex justify-between items-center mb-4">
+                    <div class="text-center border-r border-slate-200 flex-1"><p class="text-[9px] uppercase text-slate-400">Publication</p><p class="text-[11px] font-bold text-slate-700">27 Avr. 2026</p></div>
+                    <div class="text-center flex-1"><p class="text-[9px] uppercase text-slate-400">Limite</p><p class="text-[11px] font-bold text-antares-orange">30 Mai 2026</p></div>
+                </div>
+                <a href="#" class="w-full py-2 bg-slate-900 hover:bg-antares-blue text-white text-center text-xs font-bold rounded transition-colors uppercase">{% trans "Consulter" %}</a>
+            </div>
+
+        </div>
+    </div>
+</section>

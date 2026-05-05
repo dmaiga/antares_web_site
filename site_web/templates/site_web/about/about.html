@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{% trans "À propos de nous" %} | Antares RH{% endblock %}
+
+{% block content %}
+    {% include "site_web/about/partials/_history.html" %}
+
+    {% include "site_web/about/partials/_values.html" %}
+
+    {% include "site_web/about/partials/_services.html" %}
+
+    {% include "site_web/about/partials/_secteur.html" %}
+
+    {% include "site_web/about/partials/_cta_about.html" %}
+{% endblock %}

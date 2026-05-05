@@ -1,0 +1,61 @@
+<!-- site_web/espaces/partials/candidat/_hero_section.html -->
+{% load i18n static %}
+
+<section class="relative pt-8 pb-8 md:pt-16 md:pb-16 overflow-hidden bg-[#f5f5f5]">
+    <!-- Subtiles lueurs en arrière-plan (Style SaaS moderne) -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-antares-blue/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-antares-orange/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-1 relative z-10">
+        <div class="grid lg:grid-cols-5 gap-12 items-center">
+            
+            <!-- Texte (Contraste sombre sur fond clair) -->
+            <div class="lg:col-span-3 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-200/50 border border-slate-300/50 rounded-full mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-antares-blue"></span>
+                    </span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.15em] text-slate-600 italic">
+                        {% trans "Espace Candidat" %}
+                    </span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl font-black text-slate-900 italic leading-[0.9] tracking-tighter mb-8">
+                    {% trans "Propulsez votre" %}
+                    <span class="text-antares-blue">{% trans "Potentiel." %}</span>
+                </h1>
+
+                <p class="text-lg text-slate-800 max-w-lg mx-auto lg:mx-0 mb-10 font-medium italic leading-relaxed">
+                    {% trans "Rejoignez notre réseau de talents et accédez à des opportunités exclusives dans divers secteurs" %}
+                </p>
+
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                   <a href="#registration-form" class="btn bg-antares-orange border-none text-white px-8 rounded-xl font-black uppercase tracking-widest btn-md hover:scale-105 transition-transform scroll-smooth">
+                        {% trans "S'inscrire" %}
+                    </a>
+                    <a href="{% url 'jobs' %}" class="btn btn-ghost text-slate-900 font-black uppercase tracking-widest hover:bg-slate-200/50">
+                        {% trans "Voir les offres" %}
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image (Style Épuré avec ombre portée douce) -->
+            <div class="lg:col-span-2 relative hidden lg:block">
+                <div class="relative max-w-sm mx-auto">
+                    <!-- Bordure décorative type Dashboard -->
+                    <div class="absolute -inset-4 "></div>
+                    
+                    <div class="relative rounded-[2rem]  overflow-hidden "
+                    style="background: linear-gradient(90deg, #002147 0%, #003263 100%);">
+                        <img src="{% static 'images/espaces/candidat_hero.png' %}" 
+                             alt="{% trans 'Antarès Services RH' %}" 
+                             class="w-250 h-100 object-cover ">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

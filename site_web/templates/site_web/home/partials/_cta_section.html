@@ -1,0 +1,95 @@
+{% load i18n static %}
+
+<style>
+@keyframes infiniteScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  display: flex;
+  width: max-content;
+  animation: infiniteScroll 30s linear infinite;
+}
+
+/* On force une taille de boîte fixe pour TOUS les logos */
+.partner-logo-box {
+  width: 220px; /* Largeur fixe */
+  height: 80px;  /* Hauteur fixe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 30px; /* Espace entre les logos */
+}
+
+.partner-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-contain: contain;
+  /* Optionnel : filter: grayscale(1); transition: 0.3s; */
+}
+</style>
+
+
+<section class="relative py-12 md:py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[#002147] z-0">
+        <div class="absolute -top-12 -left-12 w-64 h-64 bg-antares-orange/10 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute inset-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
+        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-antares-orange/10 rounded-full blur-3xl opacity-50"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <h2 class="text-2xl md:text-4xl font-black text-white mb-4 md:mb-6 tracking-tight leading-tight">
+            {% trans "Prêt à transformer votre" %} <br class="md:hidden"> 
+            <span class="text-antares-orange">{% trans "Capital Humain" %}</span> ?
+        </h2>
+
+        <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed px-2">
+            {% trans "Nos experts vous accompagnent avec discrétion et rigueur pour relever vos défis sur le continent." %}
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-8">
+            <a href="#" class="w-full sm:w-auto px-8 py-3.5 bg-antares-orange text-white text-sm font-black rounded transition-all active:scale-95 shadow-lg shadow-orange-900/20 uppercase tracking-widest">
+                {% trans "DÉPOSER UNE MISSION" %}
+            </a>
+            
+            <a href="#" class="group flex items-center justify-center gap-2 text-white text-sm font-bold hover:text-antares-orange transition-colors py-2">
+                <span>{% trans "REJOINDRE LE ROSTER" %}</span>
+                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-white border-y border-gray-100 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 mb-8">
+        <p class="text-center text-gray-400 text-[10px] uppercase font-bold tracking-[0.2em]">
+            {% trans "Ils nous font confiance" %}
+        </p>
+    </div>
+
+    <div class="relative overflow-hidden">
+        <div class="marquee-container">
+            
+            <div class="flex">
+                {% for i in "123456" %}
+                <div class="partner-logo-box">
+                    <img src="{% static 'images/partenaires/partenaire' %}{{ i }}.webp" alt="Partner {{ i }}">
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="flex">
+                {% for i in "123456" %}
+                <div class="partner-logo-box">
+                    <img src="{% static 'images/partenaires/partenaire' %}{{ i }}.webp" alt="Partner {{ i }}">
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</section>

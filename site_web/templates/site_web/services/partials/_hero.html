@@ -1,0 +1,80 @@
+{% load i18n static %}
+
+<section class="relative bg-white pt-10 lg:pt-8 pb-16 lg:pb-24 overflow-hidden border-b border-slate-50">
+    <!-- Décor d'arrière-plan -->
+    <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[300px] lg:w-[600px] h-[300px] lg:h-[600px] bg-antares-blue/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[200px] lg:w-[400px] h-[200px] lg:h-[400px] bg-antares-orange/5 rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            
+            <!-- Contenu Texte -->
+            <div class="w-full lg:w-3/5 text-center lg:text-left order-1 lg:order-1">
+                <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-slate-600 mb-6 lg:mb-8">
+                    <span class="text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em]">{% trans "Expertise RH & Stratégie au Mali" %}</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight mb-6 lg:mb-8 leading-[1.1] italic">
+                    {% trans "Propulsez votre" %}<br>
+                    <span class="text-antares-blue">{% trans "Capital Humain" %}</span>
+                </h1>
+                
+                <p class="text-slate-900 text-base md:text-lg lg:text-xl leading-relaxed font-light max-w-2xl mb-8 lg:mb-12 mx-auto lg:mx-0">
+                    {% trans "De la chasse de têtes à la gestion administrative externalisée, nous transformons vos défis RH en leviers de performance durable." %}
+                </p>
+
+                <!-- Tags de services rapides -->
+                <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-4 lg:mb-10">
+                   
+                    
+                    <div class="flex items-center gap-1.5 text-[10px] lg:text-xs font-semibold text-slate-700 bg-white shadow-sm border border-slate-100 px-3 py-1.5 rounded-lg">
+                        <svg class="w-3.5 h-3.5 lg:w-4 h-4 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        {% trans "Recrutement" %}
+                    </div>
+                    <div class="flex items-center gap-1.5 text-[10px] lg:text-xs font-semibold text-slate-700 bg-white shadow-sm border border-slate-100 px-3 py-1.5 rounded-lg">
+                        <svg class="w-3.5 h-3.5 lg:w-4 h-4 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        {% trans "Intérim & Mise à disposition" %}
+                    </div>
+                    <div class="flex items-center gap-1.5 text-[10px] lg:text-xs font-semibold text-slate-700 bg-white shadow-sm border border-slate-100 px-3 py-1.5 rounded-lg">
+                        <svg class="w-3.5 h-3.5 lg:w-4 h-4 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        {% trans "Externalisation RH" %}
+                    </div>
+                    <div class="flex items-center gap-1.5 text-[10px] lg:text-xs font-semibold text-slate-700 bg-white shadow-sm border border-slate-100 px-3 py-1.5 rounded-lg">
+                        <svg class="w-3.5 h-3.5 lg:w-4 h-4 text-antares-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        {% trans "Conseil & Audit" %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visuel & Stats -->
+            <div class="w-full lg:w-2/5 relative order-2 lg:order-2 px-4 lg:px-0">
+                <div class="relative group max-w-md mx-auto lg:max-w-none">
+                    <!-- Décoration derrière -->
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-antares-blue to-antares-orange opacity-20 rounded-[2rem] blur-2xl group-hover:opacity-30 transition duration-500"></div>
+                    
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] lg:aspect-auto">
+                        <img src="{% static 'images/services/service_hero_man.png' %}" 
+                             alt="{% trans 'Antarès Services RH' %}" 
+                             class="w-full h-full lg:h-[550px] object-cover object-top hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+                    </div>
+
+                    <!-- Badge : Expérience (Adapté mobile) -->
+                    <div class="absolute -top-4 lg:-top-6 -left-2 lg:-left-6 glass bg-white/90 p-4 lg:p-6 rounded-2xl shadow-xl border border-white/50 animate-bounce-slow">
+                        <div class="text-2xl lg:text-3xl font-black text-antares-blue leading-none">20+</div>
+                        <div class="text-[9px] lg:text-[10px] uppercase font-black text-slate-400 tracking-tighter">{% trans "Années de" %}<br>{% trans "succès" %}</div>
+                    </div>
+
+                    <!-- Badge : Profils (Adapté mobile) -->
+                    <div class="absolute -bottom-4 lg:-bottom-6 -right-2 lg:-right-6 bg-white p-4 lg:p-6 rounded-2xl shadow-xl border border-slate-100 text-center min-w-[120px] lg:min-w-[160px]">
+                        <div class="text-3xl lg:text-4xl font-black text-antares-blue leading-none mb-1">3 000</div>
+                        <div class="text-[9px] lg:text-[10px] uppercase font-bold text-slate-500 tracking-widest leading-tight">
+                            {% trans "Vivier de talents" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

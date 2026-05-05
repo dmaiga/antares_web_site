@@ -1,0 +1,56 @@
+<!-- site_web/jobs/partials/_special_offer_card.html -->
+{% load i18n static %}
+
+<div class="flex flex-col bg-gradient-to-br from-antares-blue to-blue-900 rounded-3xl shadow-xl p-6 h-full text-white relative overflow-hidden group">
+    
+    <!-- Déco de fond (Cercles abstraits) -->
+    <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:bg-antares-orange/20 transition-colors duration-500"></div>
+    <div class="absolute -left-10 -bottom-10 w-32 h-32 bg-antares-orange/10 rounded-full blur-2xl"></div>
+
+    <div class="relative z-10 flex flex-col h-full">
+        <!-- Badge Type d'offre -->
+        <div class="mb-6">
+            <span class="px-3 py-1 rounded-full bg-antares-orange text-white text-[10px] font-black uppercase tracking-widest shadow-lg shadow-orange-950/20">
+                {% if type == "formation" %}
+                    <i class="bi bi-mortarboard-fill mr-1"></i> {% trans "Formation" %}
+                {% elif type == "seminaire" %}
+                    <i class="bi bi-mic-fill mr-1"></i> {% trans "Séminaire" %}
+                {% else %}
+                    <i class="bi bi-megaphone-fill mr-1"></i> {% trans "Annonce" %}
+                {% endif %}
+            </span>
+        </div>
+
+        <!-- Titre & Accroche -->
+        <div class="mb-4">
+            <h3 class="text-2xl font-black leading-tight mb-3">
+                {% if type == "formation" %}
+                    {% trans "Boostez votre carrière avec nos experts" %}
+                {% else %}
+                    {% trans "Participez à nos événements exclusifs" %}
+                {% endif %}
+            </h3>
+            <p class="text-blue-100 text-sm leading-relaxed opacity-90">
+                {{ description|default:"Découvrez nos programmes d'accompagnement sur mesure pour propulser vos compétences au niveau supérieur." }}
+            </p>
+        </div>
+
+        <!-- Détails spécifiques (Date ou Lieu) -->
+        <div class="mt-4 space-y-2">
+            <div class="flex items-center gap-2 text-sm">
+                <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
+                    <i class="bi bi-calendar-event text-antares-orange"></i>
+                </div>
+                <span class="font-bold">{% trans "Prochaine session" %} : <span class="text-antares-orange">Juin 2026</span></span>
+            </div>
+        </div>
+
+        <!-- Bouton d'action -->
+        <div class="mt-auto pt-8">
+            <a href="#" class="group/btn flex items-center justify-center gap-2 w-full h-12 bg-white text-antares-blue hover:bg-antares-orange hover:text-white rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-300">
+                {% trans "En savoir plus" %}
+                <i class="bi bi-arrow-right transition-transform group-hover/btn:translate-x-1"></i>
+            </a>
+        </div>
+    </div>
+</div>

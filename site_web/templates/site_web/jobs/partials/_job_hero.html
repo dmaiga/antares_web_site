@@ -1,0 +1,46 @@
+<!-- site_web/jobs/partials/_job_hero.html -->
+{% load i18n static %}
+<section class="relative pt-12 pb-6 overflow-hidden bg-[#f5f5f5]">
+    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-3xl -z-10"></div>
+    
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col items-center text-center">
+            <h1 class="text-3xl md:text-3xl lg:text-6xl font-black text-slate-900 italic tracking-tighter leading-[0.9] mb-6">
+                {% trans "Trouvez votre" %} <br>
+                <span class="text-antares-blue">{% trans "prochaine opportunité" %} </span>
+            </h1>
+
+            <p class="max-w-2xl text-slate-500 text-lg md:text-xl font-medium leading-relaxed mb-10">
+                {% trans "Explorez des opportunités exclusives au Mali. Antarès vous connecte aux entreprises qui façonnent l'avenir." %}
+            </p>
+
+            <!-- Barre de Recherche responsive -->
+            <div class="w-full max-w-4xl">
+                <form method="GET" action="#" class="bg-white p-2 md:p-3 rounded-3xl md:rounded-[2.5rem] shadow-2xl shadow-blue-900/10 border border-slate-100 flex flex-col md:flex-row gap-2">
+                    
+                    <div class="flex-1 relative group">
+                        <span class="absolute inset-y-0 left-5 flex items-center text-slate-400 group-focus-within:text-antares-blue transition-colors">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text" name="q" placeholder="{% trans 'Poste ou secteur...' %}" 
+                               class="w-full h-14 pl-12 pr-4 bg-transparent border-none focus:ring-0 font-semibold text-slate-800">
+                    </div>
+
+                    <div class="hidden md:block w-px h-8 bg-slate-200 self-center"></div>
+
+                    <div class="flex-1 relative group">
+                        <span class="absolute inset-y-0 left-5 flex items-center text-slate-400 group-focus-within:text-antares-blue transition-colors">
+                            <i class="bi bi-geo-alt"></i>
+                        </span>
+                        <input type="text" name="l" placeholder="{% trans 'Bamako, Mali...' %}" 
+                               class="w-full h-14 pl-12 pr-4 bg-transparent border-none focus:ring-0 font-semibold text-slate-800">
+                    </div>
+
+                    <button type="submit" class="btn bg-antares-blue hover:bg-blue-700 text-white border-none rounded-2xl md:rounded-full h-14 px-8 text-sm font-black uppercase tracking-widest transition-all shadow-lg shadow-blue-200">
+                        {% trans "Rechercher" %}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

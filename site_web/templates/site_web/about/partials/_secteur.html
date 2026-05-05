@@ -1,0 +1,70 @@
+{% load i18n static %}
+
+<section class="py-4 md:py-8 bg-white">
+  <div class="container mx-auto px-6 max-w-7xl">
+    
+    <div class="mb-12 text-center lg:text-left">
+      <h2 class="text-2xl md:text-4xl font-black text-slate-900 leading-tight italic">
+        {% trans "Une expertise multisectorielle" %}
+      </h2>
+      <p class="text-slate-500 mt-4 text-sm md:text-base max-w-2xl">
+        {% trans "Plus de 18 ans d'accompagnement opérationnel auprès des acteurs clés de l'économie." %}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      
+      <div class="p-6 bg-slate-50 rounded-xl border-t-4 border-antares-blue transition-all hover:shadow-md">
+        <h3 class="text-lg font-bold text-slate-800 mb-2 uppercase tracking-tight">{% trans "Public & Institutionnel" %}</h3>
+        <p class="text-slate-500 text-xs leading-relaxed font-medium">
+          {% trans "Administrations publiques, organismes d'État et projets de gouvernance." %}
+        </p>
+      </div>
+
+      <div class="p-6 bg-slate-50 rounded-xl border-t-4 border-antares-blue transition-all hover:shadow-md">
+        <h3 class="text-lg font-bold text-slate-800 mb-2 uppercase tracking-tight">{% trans "Secteur Privé" %}</h3>
+        <p class="text-slate-500 text-xs leading-relaxed font-medium">
+          {% trans "Accompagnement des PME, PMI et grandes entreprises structurées." %}
+        </p>
+      </div>
+
+      <div class="p-6 bg-slate-50 rounded-xl border-t-4 border-antares-blue transition-all hover:shadow-md">
+        <h3 class="text-lg font-bold text-slate-800 mb-2 uppercase tracking-tight">{% trans "Industrie & BTP" %}</h3>
+        <p class="text-slate-500 text-xs leading-relaxed font-medium">
+          {% trans "Mines, agro-industrie, infrastructures et chantiers d'envergure." %}
+        </p>
+      </div>
+
+      <div class="p-6 bg-slate-50 rounded-xl border-t-4 border-antares-blue transition-all hover:shadow-md">
+        <h3 class="text-lg font-bold text-slate-800 mb-2 uppercase tracking-tight">{% trans "Services & Tertiaire" %}</h3>
+        <p class="text-slate-500 text-xs leading-relaxed font-medium">
+          {% trans "Banques, assurances, télécommunications et cabinets de conseil." %}
+        </p>
+      </div>
+
+      <div class="p-6 bg-slate-900 rounded-xl border-t-4 border-antares-orange transition-all hover:shadow-lg sm:col-span-2 lg:col-span-1">
+        <h3 class="text-lg font-bold text-white mb-2 uppercase tracking-tight">{% trans "ONG & International" %}</h3>
+        <p class="text-slate-400 text-xs leading-relaxed font-medium">
+          {% trans "Organisations internationales et projets de développement à impact social." %}
+        </p>
+      </div>
+
+    </div>
+
+    <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-x-10 gap-y-6 pt-8 border-t border-slate-100">
+      <div class="flex flex-col">
+        <span class="text-xl font-black text-antares-blue">100%</span>
+        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{% trans "Conformité Sociale" %}</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-xl font-black text-antares-blue">Mali / UEMOA</span>
+        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{% trans "Zone d'Intervention" %}</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-xl font-black text-antares-orange">Expertise</span>
+        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{% trans "Multisectorielle" %}</span>
+      </div>
+    </div>
+
+  </div>
+</section>

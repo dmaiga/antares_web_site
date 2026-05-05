@@ -1,0 +1,111 @@
+{% extends 'base.html' %}[
+{% load i18n static %}]
+
+{% block content %}
+<main class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- COLONNE GAUCHE : DÉTAIL DE L'OFFRE (8/12) -->
+        <article class="lg:col-span-8 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
+            
+            <!-- Badge & Référence -->
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+                <span class="px-4 py-1.5 bg-antares-blue/10 text-antares-blue rounded-full text-xs font-black uppercase tracking-widest">
+                    {% trans "Offre d'emploi" %}
+                </span>
+                <span class="text-xs font-bold text-slate-400 italic">
+                    Réf: {{ job.reference }} <!-- ex: ANT/ARHP/00270125AF-->
+                </span>
+            </div>
+
+            <!-- Titre du Poste -->
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 italic mb-6 leading-tight">
+                {{ job.title }} <!-- ex: Assistant(e) RH Polyvalent(e) -->
+            </h1>
+
+            <!-- Mission Principale -->
+            <section class="mb-10">
+                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-4 italic">
+                    {% trans "Mission principale" %}
+                </h3>
+                <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                    {{ job.main_mission }} <!-- -->
+                </p>
+            </section>
+
+            <!-- Tâches Spécifiques (Content dynamique) -->
+            <section class="prose prose-slate max-w-none mb-10 
+                            prose-h4:text-[11px] prose-h4:font-black prose-h4:uppercase prose-h4:tracking-widest prose-h4:text-slate-900 
+                            prose-ul:list-disc prose-li:font-medium prose-li:text-slate-600">
+                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-6 italic">
+                    {% trans "Tâches spécifiques" %}
+                </h3>
+                {{ job.description_html|safe }} 
+            </section>
+
+            <!-- Profil du poste -->
+            <section class="bounded-[2rem] p-8 mb-10">
+                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-6 italic">
+                    {% trans "Profil du poste" %}
+                </h3>
+                <div class="grid grid-cols-1 md:gap-x-8 gap-y-4">
+                    {{ job.profile_html|safe }} 
+                </div>
+            </section>
+
+
+            <!-- Candidature -->
+             <section class="border-t border-slate-100 pt-10 mt-12">
+            
+                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-6 italic">
+                    {% trans "Comment postuler" %}
+                </h3>
+            
+                <div class="prose prose-slate max-w-none text-sm">
+                    {{ job.application_html|safe }}
+                </div>
+
+            </section>
+        </article>
+
+        <!-- COLONNE DROITE : SIDEBAR (4/12) -->
+        <aside class="lg:col-span-4 flex flex-col gap-10">
+            
+            <!-- SECTION : CONSEILS / PRÉCAUTIONS -->
+            <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                <div class="relative z-10">
+                    <h3 class="text-xs font-black uppercase tracking-widest text-antares-orange mb-6 italic">
+                        {% trans "Précautions à prendre" %}
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 items-start">
+                            <i class="bi bi-check2-circle text-antares-orange"></i>
+                            <span class="text-xs font-bold opacity-80 italic">{% trans "Vérifiez les références de l'annonce en objet d'envoi." %}</span>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <i class="bi bi-check2-circle text-antares-orange"></i>
+                            <span class="text-xs font-bold opacity-80 italic">{% trans "Seuls les candidats présélectionnés seront contactés." %}</span>
+                        </li>
+                        <li class="flex gap-3 items-start text-red-400">
+                            <i class="bi bi-exclamation-triangle"></i>
+                            <span class="text-xs font-bold italic">{% trans "Antarès ne demande jamais de frais durant le recrutement." %}</span>
+                        </li>
+                    </ul>
+                </div>
+                <i class="bi bi-shield-lock absolute -bottom-6 -right-6 text-8xl text-white/5"></i>
+            </div>
+
+            <!-- SECTION : ANNONCES / FORMATIONS / COLLOQUES -->
+            <div class="flex flex-col gap-6">
+                <h3 class="text-[11px] font-black uppercase tracking-widest text-slate-900 px-4">
+                    {% trans "Événements & Formations" %}
+                </h3>
+
+                <!-- Carte Ad / Event -->
+                {% include 'site_web/jobs/partials/_sidebar_ad.html' %}
+            </div>
+
+        </aside>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-antares-blue: #0080FF;
+  --color-antares-orange: #FA8105;
+}
+@layer components {
+  .nav-link-ltr {
+    @apply relative py-1 transition-colors duration-300;
+  }
+
+  /* La ligne de soulignement */
+  .nav-link-ltr::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-antares-orange transition-all duration-300;
+  }
+
+  /* Effet Hover */
+  .nav-link-ltr:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link-ltr:hover {
+    @apply text-antares-blue;
+  }
+
+  /* État Actif (quand on est sur la page) */
+  .nav-link-ltr.active {
+    @apply text-antares-blue;
+  }
+  
+  .nav-link-ltr.active::after {
+    @apply w-full bg-antares-blue;
+  }
+}
+
+@source "../../../**/*.{html,py,js}";

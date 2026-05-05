@@ -1,0 +1,44 @@
+<!-- jobs.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- 1. Hero & Search -->
+    {% include 'site_web/jobs/partials/_job_hero.html' %}
+    
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- 2. Filtres (Sidebar) -->
+            <aside class="lg:col-span-3">
+                {% include 'site_web/jobs/partials/_job_filters.html' %}
+            </aside>
+
+            <!-- 3. Flux des Offres -->
+            <main class="lg:col-span-9">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {% for job in jobs %}
+                        <!-- Offre standard -->
+                        {% include 'site_web/jobs/partials/_job_card.html' with job=job %}
+
+                        <!-- Injection d'une offre spéciale (ex: formation) au milieu -->
+                        {% if forloop.counter == 3 %}
+                            {% include 'site_web/jobs/partials/_special_offer_card.html' with type="formation" %}
+                        {% endif %}
+                        
+                    {% empty %}
+                        <!-- Aucun résultat -->
+                        <div class="col-span-full">
+                            {% include 'site_web/jobs/partials/_job_empty_state.html' %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- 4. Pagination -->
+                <div class="mt-12">
+                    {% include 'site_web/jobs/partials/_job_pagination.html' %}
+                </div>
+            </main>
+        </div>
+    </div>
+      {% include 'site_web/jobs/partials/_cta.html' %}
+{% endblock %}

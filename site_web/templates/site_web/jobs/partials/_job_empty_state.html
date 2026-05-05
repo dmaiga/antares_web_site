@@ -1,0 +1,27 @@
+<!-- site_web/jobs/partials/_job_empty_state.html -->
+{% load i18n static %}
+
+<div class="flex flex-col items-center justify-center py-16 px-6 bg-slate-50 rounded-[3rem] border-2 border-dashed border-slate-200 text-center">
+    <!-- Illustration / Icône -->
+    <div class="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center mb-6">
+        <i class="bi bi-search text-4xl text-slate-300"></i>
+    </div>
+
+    <!-- Texte -->
+    <h3 class="text-2xl font-black text-slate-900 italic tracking-tighter mb-3">
+        {% trans "Aucune offre ne correspond" %}
+    </h3>
+    <p class="max-w-md text-slate-500 text-sm font-medium leading-relaxed mb-8">
+        {% trans "Nous n'avons pas trouvé d'opportunités correspondant exactement à vos critères. Essayez de modifier vos filtres ou de réinitialiser la recherche." %}
+    </p>
+
+    <!-- Actions -->
+    <div class="flex flex-col sm:flex-row gap-4">
+        <button onclick="window.location.reload()" class="btn bg-white hover:bg-slate-100 text-slate-900 border border-slate-200 rounded-xl px-8 font-bold text-xs uppercase tracking-widest">
+            {% trans "Réinitialiser" %}
+        </button>
+        <a href="{% url 'contact' %}" class="btn bg-antares-blue hover:bg-blue-700 text-white border-none rounded-xl px-8 font-bold text-xs uppercase tracking-widest shadow-lg shadow-blue-100">
+            {% trans "Candidature Spontanée" %}
+        </a>
+    </div>
+</div>

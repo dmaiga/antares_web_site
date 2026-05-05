@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block content %}
+<!-- Header Minimaliste -->
+<div class="bg-slate-900 pt-32 pb-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-3xl md:text-5xl font-black text-white italic">
+            {% trans "Présentation du Cabinet" %} <span class="text-antares-blue">ANTARES</span>
+        </h1>
+        <div class="mt-4 flex justify-center gap-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+            <span>{% trans "Recrutement" %}</span>
+            <span class="text-antares-orange">•</span>
+            <span>{% trans "Formation" %}</span>
+            <span class="text-antares-orange">•</span>
+            <span>{% trans "Intérim" %}</span>
+        </div>
+    </div>
+</div>
+
+<!-- Section Histoire & Valeurs (Inspiré du doc) -->
+<section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div class="prose prose-slate lg:prose-lg font-light text-slate-600">
+                <p>
+                    {% trans "Le cabinet Antarès a été créé en 2007 pour accompagner les entreprises Maliennes et étrangères dans le développement de leurs ressources humaines. Avec une trentaine de consultants permanents, nous intervenons sur l'ensemble du territoire national." %}[cite: 4]
+                </p>
+                <p>
+                    {% trans "Notre différence réside dans notre capacité à appréhender de manière transversale les problématiques RH, en proposant des solutions sur-mesure basées sur une connaissance fine du tissu économique local." %}[cite: 4]
+                </p>
+            </div>
+            
+            <!-- Table des informations légales -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                <table class="table table-compact w-full text-sm">
+                    <tbody class="text-slate-700">
+                        <tr class="border-b border-slate-200">
+                            <th class="bg-slate-100/50 w-1/3 italic font-black uppercase text-[10px]">{% trans "Statut" %}</th>
+                            <td>SARL (2007)</td>
+                        </tr>
+                        <tr class="border-b border-slate-200">
+                            <th class="bg-slate-100/50 italic font-black uppercase text-[10px]">{% trans "Siège" %}</th>
+                            <td>Hamdallaye ACI 2000, Immeuble Kanté</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-slate-100/50 italic font-black uppercase text-[10px]">{% trans "Assurance" %}</th>
+                            <td>Responsabilité Civile (Allianz Mali)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Nos Services (Anchor List) -->
+<section class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col gap-8">
+            
+            <!-- Service 1: Recrutement -->
+            <div id="recrutement" class="card lg:card-side bg-white shadow-xl border border-slate-200 overflow-hidden scroll-mt-24">
+                <div class="p-8 lg:w-2/3">
+                    <div class="badge badge-outline font-black text-antares-blue mb-4 tracking-widest uppercase text-[10px]">{% trans "Service Expert" %}</div>
+                    <h2 class="text-3xl font-black text-slate-900 mb-4 tracking-tighter">{% trans "Recrutement de personnel" %}</h2>
+                    <p class="text-slate-500 font-light leading-relaxed mb-6">
+                        {% trans "Nous disposons d'une base de données de plus de 3.000 profils. Notre méthodologie rigoureuse en 10 étapes garantit l'adéquation parfaite entre le candidat et votre culture d'entreprise." %}
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium text-slate-700">
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-orange"></div>{% trans "Analyse des besoins & fiche de poste" %}</div>
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-orange"></div>{% trans "Validation technique & psychotechnique" %}</div>
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-orange"></div>{% trans "Contrôle des références" %}</div>
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-orange"></div>{% trans "Short-list de 3 à 5 candidats" %}</div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 p-8 flex flex-col justify-center items-center lg:w-1/3 text-center border-t lg:border-t-0 lg:border-l border-slate-800">
+                    <span class="text-slate-400 text-xs font-bold uppercase mb-4">{% trans "Délai moyen" %}</span>
+                    <span class="text-white text-4xl font-black mb-2">07 - 45</span>
+                    <span class="text-antares-blue font-black uppercase text-xs">{% trans "Jours ouvrés" %}</span>[cite: 5]
+                </div>
+            </div>
+
+            <!-- Service 2: Mise à disposition / Intérim -->
+            <div id="interim" class="card lg:card-side bg-white shadow-xl border border-slate-200 overflow-hidden scroll-mt-24">
+                <div class="p-8 lg:w-2/3">
+                    <div class="badge badge-outline font-black text-antares-blue mb-4 tracking-widest uppercase text-[10px]">{% trans "Flexibilité" %}</div>
+                    <h2 class="text-3xl font-black text-slate-900 mb-4 tracking-tighter">{% trans "Intérim & Mise à disposition" %}</h2>
+                    <p class="text-slate-500 font-light leading-relaxed mb-6">
+                        {% trans "Antarès reste l'unique employeur de votre personnel délégué. Nous gérons l'intégralité du cycle administratif, fiscal et social pour vous permettre de vous concentrer sur votre métier." %}[cite: 5]
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium text-slate-700">
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-blue"></div>{% trans "Édition & validation des contrats" %}</div>
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-blue"></div>{% trans "Gestion de la paie & ITS" %}</div>
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-blue"></div>{% trans "Déclarations INPS & AMO" %}</div>
+                        <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-antares-blue"></div>{% trans "Couverture Responsabilité Civile" %}</div>
+                    </div>
+                </div>
+                <div class="bg-antares-blue p-8 flex flex-col justify-center items-center lg:w-1/3 text-center">
+                    <p class="text-white/80 text-xs font-medium italic mb-6">{% trans "Libérez-vous des contraintes juridiques et sociales liées au personnel temporaire." %}</p>
+                    <a href="#contact" class="btn btn-sm btn-outline border-white text-white hover:bg-white hover:text-antares-blue font-black tracking-widest uppercase">{% trans "Plus d'infos" %}</a>
+                </div>
+            </div>
+
+            <!-- Autres Services (Compact) -->
+            <div id="conseil" class="grid md:grid-cols-2 gap-8 scroll-mt-24">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-black text-slate-900 mb-4">{% trans "Conseil & Externalisation RH" %}</h3>
+                    <p class="text-sm text-slate-500 font-light leading-relaxed mb-4">
+                        {% trans "Audit social, missions d'optimisation fiscale, assistance en gestion de litiges et rédaction de fiches de poste personnalisées." %}[cite: 5]
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-black text-slate-900 mb-4">{% trans "Formation Professionnelle" %}</h3>
+                    <p class="text-sm text-slate-500 font-light leading-relaxed mb-4">
+                        {% trans "Développement des compétences de vos collaborateurs à travers des modules adaptés aux contraintes du marché malien." %}[cite: 5]
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA Final Simple -->
+<section class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-2xl font-black text-slate-900 mb-6 uppercase tracking-tight italic">
+            {% trans "Besoin d'un accompagnement personnalisé ?" %}
+        </h2>
+        <a href="#contact" class="btn bg-slate-900 hover:bg-antares-blue text-white rounded-xl px-12 font-black uppercase tracking-widest border-none transition-all">
+            {% trans "Contacter un consultant" %}
+        </a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% load i18n static %}
+
+<section class="py-6 bg-slate-50/50 relative overflow-hidden">
+    <!-- Subtile texture de fond -->
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#0080FF 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+    <div class="container mx-auto px-6 max-w-7xl relative">
+
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-antares-blue/10 text-antares-blue text-[10px] font-black uppercase tracking-widest mb-4">
+                    {% trans "Solutions 360°" %}
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                    {% trans "Expertise sur-mesure pour votre" %} <span class="text-antares-blue">{% trans "croissance" %}</span>
+                </h2>
+            </div>
+            <p class="text-slate-900 text-lg font-light max-w-md">
+                {% trans "Antarès RH vous accompagne à chaque étape du cycle de vie de vos collaborateurs avec des solutions innovantes et conformes." %}
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {% for service in services %}
+            <div class="group relative bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
+                
+                <!-- Décoration au survol (ligne orange discrète) -->
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-antares-orange transition-all duration-500 group-hover:w-1/3 rounded-b-full"></div>
+
+                <!-- Icon Container -->
+                <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-slate-50 text-slate-400 group-hover:bg-antares-blue group-hover:text-white transition-colors duration-500 mb-8">
+                    {% if service.icon == "user-group" %}
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    {% elif service.icon == "clock" %}
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    {% elif service.icon == "briefcase" %}
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    {% elif service.icon == "document-check" %}
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    {% elif service.icon == "academic-cap" %}
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+                    {% else %}
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"/></svg>
+                    {% endif %}
+                </div>
+
+                <!-- Content -->
+                <h3 class="text-xl font-black text-slate-900 mb-4 group-hover:text-antares-blue transition-colors">
+                    {{ service.title }}
+                </h3>
+
+                <p class="text-slate-500 leading-relaxed mb-8 flex-grow">
+                    {{ service.description }}
+                </p>
+
+
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>

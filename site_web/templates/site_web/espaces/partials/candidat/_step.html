@@ -1,0 +1,92 @@
+<!-- site_web/espaces/partials/candidat/_step.html -->
+{% load i18n static %}
+
+<section class="py-12 md:py-16  bg-[#f8f8f8]">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+    
+        <!-- Header -->
+        <div class="text-center mb-10 md:mb-16">
+            <h2 class="text-antares-blue font-bold text-xl md:text-2xl mb-2 md:mb-4">
+                {% trans "Comment ça marche ?" %}
+            </h2>
+            <p class="text-2xl md:text-4xl font-black text-slate-800 tracking-tight leading-tight">
+                {% trans "Rejoignez notre réseau en 4 étapes" %}
+            </p>
+        </div>
+
+        <div class="relative">
+            <!-- Ligne de connexion horizontale (Desktop uniquement) -->
+            <div class="hidden lg:block absolute top-1/2 left-0 w-full h-[1px] bg-slate-200 -translate-y-1/2 z-0"></div>
+
+            <!-- Grid: 1 col mobile, 2 col tablette, 4 col desktop -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 relative z-10">
+                
+                <!-- Étape 01 - Rouge/Rose -->
+                <div style="background-color: #fee2e2;" class="rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 shadow-sm border border-white/50 flex flex-col justify-between min-h-[180px] md:min-h-[250px] hover:scale-105 transition-transform duration-300">
+                    <div class="flex justify-between items-start">
+                        <span class="text-3xl md:text-4xl font-black text-slate-900/20 md:text-slate-900">01</span>
+                        <div style="background-color: #f87171;" class="p-2.5 md:p-3 rounded-full shadow-lg text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 leading-tight mb-1">{% trans "Inscrivez-vous" %}</h3>
+                        <p class="text-sm md:text-md text-slate-600">{% trans "Créez votre compte rapidement" %}</p>
+                    </div>
+                </div>
+
+                <!-- Étape 02 - Orange/Beige -->
+                <div style="background-color: #fef3c7;" class="rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 shadow-sm border border-white/50 flex flex-col justify-between min-h-[180px] md:min-h-[250px] hover:scale-105 transition-transform duration-300">
+                    <div class="flex justify-between items-start">
+                        <span class="text-3xl md:text-4xl font-black text-slate-900/20 md:text-slate-900">02</span>
+                        <div style="background-color: #fb923c;" class="p-2.5 md:p-3 rounded-full shadow-lg text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 leading-tight mb-1">{% trans "Complétez le profil" %}</h3>
+                        <p class="text-sm md:text-md text-slate-600">{% trans "Ajoutez vos compétences" %}</p>
+                    </div>
+                </div>
+
+                <!-- Étape 03 - Vert -->
+                <div style="background-color: #dcfce7;" class="rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 shadow-sm border border-white/50 flex flex-col justify-between min-h-[180px] md:min-h-[250px] hover:scale-105 transition-transform duration-300">
+                    <div class="flex justify-between items-start">
+                        <span class="text-3xl md:text-4xl font-black text-slate-900/20 md:text-slate-900">03</span>
+                        <div style="background-color: #4ade80;" class="p-2.5 md:p-3 rounded-full shadow-lg text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 leading-tight mb-1">{% trans "Recevez des offres" %}</h3>
+                        <p class="text-sm md:text-md text-slate-600">{% trans "Opportunités sur mesure" %}</p>
+                    </div>
+                </div>
+
+                <!-- Étape 04 - Violet -->
+                <div style="background-color: #f3e8ff;" class="rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 shadow-sm border border-white/50 flex flex-col justify-between min-h-[180px] md:min-h-[250px] hover:scale-105 transition-transform duration-300">
+                    <div class="flex justify-between items-start">
+                        <span class="text-3xl md:text-4xl font-black text-slate-900/20 md:text-slate-900">04</span>
+                        <div style="background-color: #c084fc;" class="p-2.5 md:p-3 rounded-full shadow-lg text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-6">
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 leading-tight mb-1">{% trans "Postulez facile" %}</h3>
+                        <p class="text-sm md:text-md text-slate-600">{% trans "En un clic depuis votre mobile" %}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+    </div>
+</section>

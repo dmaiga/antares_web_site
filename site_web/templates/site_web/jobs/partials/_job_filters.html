@@ -1,0 +1,118 @@
+<!-- site_web/jobs/partials/_job_filters.html -->
+{% load i18n static %}
+
+<!-- Version Mobile : Bouton pour ouvrir les filtres (Optionnel avec un JS simple ou Drawer DaisyUI) -->
+<div class="lg:hidden mb-6">
+    <label for="filter-drawer" class="btn btn-outline btn-block border-slate-200 text-slate-600 rounded-2xl font-black uppercase tracking-widest text-[10px]">
+        <i class="bi bi-sliders2-vertical mr-2"></i> {% trans "Filtrer les offres" %}
+    </label>
+</div>
+
+<div class="hidden lg:flex flex-col gap-8 sticky top-24">
+    
+    <!-- En-tête -->
+    <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <h3 class="text-[11px] font-black uppercase tracking-widest text-slate-900">
+            {% trans "Affiner la recherche" %}
+        </h3>
+        <a href="." class="text-[10px] font-bold text-antares-orange hover:underline uppercase tracking-tighter">
+            {% trans "Effacer" %}
+        </a>
+    </div>
+
+    <!-- Contrat -->
+
+<div>
+    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">{% trans "Type de contrat" %}</h4>
+    <div class="flex flex-col gap-3">
+        
+        <!-- CDI -->
+        <label class="flex items-center group cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm border-slate-300 rounded-md checked:bg-antares-blue" />
+            <span class="ms-3 text-sm font-bold text-slate-600 group-hover:text-antares-blue transition-colors">CDI</span>
+            <span class="ms-auto text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full">12</span>
+        </label>
+
+        <!-- CDD -->
+        <label class="flex items-center group cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm border-slate-300 rounded-md checked:bg-antares-blue" />
+            <span class="ms-3 text-sm font-bold text-slate-600 group-hover:text-antares-blue transition-colors">CDD</span>
+            <span class="ms-auto text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full">5</span>
+        </label>
+
+        <!-- Intérim -->
+        <label class="flex items-center group cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm border-slate-300 rounded-md checked:bg-antares-blue" />
+            <span class="ms-3 text-sm font-bold text-slate-600 group-hover:text-antares-blue transition-colors">{% trans "Intérim" %}</span>
+            <span class="ms-auto text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full">24</span>
+        </label>
+
+        <!-- Stage -->
+        <label class="flex items-center group cursor-pointer">
+            <input type="checkbox" class="checkbox checkbox-sm border-slate-300 rounded-md checked:bg-antares-blue" />
+            <span class="ms-3 text-sm font-bold text-slate-600 group-hover:text-antares-blue transition-colors">{% trans "Stage" %}</span>
+            <span class="ms-auto text-[10px] font-bold text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full">3</span>
+        </label>
+
+    </div>
+</div>
+
+<!-- Section : Secteur (Multi-sélection par Box) -->
+<div>
+    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">{% trans "Secteurs d'activité" %}</h4>
+    
+    <div class="flex flex-wrap gap-2">
+        <!-- Box Secteur : Mines -->
+        <label class="relative flex-grow cursor-pointer group">
+            <input type="checkbox" name="sector" value="mines" class="peer sr-only" />
+            <div class="px-3 py-2 bg-slate-50 border border-slate-100 rounded-xl text-[11px] font-bold text-slate-600 transition-all 
+                        peer-checked:bg-antares-blue peer-checked:text-white peer-checked:border-antares-blue 
+                        group-hover:border-antares-blue/30 text-center">
+                {% trans "Mines & Énergie" %}
+            </div>
+        </label>
+
+        <!-- Box Secteur : Banque -->
+        <label class="relative flex-grow cursor-pointer group">
+            <input type="checkbox" name="sector" value="banque" class="peer sr-only" />
+            <div class="px-3 py-2 bg-slate-50 border border-slate-100 rounded-xl text-[11px] font-bold text-slate-600 transition-all 
+                        peer-checked:bg-antares-blue peer-checked:text-white peer-checked:border-antares-blue 
+                        group-hover:border-antares-blue/30 text-center">
+                {% trans "Banque & Finance" %}
+            </div>
+        </label>
+
+        <!-- Box Secteur : ONG -->
+        <label class="relative flex-grow cursor-pointer group">
+            <input type="checkbox" name="sector" value="ong" class="peer sr-only" />
+            <div class="px-3 py-2 bg-slate-50 border border-slate-100 rounded-xl text-[11px] font-bold text-slate-600 transition-all 
+                        peer-checked:bg-antares-blue peer-checked:text-white peer-checked:border-antares-blue 
+                        group-hover:border-antares-blue/30 text-center">
+                {% trans "Humanitaire (ONG)" %}
+            </div>
+        </label>
+
+        <!-- Box Secteur : IT -->
+        <label class="relative flex-grow cursor-pointer group">
+            <input type="checkbox" name="sector" value="it" class="peer sr-only" />
+            <div class="px-3 py-2 bg-slate-50 border border-slate-100 rounded-xl text-[11px] font-bold text-slate-600 transition-all 
+                        peer-checked:bg-antares-blue peer-checked:text-white peer-checked:border-antares-blue 
+                        group-hover:border-antares-blue/30 text-center">
+                {% trans "IT & Télécoms" %}
+            </div>
+        </label>
+
+        <!-- Box Secteur : Logistique -->
+        <label class="relative flex-grow cursor-pointer group">
+            <input type="checkbox" name="sector" value="logistics" class="peer sr-only" />
+            <div class="px-3 py-2 bg-slate-50 border border-slate-100 rounded-xl text-[11px] font-bold text-slate-600 transition-all 
+                        peer-checked:bg-antares-blue peer-checked:text-white peer-checked:border-antares-blue 
+                        group-hover:border-antares-blue/30 text-center">
+                {% trans "Transport & Log." %}
+            </div>
+        </label>
+    </div>
+</div>
+
+    
+</div>

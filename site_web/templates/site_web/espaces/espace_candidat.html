@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans "Espace Candidat | Antarès RH" %}{% endblock %}
+
+{% block content %}
+<div class="bg-white">
+    <!-- 1. HERO SECTION -->
+    {% include 'site_web/espaces/partials/candidat/_hero_section.html' %}
+
+    <!-- 2. STEPS SECTION -->
+    {% include 'site_web/espaces/partials/candidat/_step.html' %}
+
+    <!-- 3. ONBOARDING FORM SECTION -->
+    {% include 'site_web/espaces/partials/candidat/_forms.html' %}
+</div>
+{% endblock %}

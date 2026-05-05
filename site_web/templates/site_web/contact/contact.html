@@ -1,0 +1,303 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+<!-- Section Hero : Minimalisme Institutionnel -->
+<section class=" pt-8 pb-8 border-b border-slate-100 bg-[#f5f5f5] ">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        
+        <!-- Titre : Identité forte -->
+        <h1 class="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-6">
+            {% trans "Contactez " %}<span class="text-antares-blue">{% trans "Antares RH" %}</span>
+        </h1>
+        
+        <!-- Baseline : Vision concise -->
+        <p class="text-slate-500 text-2xl md:text-3xl font-light tracking-tight max-w-2xl mx-auto">
+            {% trans "Votre partenaire en solutions ressources humaines" %}
+        </p>
+
+        <!-- Séparateur minimaliste -->
+        <div class="mt-8 flex justify-center">
+            <div class="w-16 h-1 bg-antares-orange/20 rounded-full"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Section Contact & Formulaire -->
+<section id="formulaire" class="py-12 md:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Header de section -->
+        <div class="mb-12 text-center lg:text-left">
+            <h2 class="text-3xl font-black text-slate-900 italic tracking-tighter">
+                {% trans "Contactez nos" %} <span class="text-antares-blue">{% trans "Experts RH" %}</span>
+            </h2>
+            <p class="text-slate-500 mt-2">{% trans "Réponse sous 72h ouvrées." %}</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            
+            <!-- Colonne GAUCHE : Infos (Priorité visuelle) -->
+            <div class="lg:col-span-4 space-y-6 order-2 lg:order-1">
+                
+                <!-- Carte Coordonnées -->
+                <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
+                    <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-blue mb-8 flex items-center">
+                        <i class="bi bi-info-circle-fill me-2"></i> {% trans "Informations" %}
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <!-- Adresse + Bouton Maps -->
+                        <div class="group">
+                            <div class="flex gap-4 mb-4">
+                                <div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-antares-blue transition-colors group-hover:bg-antares-blue group-hover:text-white">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{% trans "Siège Social" %}</p>
+                                    <p class="text-slate-900 font-bold leading-tight">
+                                        Hamdallaye ACI 2000,<br> Bamako, Mali
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Bouton Maps Clairement Visible -->
+                            <a href="https://maps.app.goo.gl/zMKHXP2E8kBARcHb7" target="_blank" 
+                               class="btn btn-sm btn-block bg-white border-slate-200 hover:bg-slate-50 hover:border-antares-blue text-antares-blue rounded-xl normal-case font-bold gap-2 py-4 h-auto shadow-sm transition-all">
+                                <i class="bi bi-map"></i>
+                                {% trans "Ouvrir dans Google Maps" %}
+                                <i class="bi bi-arrow-up-right text-[10px]"></i>
+                            </a>
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div class="flex gap-4 group">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-antares-blue transition-colors group-hover:bg-antares-blue group-hover:text-white">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{% trans "Ligne Directe" %}</p>
+                                <a href="tel:+22320292040" class="text-slate-900 font-bold hover:text-antares-blue transition text-lg">
+                                    +223 20 29 20 40
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex gap-4 group">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-antares-blue transition-colors group-hover:bg-antares-blue group-hover:text-white">
+                                <i class="bi bi-envelope-at-fill"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{% trans "Email" %}</p>
+                                <a href="mailto:antares@antares-rh.com" class="text-slate-900 font-bold hover:text-antares-blue transition break-all underline decoration-blue-100 underline-offset-4">
+                                    antares@antares-rh.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte Disponibilités -->
+                <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+                    <!-- Décoration de fond -->
+                    <div class="absolute -right-4 -bottom-4 opacity-10">
+                        <i class="bi bi-clock-history text-8xl"></i>
+                    </div>
+                    
+                    <h3 class="text-[10px] font-black uppercase tracking-widest text-blue-400 mb-6 flex items-center relative">
+                         <i class="bi bi-clock me-2"></i> {% trans "Horaires d'ouverture" %}
+                    </h3>
+                    <div class="space-y-4 relative">
+                        <div class="flex justify-between items-center text-sm border-b border-white/10 pb-2">
+                            <span class="text-white/60 font-medium">{% trans "Lun - Jeu" %}</span>
+                            <span class="font-bold uppercase tracking-tight text-white">08h00 - 17h00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-white/60 font-medium">{% trans "Vendredi" %}</span>
+                            <span class="font-bold uppercase tracking-tight text-white">08h00 - 12h30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne DROITE : Formulaire -->
+            <div class="lg:col-span-8 order-1 lg:order-2">
+                <div class="bg-white border border-slate-200 rounded-[2rem] p-6 md:p-10 shadow-sm transition-shadow hover:shadow-md">
+                    <form method="POST" class="space-y-6">
+                        {% csrf_token %}
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                            
+                            <!-- Prénom -->
+                            <div class="form-control">
+                                <label class="label font-bold text-slate-700 text-[11px] uppercase tracking-widest">
+                                    {% trans "Prénom" %}
+                                </label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                    <input type="text" name="first_name"
+                                        placeholder="Prenoms"
+                                        class="input input-bordered pl-11 bg-slate-50 border-slate-200 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-antares-blue rounded-xl w-full transition-all"
+                                        required />
+                                </div>
+                            </div>
+                        
+                            <!-- Nom -->
+                            <div class="form-control">
+                                <label class="label font-bold text-slate-700 text-[11px] uppercase tracking-widest">
+                                    {% trans "Nom" %}
+                                </label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">
+                                        <i class="bi bi-person-badge"></i>
+                                    </span>
+                                    <input type="text" name="last_name"
+                                        placeholder="Nom"
+                                        class="input input-bordered pl-11 bg-slate-50 border-slate-200 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-antares-blue rounded-xl w-full transition-all"
+                                        required />
+                                </div>
+                            </div>
+                        
+                            <!-- Email -->
+                            <div class="form-control md:col-span-3">
+                                <label class="label font-bold text-slate-700 text-[11px] uppercase tracking-widest">
+                                    {% trans "Email de contact" %}
+                                </label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">
+                                        <i class="bi bi-envelope-at"></i>
+                                    </span>
+                                    <input type="email" name="email"
+                                        placeholder="monemail@entreprise.ml"
+                                        class="input input-bordered pl-11 bg-slate-50 border-slate-200 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-antares-blue rounded-xl w-full transition-all"
+                                        required />
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                        <div class="form-control">
+                            <label class="label font-bold text-slate-700 text-[11px] uppercase tracking-widest">{% trans "Type de demande" %}</label>
+                            <select name="service" class="select select-bordered bg-slate-50 border-slate-200 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-antares-blue rounded-xl w-full transition-all font-semibold">
+                                <option disabled selected>
+                                    {% trans "Sélectionnez votre besoin" %}
+                                </option>
+                                <option>{% trans "Recrutement de personnel" %}</option>
+                                <option>{% trans "Mise à disposition de personnel" %}</option>
+                                <option>{% trans "Gestion RH externalisée" %}</option>
+                                <option>{% trans "Conseil en ressources humaines" %}</option>
+                                <option>{% trans "Audit RH" %}</option>
+                                <option>{% trans "Formation du personnel" %}</option>
+                                <option>{% trans "Autre" %}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="label font-bold text-slate-700 text-[11px] uppercase tracking-widest">{% trans "Détails de votre besoin" %}</label>
+                            <textarea name="message" class="textarea textarea-bordered bg-slate-50 border-slate-200 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-antares-blue rounded-xl h-40 w-full transition-all" placeholder="Message..."></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="btn btn-block bg-antares-blue hover:bg-blue-700 text-white border-none rounded-xl h-16 text-sm font-black uppercase tracking-widest shadow-xl shadow-blue-100 transition-all group">
+                                <span>{% trans "Envoyer ma demande" %}</span>
+                                <i class="bi bi-send-fill ms-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-16 bg-slate-50">
+  <div class="max-w-3xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-black text-slate-900 mb-3">
+        Questions fréquentes
+      </h2>
+      <p class="text-slate-500">
+        Les points essentiels sur notre accompagnement RH
+      </p>
+    </div>
+
+    <div class="space-y-4">
+
+      <!-- Q1 -->
+      <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
+        <input type="radio" name="faq" checked />
+        <div class="collapse-title font-semibold">
+          Comment se déroule un recrutement chez Antarès ?
+        </div>
+        <div class="collapse-content text-sm text-slate-600">
+          Notre processus suit une méthodologie structurée : analyse du besoin, 
+          sourcing, tests, entretiens, contrôle des références et présentation 
+          d’une short-list de candidats qualifiés.
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
+        <input type="radio" name="faq" />
+        <div class="collapse-title font-semibold">
+          En combien de temps pouvez-vous pourvoir un poste ?
+        </div>
+        <div class="collapse-content text-sm text-slate-600">
+          Le délai varie selon le profil recherché, généralement entre 
+          <strong>5 et 45 jours</strong>, avec un suivi régulier de l’avancement.
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
+        <input type="radio" name="faq" />
+        <div class="collapse-title font-semibold">
+          Que comprend la mise à disposition de personnel ?
+        </div>
+        <div class="collapse-content text-sm text-slate-600">
+          Nous prenons en charge l’ensemble de la gestion administrative, 
+          contractuelle, sociale et fiscale du personnel, vous permettant 
+          de vous concentrer sur votre activité principale.
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
+        <input type="radio" name="faq" />
+        <div class="collapse-title font-semibold">
+          Sur quoi sont basés vos tarifs ?
+        </div>
+        <div class="collapse-content text-sm text-slate-600">
+          Les tarifs dépendent du niveau du poste, du type de mission et du 
+          volume de recrutement. Une étude personnalisée est réalisée pour 
+          chaque besoin.
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
+        <input type="radio" name="faq" />
+        <div class="collapse-title font-semibold">
+          Travaillez-vous sur le long terme avec vos clients ?
+        </div>
+        <div class="collapse-content text-sm text-slate-600">
+          Oui. Notre approche repose sur un partenariat durable avec nos clients, 
+          en les accompagnant dans la gestion et l’évolution de leurs ressources humaines.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock %}

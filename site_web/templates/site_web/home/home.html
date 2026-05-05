@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Accueil" %}{% endblock %}
+
+{% block content %}
+
+<section class="relative bg-[#002147] text-white pt-12 pb-16 px-4 overflow-hidden border-b border-gray-100">
+  
+  <div class="absolute inset-0 z-0 bg-black">
+    <img src="{% static 'images/home/building.jpg' %}" 
+         alt="Antares RH"
+         class="w-full h-full object-cover object-center opacity-60"> 
+  </div>
+
+  <div class="absolute inset-0 bg-gradient-to-tr from-[#002147] via-[#002147]/90 to-transparent z-10"></div>
+
+  <div class="max-w-5xl mx-auto text-center relative z-20">
+       
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight tracking-tight px-4">
+      Au service du <span class="text-antares-orange">Capital Humain</span> en Afrique
+    </h1>
+    
+    <p class="text-white text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed font-medium px-4">
+      Près de 20 ans d'expérience en recrutement, conseil et structuration RH. Nous aidons les entreprises locales comme les multinationales à bâtir des équipes solides. 
+    </p>
+    
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
+      <a href="#" class="btn btn-md bg-antares-orange hover:bg-antares-orange/90 border-none text-white px-10 rounded-md transition-all shadow-lg">
+        {% trans "NOS SERVICES" %}
+      </a>
+      <a href="#" class="btn btn-md btn-outline border-white text-white hover:bg-white hover:text-[#002147] px-10 rounded-md transition-all">
+        {% trans "NOUS CONTACTER" %}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="relative z-20 -mt-10 max-w-6xl mx-auto px-4">
+  <div class="bg-white rounded-lg shadow-2xl py-8 px-6 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 border border-gray-100">
+    
+    <div class="text-center border-r border-gray-100 last:border-0">
+      <h3 class="text-3xl md:text-4xl font-black text-antares-blue">
+        + <span class="counter" data-target="1500">0</span>
+      </h3>
+      <p class="text-gray-500 text-[10px] md:text-xs uppercase font-bold mt-1 tracking-wider">{% trans "Talents Accompagnés" %}</p>
+      
+    </div>
+
+    <div class="text-center border-r border-gray-100 last:border-0">
+      <h3 class="text-3xl md:text-4xl font-black text-antares-blue">
+        +<span class="counter" data-target="850">0</span>
+      </h3>
+      <p class="text-gray-500 text-[10px] md:text-xs uppercase font-bold mt-1 tracking-wider">{% trans "Consultants experts" %}</p>
+    </div>
+
+    <div class="text-center border-r border-gray-100 last:border-0">
+      <h3 class="text-3xl md:text-4xl font-black text-antares-blue">
+        +<span class="counter" data-target="120">0</span>
+      </h3>
+      <p class="text-gray-500 text-[10px] md:text-xs uppercase font-bold mt-1 tracking-wider">{% trans "Entreprises partenaires" %}</p>
+    </div>
+
+    <div class="text-center">
+      <h3 class="text-3xl md:text-4xl font-black text-antares-blue">
+        +<span class="counter" data-target="350">0</span>
+      </h3>
+      <p class="text-gray-500 text-[10px] md:text-xs uppercase font-bold mt-1 tracking-wider">{% trans "Offres gérées / an" %}</p>
+    </div>
+    
+  </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="text-center mb-12">
+      <h2 class="text-antares-blue font-bold uppercase tracking-widest text-xs mb-2">Nos solutions</h2>
+      <p class="text-2xl md:text-3xl font-extrabold text-slate-800">Des services adaptés à chaque acteur</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-white rounded-xl shadow-md border-t-4 border-antares-blue p-8 flex flex-col h-full transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h3 class="text-xl font-black text-slate-800">CANDIDATS</h3>
+            <p class="text-antares-blue text-xs font-bold italic">Boostez votre carrière</p>
+          </div>
+          <div class="p-2 bg-blue-50 rounded-lg">
+            <svg class="w-6 h-6 text-antares-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+          </div>
+        </div>
+        <ul class="space-y-4 text-sm text-slate-600 flex-grow">
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-antares-blue"></span> Coaching personnalisé </li>
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-antares-blue"></span> Accès aux meilleures offres </li>
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-antares-blue"></span> Suivi post-embauche </li>
+        </ul>
+        <div class="mt-8 border-t pt-4">
+          <a href="#" class="text-antares-blue font-bold text-sm hover:underline flex items-center gap-2">
+            Voir les offres <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md border-t-4 border-antares-orange p-8 flex flex-col h-full transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h3 class="text-xl font-black text-slate-800">ENTREPRISES</h3>
+            <p class="text-antares-orange text-xs font-bold italic">Recrutez les meilleurs</p>
+          </div>
+          <div class="p-2 bg-orange-50 rounded-lg text-antares-orange">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+          </div>
+        </div>
+        <ul class="space-y-4 text-sm text-slate-600 flex-grow">
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-antares-orange"></span> Chasse de tête (Headhunting) </li>
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-antares-orange"></span> Audit & Conseil RH </li>
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-antares-orange"></span> Externalisation de la paie </li>
+        </ul>
+        <div class="mt-8 border-t pt-4">
+          <a href="#" class="text-antares-orange font-bold text-sm hover:underline flex items-center gap-2">
+            Nos services aux entreprises →
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md border-t-4 border-green-600 p-8 flex flex-col h-full transition-all hover:shadow-xl hover:-translate-y-1">
+        <div class="flex justify-between items-start mb-6">
+          <div>
+            <h3 class="text-xl font-black text-slate-800">CONSULTANTS</h3>
+            <p class="text-green-600 text-xs font-bold italic">Rejoignez notre réseau</p>
+          </div>
+          <div class="p-2 bg-green-50 rounded-lg text-green-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+        </div>
+        <ul class="space-y-4 text-sm text-slate-600 flex-grow">
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Missions d'expertise </li>
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Networking de haut niveau </li>
+          <li class="flex items-center gap-2"> <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Projets internationaux </li>
+        </ul>
+        <div class="mt-8 border-t pt-4">
+          <a href="#" class="text-green-600 font-bold text-sm hover:underline flex items-center gap-2">
+            Postuler au Roster →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% include 'site_web/home/partials/_job_offers_list.html' %}
+
+{% include 'site_web/home/partials/_cta_section.html' %}
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 150; // Plus le chiffre est petit, plus c'est rapide
+
+    const startCount = (el) => {
+        const target = +el.getAttribute('data-target');
+        const count = +el.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+            el.innerText = Math.ceil(count + inc);
+            setTimeout(() => startCount(el), 20);
+        } else {
+            el.innerText = target;
+        }
+    };
+
+    // Déclenchement au scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCount(entry.target);
+                observer.unobserve(entry.target); // On anime une seule fois
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+});
+</script>
+{% endblock %}
