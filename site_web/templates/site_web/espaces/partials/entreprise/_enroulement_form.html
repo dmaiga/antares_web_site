@@ -1,0 +1,124 @@
+{% load i18n %}
+
+<section id="enroulement-form" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-20">
+            
+            <div class="w-full lg:w-5/12 space-y-12">
+                
+                <div>
+                    <h2 class="text-4xl font-black text-slate-900 leading-[1.1] mb-6">
+                        {% trans "Votre pilotage RH commence ici." %}
+                    </h2>
+                    <p class="text-slate-600 font-medium text-lg leading-relaxed">
+                        {% trans "Un écosystème digital conçu pour centraliser vos besoins, optimiser vos coûts et suivre vos performances en temps réel." %}
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-antares-orange">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-slate-900 uppercase tracking-tight">{% trans "Tableau de bord complet" %}</h4>
+                            <p class="text-xs text-slate-700 mt-1 leading-relaxed">{% trans "Indicateurs de performance et gestion centralisée de vos processus RH." %}</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-antares-orange">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-slate-900 uppercase tracking-tight">{% trans "Accès aux Experts" %}</h4>
+                            <p class="text-xs text-slate-700 mt-1 leading-relaxed">{% trans "Bénéficiez de consultants spécialisés par secteur d'activité." %}</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 text-antares-orange">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-slate-900 uppercase tracking-tight">{% trans "Optimisation des coûts" %}</h4>
+                            <p class="text-xs text-slate-700 mt-1 leading-relaxed">{% trans "Réduction de vos dépenses via nos solutions d'externalisation." %}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-slate-200">
+
+                <div class="space-y-6">
+                    <h5 class="text-xs font-black text-slate-400 uppercase tracking-widest">{% trans "Processus d'adhésion" %}</h5>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] font-bold flex items-center justify-center">1</span>
+                            <span class="text-sm font-bold text-slate-700">{% trans "Examen du dossier sous 72h" %}</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] font-bold flex items-center justify-center">2</span>
+                            <span class="text-sm font-bold text-slate-700">{% trans "Réception des accès par email" %}</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-6 h-6 rounded-full bg-antares-orange text-white text-[10px] font-bold flex items-center justify-center">3</span>
+                            <span class="text-sm font-bold text-slate-900">{% trans "Pilotage et demande de services" %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="w-full lg:w-7/12">
+    <div class="bg-white p-8 md:p-14 rounded-[3rem] shadow-2xl shadow-slate-200/50 border border-white">
+        <form method="POST" class="space-y-10">
+            {% csrf_token %}
+            
+            <div class="space-y-5">
+                <div class="flex items-center gap-3">
+                    <span class="w-1 h-4 bg-slate-300 rounded-full "></span>
+                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">{% trans "Identité de l'Organisation" %}</label>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <input type="text" placeholder="{% trans "Raison sociale" %}" 
+                           class="w-full px-6 py-5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
+                    <textarea placeholder="{% trans "Décrivez brièvement vos activités..." %}" rows="2" 
+                              class="w-full px-6 py-5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700"></textarea>
+                </div>
+            </div>
+
+            <div class="space-y-5">
+                <div class="flex items-center gap-3">
+                    <span class="w-1 h-4 bg-slate-300 rounded-full"></span>
+                    <label class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">{% trans "Contact Référent" %}</label>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="{% trans "Nom" %}" 
+                           class="w-full px-6 py-5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
+                    <input type="text" placeholder="{% trans "Prénom" %}" 
+                           class="w-full px-6 py-5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
+                    
+                    <input type="text" placeholder="{% trans "Poste occupé" %}" 
+                           class="w-full px-6 py-5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700 md:col-span-2">
+                    
+                    <input type="email" placeholder="{% trans "Email professionnel" %}" 
+                           class="w-full px-6 py-5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
+                    <input type="tel" placeholder="{% trans "Téléphone" %}" 
+                           class="w-full px-6 py-5 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
+                </div>
+            </div>
+
+            <div class="pt-4">
+                <button type="submit" class="w-full group relative px-8 py-6 bg-slate-900 text-white text-[11px] font-black uppercase tracking-[0.3em] rounded-2xl overflow-hidden transition-all duration-500 shadow-xl shadow-slate-900/10">
+                    <span class="relative z-10">{% trans "Soumettre mon enrôlement" %}</span>
+                    <div class="absolute inset-0 bg-antares-orange -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                </button>
+                <p class="text-[10px] text-center text-slate-400 mt-6 font-medium">
+                    {% trans "En soumettant ce formulaire, vous acceptez d'être contacté pour la validation de votre compte." %}
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+        </div>
+    </div>
+</section>

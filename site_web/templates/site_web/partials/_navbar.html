@@ -36,13 +36,13 @@
           </a>
         </li>
         <li>
-          <a href="#" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
+          <a href="{% url 'espace_entreprise' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
             <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Entreprise" %}</span>
 
           </a>
         </li>
         <li>
-          <a href="#" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
+          <a href="{% url 'espace_consultant' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
             <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Consultant" %}</span>
           </a>
         </li>
@@ -96,8 +96,8 @@
     <summary class="font-semibold italic text-antares-blue">{% trans "Espaces" %}</summary>
     <ul>
       <li><a href="{% url 'espace_candidat' %}">{% trans "Espace Candidat" %}</a></li>
-      <li><a href="#">{% trans "Espace Entreprise" %}</a></li>
-      <li><a href="#">{% trans "Espace Consultant" %}</a></li>
+      <li><a href="{% url 'espace_entreprise' %}" >{% trans "Espace Entreprise" %}</a></li>
+      <li><a href="{% url 'espace_consultant' %}" >{% trans "Espace Consultant" %}</a></li>
     </ul>
   </details>
 </li>

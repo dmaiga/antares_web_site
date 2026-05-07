@@ -1,0 +1,66 @@
+<!-- site_web/espaces/espace_entreprise.html -->
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{% trans "Espace Entreprise | Antarès SARL - Expert RH au Mali" %}{% endblock %}
+
+{% block content %}
+<main class="bg-white">
+    
+    {# 1. HERO SECTION : Proposition de valeur B2B #}
+
+    {% include "site_web/espaces/partials/entreprise/_hero.html" %}
+
+
+    {# 3. SERVICES GRID : Nos domaines d'intervention #}
+    <div id="services"  class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4">
+                {% trans "Des solutions RH sur-mesure" %}
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">
+                {% trans "Nous accompagnons les entreprises maliennes et étrangères dans l'optimisation de leur capital humain." %}
+            </p>
+        </div>
+        {% include "site_web/espaces/partials/entreprise/_services_grid.html" %}
+    </div>
+
+    {# 4. STEPS RECRUTEUR : La méthodologie Antarès #}
+    <section class="py-20">
+
+        <div class="max-w-7xl mx-auto px-6 text-center mb-12">
+
+            <span class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
+                {% trans "Processus de recrutement" %}
+            </span>
+
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-4 mb-4">
+                {% trans "Une approche structurée pour sécuriser vos recrutements" %}
+            </h2>
+
+            <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                {% trans "De l’analyse du besoin à l’intégration du collaborateur, Antarès applique un processus rigoureux pour identifier les profils les plus adaptés à votre environnement." %}
+            </p>
+
+        </div>
+
+        {% include "site_web/espaces/partials/entreprise/_steps_recruteur.html" %}
+
+    </section>
+
+    {# 5. CONTACT FORM & AVANTAGES  #}
+    {% include "site_web/espaces/partials/entreprise/_enroulement_form.html" %}
+
+    {# 5. CLIENTS : client partenaire #}
+    {% include "site_web/espaces/partials/entreprise/_clients.html" %}
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Petit script pour l'animation au scroll si nécessaire
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("Espace Entreprise Antarès chargé.");
+    });
+</script>
+{% endblock %}

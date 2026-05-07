@@ -1,7 +1,10 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request, 'site_web/home/home.html')
+    context = {
+        'clients': range(1, 16)
+    }
+    return render(request, 'site_web/home/home.html', context)
 
 def about(request):
     return render(request, 'site_web/about/about.html')
@@ -240,3 +243,99 @@ def savoir_plus(request):
 def espace_candidat(request):
     return render(request, 'site_web/espaces/espace_candidat.html')
 
+def espace_consultant(request):
+    return render(request, 'site_web/espaces/espace_consultant.html')
+
+
+def espace_entreprise(request):
+
+    clients = range(1, 16)
+
+    secteurs = sorted([
+        "Banque & Assurance",
+        "BTP & Infrastructures",
+        "Distribution & FMCG",
+        "Grande Distribution",
+        "Industrie Agroalimentaire",
+        "Mines & Énergie",
+        "Nettoyage & Facility Management",
+        "ONG & Projets Internationaux",
+        "Production Industrielle",
+        "Services Externalisés",
+        "Technologie & IT",
+        "Télécommunications",
+        "Transport & Logistique",
+    ])
+
+    services = [
+        {
+            "title": "Recrutement Stratégique",
+            "description": (
+                "Identification et sélection de profils qualifiés "
+                "pour vos besoins en CDD, CDI et postes stratégiques."
+            ),
+            "highlight": "5 à 45 jours",
+            "icon": "users",
+        },
+    
+        {
+            "title": "Intérim & Mise à disposition",
+            "description": (
+                "Personnel immédiatement opérationnel avec gestion "
+                "complète de la paie, INPS, AMO et obligations sociales."
+            ),
+            "highlight": "Gestion RH complète",
+            "icon": "briefcase",
+        },
+    
+        {
+            "title": "Externalisation RH",
+            "description": (
+                "Antarès agit comme votre DRH externe : contrats, "
+                "administration du personnel et suivi social."
+            ),
+            "highlight": "DRH externalisée",
+            "icon": "building",
+        },
+    
+        {
+            "title": "Formation et Conseil",
+            "description": (
+                "Audit RH, ingénierie de formation et accompagnement "
+                "stratégique pour développer votre capital humain."
+            ),
+            "highlight": "Conseil stratégique",
+            "icon": "graduation",
+        },
+    
+        {
+            "title": "Sous-traitance Opérationnelle",
+            "description": (
+                "Gestion et mise à disposition d'équipes adaptées "
+                "à vos activités terrain et opérations critiques."
+            ),
+            "highlight": "Flexibilité opérationnelle",
+            "icon": "layers",
+        },
+    
+        {
+            "title": "Audit Social & Fiscal",
+            "description": (
+                "Conformité réglementaire, audit RH et optimisation "
+                "des charges sociales et administratives."
+            ),
+            "highlight": "Conformité & optimisation",
+            "icon": "shield",
+        },
+    ]
+    context = {
+        "clients": clients,
+        "secteurs": secteurs,
+        "services": services,
+    }
+
+    return render(
+        request,
+        "site_web/espaces/espace_entreprise.html",
+        context
+    )

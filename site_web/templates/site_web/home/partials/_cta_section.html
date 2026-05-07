@@ -9,7 +9,8 @@
 .marquee-container {
   display: flex;
   width: max-content;
-  animation: infiniteScroll 30s linear infinite;
+  animation: infiniteScroll 80s linear infinite;
+  will-change: transform;
 }
 
 /* On force une taille de boîte fixe pour TOUS les logos */
@@ -71,25 +72,32 @@
         </p>
     </div>
 
-    <div class="relative overflow-hidden">
-        <div class="marquee-container">
-            
-            <div class="flex">
-                {% for i in "123456" %}
-                <div class="partner-logo-box">
-                    <img src="{% static 'images/partenaires/partenaire' %}{{ i }}.webp" alt="Partner {{ i }}">
-                </div>
-                {% endfor %}
-            </div>
+<div class="relative overflow-hidden">
+    <div class="marquee-container">
 
-            <div class="flex">
-                {% for i in "123456" %}
-                <div class="partner-logo-box">
-                    <img src="{% static 'images/partenaires/partenaire' %}{{ i }}.webp" alt="Partner {{ i }}">
-                </div>
-                {% endfor %}
+        <div class="flex">
+            {% for i in clients %}
+            <div class="partner-logo-box">
+                <img 
+                    src="{% static 'images/clients/client' %}{{ i }}.webp"
+                    alt="Client {{ i }}"
+                >
             </div>
-
+            {% endfor %}
         </div>
+
+        <div class="flex">
+            {% for i in clients %}
+            <div class="partner-logo-box">
+                <img 
+                    src="{% static 'images/clients/client' %}{{ i }}.webp"
+                    alt="Client {{ i }}"
+                >
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
     </div>
 </section>

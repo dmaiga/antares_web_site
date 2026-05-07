@@ -4,6 +4,7 @@
 @theme {
   --color-antares-blue: #0080FF;
   --color-antares-orange: #FA8105;
+  --color-antares-vert: #50C878;
 }
 @layer components {
   .nav-link-ltr {
