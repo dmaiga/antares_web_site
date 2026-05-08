@@ -62,7 +62,7 @@
     </div>
 
     <!-- LOGIN BUTTON (hidden mobile) -->
-    <a class="hidden sm:inline-flex btn bg-antares-blue hover:bg-blue-700 border-none text-white rounded-md px-4 sm:px-6 btn-sm sm:btn-md">
+    <a href="{% url 'login' %}" class="hidden sm:inline-flex btn bg-antares-blue hover:bg-blue-700 border-none text-white rounded-md px-4 sm:px-6 btn-sm sm:btn-md">
       {% trans "Se connecter" %}
     </a>
 
@@ -110,7 +110,7 @@
           {% include 'site_web/partials/_language_switcher.html' %}
         </li>
         <li class="sm:hidden">
-          <a class="text-white bg-antares-blue rounded-md text-center">
+          <a href="{% url 'login' %}" class="text-white bg-antares-blue rounded-md text-center">
             {% trans "Se connecter" %}
           </a>
         </li>

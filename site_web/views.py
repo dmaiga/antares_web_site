@@ -339,3 +339,16 @@ def espace_entreprise(request):
         "site_web/espaces/espace_entreprise.html",
         context
     )
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.utils.translation import gettext as _
+
+def login_view(request):
+   
+    return render(request, 'site_web/auth/login.html')
+
+def register_view(request):
+    # Logique pour la redirection vers le formulaire d'enrôlement expert
+    return render(request, 'site_web/auth/register.html')
