@@ -18,15 +18,15 @@
 
         <div class="flex flex-col md:flex-row justify-center items-center gap-4">
           
-          <a href="#"  class="btn btn-lg bg-white border-white text-[#002147] hover:bg-slate-100 font-bold px-8 rounded-xl w-full md:w-auto transition-all shadow-lg">
+          <a href="{% url 'jobs' %}"  class="btn btn-lg bg-white border-white text-[#002147] hover:bg-slate-100 font-bold px-8 rounded-xl w-full md:w-auto transition-all shadow-lg">
             {% trans "Voir nos Offres" %}
           </a>
 
-          <a href="#"  class="btn btn-lg bg-antares-orange border-antares-orange text-slate-900 hover:bg-[#E59622] font-bold px-10 rounded-xl w-full md:w-auto transition-all shadow-lg scale-105">
+          <a href="{% url 'espace_entreprise' %}"  class="btn btn-lg bg-antares-orange border-antares-orange text-slate-900 hover:bg-[#E59622] font-bold px-10 rounded-xl w-full md:w-auto transition-all shadow-lg scale-105">
             {% trans "Devenir Client" %}
           </a>
 
-          <a href="#"  class="btn btn-lg bg-white/10 border-white/20 text-white hover:bg-white/20 font-bold px-8 rounded-xl w-full md:w-auto transition-all">
+          <a href="{% url 'services' %}"  class="btn btn-lg bg-white/10 border-white/20 text-white hover:bg-white/20 font-bold px-8 rounded-xl w-full md:w-auto transition-all">
             {% trans "Nos services" %}
           </a>
 

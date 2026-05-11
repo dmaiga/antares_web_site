@@ -1,0 +1,117 @@
+<!-- ========================= -->
+<!-- HERO - ESPACE ENTREPRISE -->
+<!-- ========================= -->
+
+{% load i18n static %}
+
+<section class="relative bg-[#f5f5f5] py-10 md:py-14 overflow-hidden border-b border-slate-200">
+
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 right-0 w-[420px] h-[420px] bg-antares-orange/10 rounded-full blur-[120px] -translate-y-1/2"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- CONTENT -->
+            <div>
+
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antares-orange/10 border border-antares-orange/20 mb-6">
+
+                    <span class="flex h-2 w-2 rounded-full bg-antares-orange"></span>
+
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-700">
+                        {% trans "Espace Entreprise" %}
+                    </span>
+
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter leading-[0.95] text-slate-900 mb-5">
+
+                    {% trans "Recrutez l’excellence pour votre" %}
+
+                    <span class="text-antares-orange">
+                        {% trans "croissance" %}
+                    </span>
+
+                </h1>
+
+                <p class="text-slate-600 text-lg leading-relaxed max-w-2xl mb-8">
+
+                    {% trans "Optimisez votre capital humain grâce à une équipe de consultants expérimentés et des solutions RH adaptées à vos enjeux." %}
+
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-10">
+
+                    <a href="#enroulement-form"
+                       class="px-8 py-4 rounded-xl bg-antares-orange text-white text-sm font-semibold hover:opacity-90 transition-all duration-300 text-center">
+
+                        {% trans "Démarrer une collaboration" %}
+
+                    </a>
+
+                    <a href="#services"
+                       class="px-8 py-4 rounded-xl bg-white border border-slate-300 text-slate-700 text-sm font-semibold hover:border-antares-orange hover:text-antares-orange transition-all duration-300 text-center">
+
+                        {% trans "Découvrir nos solutions" %}
+
+                    </a>
+
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-slate-200 pt-8">
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">20</p>
+                        <p class=" text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Ans d’expertise" %}
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">+85</p>
+                        <p class="text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Consultants" %}
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">+50</p>
+                        <p class=" text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Entreprises" %}
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">5k+</p>
+                        <p class=" text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Talents" %}
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- IMAGE -->
+            <div class="relative hidden lg:block">
+
+                <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/20">
+
+                    <img src="{% static 'images/espaces/entreprise_hero.webp' %}"
+                         alt="{% trans 'Espace Entreprise Antarès RH' %}"
+                         class="w-full h-[520px] object-cover">
+
+                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

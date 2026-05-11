@@ -12,44 +12,48 @@
   </div>
 
   <!-- CENTER: MENU DESKTOP -->
-<!-- CENTER: MENU DESKTOP -->
+
 <div class="navbar-center hidden lg:flex">
-  <ul class="menu menu-horizontal px-1 gap-6 font-bold text-gray-700">
+  <ul class="menu menu-horizontal px-1 gap-6 font-bold text-gray-900">
     <li><a href="{% url 'home' %}" class="nav-link-ltr hover:bg-transparent">{% trans "Accueil" %}</a></li>
     <li><a href="{% url 'about' %}" class="nav-link-ltr hover:bg-transparent">{% trans "À propos" %}</a></li>
     <li><a href="{% url 'services' %}" class="nav-link-ltr hover:bg-transparent">{% trans "Services" %}</a></li>
     <li><a href="{% url 'jobs' %}" class="nav-link-ltr hover:bg-transparent">{% trans "Offres" %}</a></li>
-    
-    <!-- DROP DOWN ESPACES -->
+
     <li class="dropdown dropdown-hover">
-      <div tabindex="0" role="button" class="nav-link-ltr hover:bg-transparent flex items-center gap-1">
-        {% trans "Espaces" %}
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div tabindex="0" role="button" class="nav-link-ltr hover:bg-transparent flex items-center gap-1 py-2">
+        <span>{% trans "Espaces" %}</span>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-70 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-xl bg-white border border-gray-100 rounded-2xl w-52 mt-0">
-        <li>
-          <a href="{% url 'espace_candidat' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0">
-            <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Candidat" %}</span>
+        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-xl bg-white border border-gray-100 rounded-xl w-52 mt-0">
+          <li>
+            <a href="{% url 'espace_candidat' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0">
+              <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Candidat" %}</span>
+            
+            </a>
+          </li>
 
-          </a>
-        </li>
-        <li>
-          <a href="{% url 'espace_entreprise' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
-            <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Entreprise" %}</span>
+          <li>
+            <a href="{% url 'espace_entreprise' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
+              <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Entreprise" %}</span>
+            
+            </a>
+          </li>
 
-          </a>
-        </li>
-        <li>
-          <a href="{% url 'espace_consultant' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
-            <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Consultant" %}</span>
-          </a>
-        </li>
-      </ul>
-    </li>
+          <li>
+            <a href="{% url 'espace_consultant' %}" class="hover:text-antares-blue py-3 flex flex-col items-start gap-0 border-t border-gray-50">
+              <span class="font-black italic uppercase text-[10px] tracking-widest ">{% trans "Consultant" %}</span>
+            </a>
+          </li>
 
+        </ul>
+          
+    </li>  
     <li><a href="{% url 'contact' %}" class="nav-link-ltr hover:bg-transparent">{% trans "Contact" %}</a></li>
+  
   </ul>
 </div>
 

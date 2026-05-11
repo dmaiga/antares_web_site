@@ -1,111 +1,492 @@
-{% extends 'base.html' %}[
-{% load i18n static %}]
+{% extends 'base.html' %}
+{% load i18n static %}
 
 {% block content %}
-<main class="max-w-7xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        <!-- COLONNE GAUCHE : DÉTAIL DE L'OFFRE (8/12) -->
-        <article class="lg:col-span-8 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100">
-            
-            <!-- Badge & Référence -->
-            <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-                <span class="px-4 py-1.5 bg-antares-blue/10 text-antares-blue rounded-full text-xs font-black uppercase tracking-widest">
-                    {% trans "Offre d'emploi" %}
-                </span>
-                <span class="text-xs font-bold text-slate-400 italic">
-                    Réf: {{ job.reference }} <!-- ex: ANT/ARHP/00270125AF-->
-                </span>
-            </div>
 
-            <!-- Titre du Poste -->
-            <h1 class="text-3xl md:text-5xl font-black text-slate-900 italic mb-6 leading-tight">
-                {{ job.title }} <!-- ex: Assistant(e) RH Polyvalent(e) -->
-            </h1>
+<main class="bg-slate-50 min-h-screen">
 
-            <!-- Mission Principale -->
-            <section class="mb-10">
-                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-4 italic">
-                    {% trans "Mission principale" %}
-                </h3>
-                <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                    {{ job.main_mission }} <!-- -->
-                </p>
-            </section>
+    <div class="max-w-6xl mx-auto px-4 py-8 md:py-12">
 
-            <!-- Tâches Spécifiques (Content dynamique) -->
-            <section class="prose prose-slate max-w-none mb-10 
-                            prose-h4:text-[11px] prose-h4:font-black prose-h4:uppercase prose-h4:tracking-widest prose-h4:text-slate-900 
-                            prose-ul:list-disc prose-li:font-medium prose-li:text-slate-600">
-                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-6 italic">
-                    {% trans "Tâches spécifiques" %}
-                </h3>
-                {{ job.description_html|safe }} 
-            </section>
+        <div class="grid lg:grid-cols-12 gap-10">
 
-            <!-- Profil du poste -->
-            <section class="bounded-[2rem] p-8 mb-10">
-                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-6 italic">
-                    {% trans "Profil du poste" %}
-                </h3>
-                <div class="grid grid-cols-1 md:gap-x-8 gap-y-4">
-                    {{ job.profile_html|safe }} 
-                </div>
-            </section>
+            <!-- MAIN CONTENT -->
+            <article class="lg:col-span-8">
 
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-sm text-slate-400 mb-8 overflow-x-auto whitespace-nowrap">
 
-            <!-- Candidature -->
-             <section class="border-t border-slate-100 pt-10 mt-12">
-            
-                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-antares-orange mb-6 italic">
-                    {% trans "Comment postuler" %}
-                </h3>
-            
-                <div class="prose prose-slate max-w-none text-sm">
-                    {{ job.application_html|safe }}
-                </div>
+    <a href="{% url 'home' %}" class="transition-colors hover:text-antares-blue">
+        {% trans "Accueil" %}
+    </a>
 
-            </section>
-        </article>
+    <i class="bi bi-chevron-right text-[10px]"></i>
 
-        <!-- COLONNE DROITE : SIDEBAR (4/12) -->
-        <aside class="lg:col-span-4 flex flex-col gap-10">
-            
-            <!-- SECTION : CONSEILS / PRÉCAUTIONS -->
-            <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
-                <div class="relative z-10">
-                    <h3 class="text-xs font-black uppercase tracking-widest text-antares-orange mb-6 italic">
-                        {% trans "Précautions à prendre" %}
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex gap-3 items-start">
-                            <i class="bi bi-check2-circle text-antares-orange"></i>
-                            <span class="text-xs font-bold opacity-80 italic">{% trans "Vérifiez les références de l'annonce en objet d'envoi." %}</span>
-                        </li>
-                        <li class="flex gap-3 items-start">
-                            <i class="bi bi-check2-circle text-antares-orange"></i>
-                            <span class="text-xs font-bold opacity-80 italic">{% trans "Seuls les candidats présélectionnés seront contactés." %}</span>
-                        </li>
-                        <li class="flex gap-3 items-start text-red-400">
-                            <i class="bi bi-exclamation-triangle"></i>
-                            <span class="text-xs font-bold italic">{% trans "Antarès ne demande jamais de frais durant le recrutement." %}</span>
-                        </li>
-                    </ul>
-                </div>
-                <i class="bi bi-shield-lock absolute -bottom-6 -right-6 text-8xl text-white/5"></i>
-            </div>
+    <a href="{% url 'jobs' %}" class="transition-colors hover:text-antares-blue">
+        {% trans "Offres" %}
+    </a>
 
-            <!-- SECTION : ANNONCES / FORMATIONS / COLLOQUES -->
-            <div class="flex flex-col gap-6">
-                <h3 class="text-[11px] font-black uppercase tracking-widest text-slate-900 px-4">
-                    {% trans "Événements & Formations" %}
-                </h3>
+    <i class="bi bi-chevron-right text-[10px]"></i>
 
-                <!-- Carte Ad / Event -->
-                {% include 'site_web/jobs/partials/_sidebar_ad.html' %}
-            </div>
+    <span class="text-slate-500 truncate">
+        {{ job.title|default:"Responsable Ressources Humaines Senior" }}
+    </span>
 
-        </aside>
+</nav>
+
+<!-- HERO -->
+<header class="bg-white border border-slate-200 rounded-[2rem] p-8 md:p-10 mb-8">
+
+    <!-- Badge -->
+    <div class="flex flex-wrap items-center gap-3 mb-6">
+
+        <span class="
+            px-4 py-1.5
+            rounded-full
+
+            bg-antares-blue/10
+            text-antares-blue
+
+            text-[11px]
+            font-black
+            uppercase
+            tracking-[0.2em]
+        ">
+            {% trans "Offre d'emploi" %}
+        </span>
+
+        <!-- Contrat -->
+        <span class="
+            px-4 py-1.5
+            rounded-full
+
+            bg-slate-100
+            text-slate-600
+
+            text-[11px]
+            font-bold
+            uppercase
+            tracking-[0.15em]
+        ">
+            {{ job.contract_type|default:"CDI" }}
+        </span>
+
     </div>
+
+    <!-- Title -->
+    <h1 class="
+        text-3xl md:text-5xl
+        font-black
+        tracking-tight
+        leading-tight
+
+        text-slate-900
+
+        mb-8
+    ">
+
+        {{ job.title|default:"Responsable Ressources Humaines Senior" }}
+
+    </h1>
+
+    <!-- Infos -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <!-- REF -->
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+
+            <span class="
+                block
+                text-[10px]
+                uppercase
+                tracking-[0.2em]
+                font-black
+                text-slate-400
+                mb-2
+            ">
+                {% trans "Référence" %}
+            </span>
+
+            <p class="text-sm font-semibold text-slate-800">
+                {{ job.reference|default:"ANT-RH-2026-014" }}
+            </p>
+
+        </div>
+
+        <!-- LOCATION -->
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+
+            <span class="
+                block
+                text-[10px]
+                uppercase
+                tracking-[0.2em]
+                font-black
+                text-slate-400
+                mb-2
+            ">
+                {% trans "Localisation" %}
+            </span>
+
+            <p class="text-sm font-semibold text-slate-800">
+                {{ job.location|default:"Bamako, Mali" }}
+            </p>
+
+        </div>
+
+        <!-- SECTOR -->
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+
+            <span class="
+                block
+                text-[10px]
+                uppercase
+                tracking-[0.2em]
+                font-black
+                text-slate-400
+                mb-2
+            ">
+                {% trans "Secteur" %}
+            </span>
+
+            <p class="text-sm font-semibold text-slate-800">
+                {{ job.sector|default:"Ressources Humaines" }}
+            </p>
+
+        </div>
+
+        <!-- DATE -->
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+
+            <span class="
+                block
+                text-[10px]
+                uppercase
+                tracking-[0.2em]
+                font-black
+                text-slate-400
+                mb-2
+            ">
+                {% trans "Publication" %}
+            </span>
+
+            <p class="text-sm font-semibold text-slate-800">
+                {{ job.created_at|date:"d M Y"|default:"11 Jan 2026" }}
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+                <!-- MISSION -->
+                <section class="bg-white border border-slate-200 rounded-[2rem] p-8 md:p-10 mb-6">
+
+                    <h2 class="text-lg font-black text-slate-900 mb-6">
+                        {% trans "Mission principale" %}
+                    </h2>
+
+                    <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+                        {{ job.main_mission }}
+                    </p>
+
+                </section>
+
+                <!-- RESPONSABILITES -->
+                <section class="bg-white border border-slate-200 rounded-[2rem] p-8 md:p-10 mb-6">
+
+                    <h2 class="text-lg font-black text-slate-900 mb-6">
+                        {% trans "Responsabilités" %}
+                    </h2>
+
+                    <div class="
+                        prose prose-slate max-w-none
+
+                        prose-p:text-slate-600
+                        prose-p:leading-relaxed
+
+                        prose-li:text-slate-600
+                        prose-li:leading-relaxed
+
+                        prose-strong:text-slate-900
+                    ">
+
+                        {{ job.description_html|safe }}
+
+                    </div>
+
+                </section>
+
+                <!-- PROFILE -->
+                <section class="bg-white border border-slate-200 rounded-[2rem] p-8 md:p-10 mb-6">
+
+                    <h2 class="text-lg font-black text-slate-900 mb-6">
+                        {% trans "Profil recherché" %}
+                    </h2>
+
+                    <div class="
+                        prose prose-slate max-w-none
+
+                        prose-p:text-slate-600
+                        prose-li:text-slate-600
+                        prose-li:leading-relaxed
+                    ">
+
+                        {{ job.profile_html|safe }}
+
+                    </div>
+
+                </section>
+
+                <!-- APPLY -->
+                <section class="bg-white border border-slate-200 rounded-[2rem] p-8 md:p-10">
+
+                    <h2 class="text-lg font-black text-slate-900 mb-6">
+                        {% trans "Comment postuler" %}
+                    </h2>
+
+                    <div class="
+                        prose prose-slate max-w-none
+
+                        prose-p:text-slate-600
+                        prose-li:text-slate-600
+
+                        prose-a:text-antares-blue
+                        prose-a:no-underline
+                    ">
+
+                        {{ job.application_html|safe }}
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="lg:col-span-4">
+
+                <div class="lg:sticky lg:top-24 flex flex-col gap-6">
+
+                    <!-- APPLY CARD -->
+                  <div class="bg-white border border-slate-200 rounded-[2rem] p-8">
+                                
+                    <!-- TITLE -->
+                    <h3 class="text-xl font-black text-slate-900 mb-3">
+                        {% trans "Postuler à cette offre" %}
+                    </h3>
+                
+                    <!-- DESCRIPTION -->
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        {% trans "Envoyez votre candidature et rejoignez une opportunité professionnelle adaptée à votre profil." %}
+                    </p>
+                
+                    <!-- APPLY BUTTON -->
+                    <a href="#"
+                       class="
+                            flex items-center justify-center
+                            w-full
+                
+                            rounded-2xl
+                            bg-antares-blue
+                
+                            px-6 py-4
+                            mb-5
+                
+                            text-sm
+                            font-black
+                            uppercase
+                            tracking-[0.15em]
+                
+                            text-white
+                       "
+                    >
+                        {% trans "Postuler maintenant" %}
+                    </a>
+                
+                    <!-- DIVIDER -->
+                    <div class="flex items-center gap-3 mb-5">
+                    
+                        <div class="flex-1 h-px bg-slate-200"></div>
+                    
+                        <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                            {% trans "Partager" %}
+                        </span>
+                    
+                        <div class="flex-1 h-px bg-slate-200"></div>
+                    
+                    </div>
+                
+                    <!-- SHARE -->
+                    <div class="flex items-center justify-center gap-3">
+                    
+                        <!-- WhatsApp -->
+                        <a 
+                            href="https://wa.me/?text=Offre d'emploi : {{ job.title|default:'Responsable Ressources Humaines Senior' }} - Antares RH"
+                            target="_blank"
+                    
+                            class="
+                                w-11 h-11
+                                rounded-xl
+                    
+                                flex items-center justify-center
+                    
+                                bg-[#25D366]/10
+                                text-[#25D366]
+                    
+                                border border-[#25D366]/20
+                    
+                                transition-colors duration-300
+                    
+                                hover:bg-[#25D366]
+                                hover:text-white
+                            "
+                        >
+                            <i class="bi bi-whatsapp text-lg"></i>
+                        </a>
+                    
+                        <!-- Facebook -->
+                        <a 
+                            href="https://www.facebook.com/sharer/sharer.php?u=https://antaresrh.com/jobs/{{ job.slug|default:'responsable-rh-senior' }}"
+                            target="_blank"
+                    
+                            class="
+                                w-11 h-11
+                                rounded-xl
+                    
+                                flex items-center justify-center
+                    
+                                bg-[#1877F2]/10
+                                text-[#1877F2]
+                    
+                                border border-[#1877F2]/20
+                    
+                                transition-colors duration-300
+                    
+                                hover:bg-[#1877F2]
+                                hover:text-white
+                            "
+                        >
+                            <i class="bi bi-facebook text-lg"></i>
+                        </a>
+                    
+                        <!-- Copy Link -->
+                        <button
+                            type="button"
+                    
+                            class="
+                                w-11 h-11
+                                rounded-xl
+                    
+                                flex items-center justify-center
+                    
+                                bg-slate-100
+                                text-slate-600
+                    
+                                border border-slate-200
+                    
+                                transition-colors duration-300
+                    
+                                hover:bg-slate-900
+                                hover:text-white
+                            "
+                        >
+                            <i class="bi bi-link-45deg text-lg"></i>
+                        </button>
+                    
+                    </div>
+                
+                </div>
+
+                    <!-- SAFETY -->
+                    <div class="bg-white border border-slate-200 rounded-[2rem] p-8">
+
+                        <h3 class="text-sm font-black uppercase tracking-[0.2em] text-slate-900 mb-6">
+                            {% trans "Informations importantes" %}
+                        </h3>
+
+                        <ul class="space-y-5">
+
+                            <li class="flex items-start gap-3">
+
+                                <i class="bi bi-check-circle text-antares-blue"></i>
+
+                                <span class="text-sm text-slate-600 leading-relaxed">
+                                    {% trans "Vérifiez toujours les références de l’offre avant envoi." %}
+                                </span>
+
+                            </li>
+
+                            <li class="flex items-start gap-3">
+
+                                <i class="bi bi-check-circle text-antares-blue"></i>
+
+                                <span class="text-sm text-slate-600 leading-relaxed">
+                                    {% trans "Seuls les profils présélectionnés seront contactés." %}
+                                </span>
+
+                            </li>
+
+                            <li class="flex items-start gap-3">
+
+                                <i class="bi bi-shield-exclamation text-antares-orange"></i>
+
+                                <span class="text-sm font-semibold text-slate-700 leading-relaxed">
+                                    {% trans "Antarès RH ne demande jamais de frais pendant un recrutement." %}
+                                </span>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    
+
+                    <!-- EVENTS -->
+                    <div>
+
+                        <h3 class="text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 mb-4 px-1">
+                            {% trans "Événements & Formations" %}
+                        </h3>
+
+                        {% include 'site_web/jobs/partials/_sidebar_ad.html' %}
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
 </main>
+
+<!-- MOBILE APPLY -->
+<div class="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 p-4 lg:hidden z-50">
+
+    <a href="#"
+       class="
+            flex items-center justify-center
+            w-full
+
+            rounded-2xl
+            bg-antares-blue
+
+            px-6 py-4
+
+            text-sm
+            font-black
+            uppercase
+            tracking-[0.15em]
+
+            text-white
+       "
+    >
+        {% trans "Postuler maintenant" %}
+    </a>
+
+</div>
+
 {% endblock %}

@@ -1,42 +1,110 @@
 <!-- site_web/jobs/partials/_sidebar_ad.html -->
 {% load i18n static %}
 
-<!-- Annonce 1 : Formation -->
-<a href="#" class="group block bg-white rounded-[2rem] border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-500 mb-6">
-    <div class="relative h-44 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Formation GRH" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-        <span class="absolute top-4 left-4 px-3 py-1 bg-white text-slate-900 text-[9px] font-black uppercase tracking-widest rounded-full shadow-sm">
-            {% trans "Formation" %}
-        </span>
-    </div>
-    <div class="p-5">
-        <h4 class="text-sm font-black italic text-slate-800 leading-snug group-hover:text-antares-blue transition-colors">
-            {% trans "Formation GRH Certifiante : Devenir Expert en Recrutement" %}
-        </h4>
-        <div class="mt-4 flex items-center justify-between text-antares-orange font-bold text-[10px] uppercase tracking-tighter">
-            <span>{% trans "Voir les détails" %}</span>
-            <i class="bi bi-arrow-right"></i>
-        </div>
-    </div>
-</a>
+<div class="space-y-4">
 
-<!-- Annonce 2 : Colloque -->
-<a href="#" class="group block bg-white rounded-[2rem] border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-500">
-    <div class="relative h-44 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Colloque Mines" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-        <span class="absolute top-4 left-4 px-3 py-1 bg-white text-slate-900 text-[9px] font-black uppercase tracking-widest rounded-full shadow-sm">
-            {% trans "Événement" %}
-        </span>
-    </div>
-    <div class="p-5">
-        <h4 class="text-sm font-black italic text-slate-800 leading-snug group-hover:text-antares-blue transition-colors">
-            {% trans "Colloque International : L'avenir du Secteur Minier au Mali" %}
-        </h4>
-        <div class="mt-4 flex items-center justify-between text-antares-orange font-bold text-[10px] uppercase tracking-tighter">
-            <span>{% trans "Voir les détails" %}</span>
-            <i class="bi bi-arrow-right"></i>
+    <!-- CARD -->
+    <a href="#"
+       class="
+            block
+            bg-white
+            border border-slate-200
+            rounded-[2rem]
+            overflow-hidden
+       "
+    >
+
+        <!-- IMAGE -->
+        <div class="h-40 overflow-hidden">
+
+            <img
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655"
+                alt="Formation"
+                class="w-full h-full object-cover"
+            >
+
         </div>
-    </div>
-</a>
+
+        <!-- CONTENT -->
+        <div class="p-6">
+
+            <span class="
+                inline-flex items-center
+                rounded-full
+                bg-slate-100
+
+                px-3 py-1
+
+                text-[10px]
+                font-black
+                uppercase
+                tracking-[0.2em]
+
+                text-slate-600
+
+                mb-4
+            ">
+                {% trans "Formation" %}
+            </span>
+
+            <h4 class="text-sm font-black text-slate-900 leading-relaxed">
+                {% trans "Formation GRH Certifiante : Devenir Expert en Recrutement" %}
+            </h4>
+
+        </div>
+
+    </a>
+
+    <!-- CARD -->
+    <a href="#"
+       class="
+            block
+            bg-white
+            border border-slate-200
+            rounded-[2rem]
+            overflow-hidden
+       "
+    >
+
+        <!-- IMAGE -->
+        <div class="h-40 overflow-hidden">
+
+            <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Event"
+                class="w-full h-full object-cover"
+            >
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="p-6">
+
+            <span class="
+                inline-flex items-center
+                rounded-full
+                bg-slate-100
+
+                px-3 py-1
+
+                text-[10px]
+                font-black
+                uppercase
+                tracking-[0.2em]
+
+                text-slate-600
+
+                mb-4
+            ">
+                {% trans "Événement" %}
+            </span>
+
+            <h4 class="text-sm font-black text-slate-900 leading-relaxed">
+                {% trans "Colloque International : L'avenir du Secteur Minier au Mali" %}
+            </h4>
+
+        </div>
+
+    </a>
+
+</div>

@@ -1,54 +1,111 @@
 {% load i18n %}
 
 <div class="max-w-7xl mx-auto px-6">
+
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
         {% for service in services %}
-        <div class="group bg-white rounded-3xl border border-slate-200 p-8 hover:border-slate-300 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500">
-            
-            <div class="flex items-center justify-between mb-8">
-                <div class="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center transition-all duration-500 group-hover:bg-antares-orange/5">
-                    <div class="text-slate-400 group-hover:text-antares-orange transition-colors duration-500">
+        <div class="
+            bg-white
+            rounded-[2rem]
+
+            border border-slate-200
+
+            p-8
+        ">
+
+            <!-- TOP -->
+            <div class="flex items-start justify-between mb-8">
+
+                <!-- ICON -->
+                <div class="
+                    w-14 h-14
+                    rounded-2xl
+
+                    bg-slate-100
+
+                    flex items-center justify-center
+                ">
+
+                    <div class="text-antares-orange">
+
                         {% if service.icon == "users" %}
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5V18a4 4 0 00-5-3.87M9 20H4V18a4 4 0 015-3.87m8-6a4 4 0 11-8 0 4 4 0 018 0zm6 4a4 4 0 00-3-3.87m-10 0A4 4 0 003 12"></path>
                         </svg>
+
                         {% elif service.icon == "briefcase" %}
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m6 2v-2M3 7h18M5 7V5a2 2 0 012-2h10a2 2 0 012 2v2m-16 0v10a2 2 0 002 2h14a2 2 0 002-2V7"></path>
                         </svg>
+
                         {% elif service.icon == "building" %}
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21h18M9 8h1m-1 4h1m4-4h1m-1 4h1M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"></path>
                         </svg>
+
                         {% elif service.icon == "graduation" %}
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422A12.083 12.083 0 0112 20.055a12.083 12.083 0 01-6.16-9.477L12 14z"></path>
                         </svg>
+
                         {% elif service.icon == "layers" %}
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2L2 7l10 5 10-5-10-5zm0 9L2 16l10 5 10-5-10-5z"></path>
                         </svg>
+
                         {% elif service.icon == "shield" %}
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3l8 4v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7l8-4z"></path>
                         </svg>
                         {% endif %}
+
                     </div>
+
                 </div>
 
-                <span class="text-[10px] uppercase font-black tracking-[0.2em] text-slate-400 group-hover:text-antares-orange transition-colors">
+                <!-- HIGHLIGHT -->
+                <span class="
+                    text-[10px]
+                    uppercase
+                    tracking-[0.2em]
+                    font-black
+
+                    text-slate-400
+                ">
                     {{ service.highlight }}
                 </span>
+
             </div>
 
-            <h3 class="text-xl font-black text-slate-900 mb-4 leading-tight">
+            <!-- TITLE -->
+            <h3 class="
+                text-xl
+                font-black
+                leading-tight
+                
+
+                text-slate-900
+
+                mb-4
+            ">
                 {{ service.title }}
             </h3>
 
-            <p class="text-slate-500 text-sm leading-relaxed mb-8">
+            <!-- DESCRIPTION -->
+            <p class="
+                text-sm
+                leading-relaxed
+
+                text-slate-500
+
+                mb-8
+            ">
                 {{ service.description }}
             </p>
 
+            <!-- LINK -->
+            
             <a href="{% url 'contact' %}" class="relative inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-900 group/link">
                 {% trans "En savoir plus" %}
                 <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,5 +116,7 @@
 
         </div>
         {% endfor %}
+
     </div>
+
 </div>

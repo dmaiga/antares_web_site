@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'site_web',
     'rosetta',
 ]
+
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 TAILWIND_APP_NAME = 'theme'
 

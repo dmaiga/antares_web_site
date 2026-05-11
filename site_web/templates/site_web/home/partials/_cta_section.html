@@ -51,11 +51,11 @@
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-8">
-            <a href="#" class="w-full sm:w-auto px-8 py-3.5 bg-antares-orange text-white text-sm font-black rounded transition-all active:scale-95 shadow-lg shadow-orange-900/20 uppercase tracking-widest">
+            <a href="{% url 'espace_entreprise' %}" class="w-full sm:w-auto px-8 py-3.5 bg-antares-orange text-white text-sm font-black rounded transition-all active:scale-95 shadow-lg shadow-orange-900/20 uppercase tracking-widest">
                 {% trans "DÉPOSER UNE MISSION" %}
             </a>
             
-            <a href="#" class="group flex items-center justify-center gap-2 text-white text-sm font-bold hover:text-antares-orange transition-colors py-2">
+            <a href="{% url 'espace_consultant' %}" class="group flex items-center justify-center gap-2 text-white text-sm font-bold hover:text-antares-orange transition-colors py-2">
                 <span>{% trans "REJOINDRE LE ROSTER" %}</span>
                 <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

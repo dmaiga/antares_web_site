@@ -1,0 +1,136 @@
+<!-- ========================= -->
+<!-- HERO - ESPACE CANDIDAT -->
+<!-- ========================= -->
+
+{% load i18n static %}
+
+<section class="relative bg-[#f5f5f5] py-10 md:py-14 overflow-hidden border-b border-slate-200">
+
+    <!-- BACKGROUND GLOW -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 right-0 w-[420px] h-[420px] bg-antares-blue/10 rounded-full blur-[120px] -translate-y-1/2"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- CONTENT -->
+            <div class="text-center lg:text-left">
+
+                <!-- BADGE -->
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antares-blue/10 border border-antares-blue/20 mb-6">
+
+                    <span class="flex h-2 w-2 rounded-full bg-antares-blue"></span>
+
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-700">
+                        {% trans "Espace Candidat" %}
+                    </span>
+
+                </div>
+
+                <!-- TITLE -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter leading-[0.95] text-slate-900 mb-5">
+
+                    {% trans "Propulsez votre" %}
+
+                    <span class="text-antares-blue">
+                        {% trans "potentiel" %}
+                    </span>
+
+                </h1>
+
+                <!-- TEXT -->
+                <p class="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+
+                    {% trans "Rejoignez notre réseau de talents et accédez à des opportunités professionnelles dans divers secteurs au Mali et à l’international." %}
+
+                </p>
+
+                <!-- CTA -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+
+                    <a href="#registration-form"
+                       class="px-8 py-4 rounded-xl bg-antares-blue text-white text-sm font-semibold hover:opacity-90 transition-all duration-300 text-center">
+
+                        {% trans "S’inscrire" %}
+
+                    </a>
+
+                    <a href="{% url 'jobs' %}"
+                       class="px-8 py-4 rounded-xl bg-white border border-slate-300 text-slate-700 text-sm font-semibold hover:border-antares-blue hover:text-antares-blue hover:transition-all duration-300 text-center">
+
+                        {% trans "Voir les offres" %}
+
+                    </a>
+
+                </div>
+
+                <!-- STATS -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-slate-200 pt-8">
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">5k+</p>
+                        <p class="text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Profils" %}
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">50+</p>
+                        <p class="text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Entreprises" %}
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">20</p>
+                        <p class="text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Ans d’expérience" %}
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-3xl font-black text-slate-900">24h</p>
+                        <p class="text-[10px] font-black uppercase tracking-widest mt-1">
+                            {% trans "Réactivité" %}
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- IMAGE -->
+            <div class="relative hidden lg:block">
+
+                <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/20">
+
+                    <img src="{% static 'images/espaces/candidat_hero.png' %}"
+                         alt="{% trans 'Espace Candidat Antarès RH' %}"
+                         class="w-full h-[520px] object-cover">
+
+                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-900/20 to-transparent"></div>
+
+                </div>
+
+                <!-- FLOATING CARD -->
+                <div class="absolute bottom-5 left-5 bg-white/95 backdrop-blur rounded-2xl px-5 py-4 shadow-xl border border-slate-100">
+
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">
+                        {% trans "Réseau Antarès" %}
+                    </p>
+
+                    <p class="text-lg font-black text-slate-900">
+                        +5 000 {% trans "Talents" %}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

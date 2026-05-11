@@ -1,6 +1,6 @@
 {% load i18n static %}
 
-<section class="py-12 bg-white">
+<section class="py-12 bg-[#F8F8F8]">
     <div class="max-w-6xl mx-auto px-4">
         
         <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4 border-l-4 border-antares-orange pl-4">
@@ -8,7 +8,7 @@
                 <h2 class="text-antares-blue font-bold uppercase tracking-tighter text-xs">{% trans "Opportunités" %}</h2>
                 <p class="text-2xl md:text-3xl font-black text-slate-800">{% trans "Offres d'emploi récentes" %}</p>
             </div>
-            <a href="{% url 'job_detail' slug='assistant-rh-polyvalent' %}"  class="text-sm font-bold text-slate-500 hover:text-antares-blue transition-colors underline decoration-antares-orange underline-offset-4">
+            <a href="{% url 'jobs' %}"  class="text-md font-bold text-slate-500 hover:text-antares-blue transition-colors underline decoration-antares-orange underline-offset-4">
                 {% trans "Toutes nos offres" %} →
             </a>
         </div>

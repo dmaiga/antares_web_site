@@ -4,25 +4,61 @@
 {% block content %}
 
 <!-- Section Hero : Minimalisme Institutionnel -->
-<section class=" pt-8 pb-8 border-b border-slate-100 bg-[#f5f5f5] ">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        
-        <!-- Titre : Identité forte -->
-        <h1 class="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-6">
-            {% trans "Contactez " %}<span class="text-antares-blue">{% trans "Antares RH" %}</span>
+<section class="relative py-16 md:py-16 border-b border-slate-100 bg-[#f5f5f5] overflow-hidden">
+
+    <!-- BACKGROUND GLOW -->
+    <div class="absolute inset-0 pointer-events-none">
+
+        <div class="absolute top-0 right-0 w-[420px] h-[420px] bg-antares-blue/10 rounded-full blur-[120px] -translate-y-1/2"></div>
+
+        <div class="absolute bottom-0 left-0 w-[320px] h-[320px] bg-antares-orange/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3"></div>
+
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+
+        <!-- BADGE -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-antares-blue/10 border border-antares-blue/20 mb-8">
+
+            <span class="flex h-2 w-2 rounded-full bg-antares-blue"></span>
+
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-700">
+
+                {% trans "Contact & Assistance" %}
+
+            </span>
+
+        </div>
+
+        <!-- TITLE -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black italic tracking-tighter leading-[0.95] text-slate-900 mb-8">
+
+            {% trans "Contactez" %}
+
+            <span class="text-antares-blue">
+
+                {% trans "Antarès RH" %}
+
+            </span>
+
         </h1>
-        
-        <!-- Baseline : Vision concise -->
-        <p class="text-slate-500 text-2xl md:text-3xl font-light tracking-tight max-w-2xl mx-auto">
-            {% trans "Votre partenaire en solutions ressources humaines" %}
+
+        <!-- DESCRIPTION -->
+        <p class="text-slate-600 text-lg md:text-2xl leading-relaxed max-w-3xl mx-auto">
+
+            {% trans "Votre partenaire en solutions ressources humaines, recrutement et accompagnement organisationnel au Mali." %}
+
         </p>
 
-        <!-- Séparateur minimaliste -->
-        <div class="mt-8 flex justify-center">
-            <div class="w-16 h-1 bg-antares-orange/20 rounded-full"></div>
+        <!-- SEPARATOR -->
+        <div class="mt-10 flex justify-center">
+
+            <div class="w-20 h-1 rounded-full bg-gradient-to-r from-antares-blue to-antares-orange opacity-40"></div>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- Section Contact & Formulaire -->
@@ -182,10 +218,14 @@
 
                         <div class="form-control">
                             <label class="label font-bold text-slate-700 text-[11px] uppercase tracking-widest">{% trans "Type de demande" %}</label>
-                            <select name="service" class="select select-bordered bg-slate-50 border-slate-200 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-antares-blue rounded-xl w-full transition-all font-semibold">
-                                <option disabled selected>
+                            <select 
+                                name="service" 
+                                class="select select-bordered bg-slate-50 border-slate-200 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-antares-blue rounded-xl w-full transition-all font-semibold text-slate-700 px-4 text-sm md:text-base"
+                            >
+                                <option disabled selected class="text-slate-400">
                                     {% trans "Sélectionnez votre besoin" %}
                                 </option>
+                            
                                 <option>{% trans "Recrutement de personnel" %}</option>
                                 <option>{% trans "Mise à disposition de personnel" %}</option>
                                 <option>{% trans "Gestion RH externalisée" %}</option>

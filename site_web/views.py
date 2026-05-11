@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import DetailView
+
+from django.views.generic import TemplateView
+from django.http import Http404
 
 def home(request):
     context = {
@@ -75,10 +79,6 @@ def jobs(request):
     
     return render(request, 'site_web/jobs/jobs.html', context)
 
-from django.views.generic import DetailView
-
-from django.views.generic import TemplateView
-from django.http import Http404
 
 class JobDetailView(TemplateView):
     template_name = 'site_web/jobs/detail_job.html'
@@ -91,7 +91,7 @@ class JobDetailView(TemplateView):
         jobs_data = {
             'assistant-rh-polyvalent': {
                 'title': 'Assistant RH Polyvalent',
-                'reference': 'ANT/ARHP/00270125AF',
+                'reference': 'ANT/00270125AF',
                 'deadline': '27 Février 2025',
                 'email': 'antares.ml@gmail.com',
 
@@ -111,35 +111,9 @@ class JobDetailView(TemplateView):
                     <li>Accompagner les nouveaux recrutés</li>
                 </ul>
 
-                <h4>Gestion administrative du personnel :</h4>
-                <ul>
-                    <li>Mettre à jour les dossiers du personnel</li>
-                    <li>Rédiger contrats, attestations et courriers administratifs</li>
-                    <li>Gérer congés, absences et incidents</li>
-                    <li>Effectuer les déclarations sociales et fiscales</li>
-                    <li>Assurer le respect du règlement intérieur</li>
-                </ul>
 
-                <h4>Formation et évaluation :</h4>
-                <ul>
-                    <li>Identifier les besoins en formation</li>
-                    <li>Organiser les sessions de formation</li>
-                    <li>Mettre en place des systèmes d’évaluation</li>
-                    <li>Analyser les performances et proposer des axes d’amélioration</li>
-                </ul>
 
-                <h4>Support organisationnel :</h4>
-                <ul>
-                    <li>Participer à l’organisation d’événements RH</li>
-                    <li>Diffuser les informations internes</li>
-                </ul>
-
-                <h4>Développement commercial :</h4>
-                <ul>
-                    <li>Identifier de nouveaux clients</li>
-                    <li>Promouvoir les services du cabinet</li>
-                    <li>Fidéliser les clients existants</li>
-                </ul>
+                
                 """,
 
                 'profile_html': """
@@ -148,10 +122,7 @@ class JobDetailView(TemplateView):
                     <li>Minimum 2 ans d’expérience</li>
                     <li>Maîtrise du droit du travail et des outils bureautiques</li>
                     <li>Bonnes capacités rédactionnelles et relationnelles</li>
-                    <li>Esprit d’équipe, rigueur et organisation</li>
-                    <li>Connaissance du processus de recrutement</li>
-                    <li>Maîtrise du français, anglais est un atout</li>
-                    <li>Respect de la confidentialité</li>
+
                 </ul>
                 """,
 
@@ -184,67 +155,93 @@ class JobDetailView(TemplateView):
         return context
 
 def services(request):
-    services = [
-        {
-            "title": "Recrutement Stratégique",
-            "description": "Dénichez les talents qui feront votre croissance grâce à notre méthodologie de sourcing rigoureuse.",
-            "icon": "user-group",
-        },
-        {
-            "title": "Intérim & Mise à disposition",
-            "description": "Gagnez en agilité avec du personnel qualifié immédiatement opérationnel pour vos projets critiques.",
-            "icon": "clock",
-        },
-        {
-            "title": "Externalisation RH (BPO)",
-            "description": "Déléguez la complexité. Nous gérons vos processus RH pour vous permettre de vous concentrer sur votre cœur de métier.",
-            "icon": "briefcase",
-        },
-        {
-            "title": "Gestion Administrative & Paie",
-            "description": "Sécurisez votre conformité sociale et optimisez la gestion de vos contrats et de votre paie au Mali.",
-            "icon": "document-check",
-        },
-        {
-            "title": "Ingénierie de Formation",
-            "description": "Valorisez votre capital humain en développant les compétences clés de vos collaborateurs.",
-            "icon": "academic-cap",
-        },
-        {
-            "title": "Audit & Conseil RH",
-            "description": "Identifiez vos leviers de performance et alignez votre organisation sur vos objectifs stratégiques.",
-            "icon": "presentation-chart",
-        },
-    ]
-    return render(request, 'site_web/services/services.html', {'services': services})
+   services = [
+                    {
+                        "title": "Recrutement & Évaluation",
+                        "description": "Identification, sélection et évaluation de profils qualifiés selon les exigences techniques et organisationnelles de votre entreprise.",
+                        "icon": "user-group",
+                    },
+                    {
+                        "title": "Intérim & Mise à disposition",
+                        "description": "Mise à disposition de personnel qualifié avec prise en charge administrative, sociale et contractuelle.",
+                        "icon": "clock",
+                    },
+                    {
+                        "title": "Gestion Administrative RH",
+                        "description": "Gestion des contrats, paie, déclarations sociales et suivi administratif du personnel conformément à la réglementation malienne.",
+                        "icon": "document-check",
+                    },
+                    {
+                        "title": "Conseil & Audit Social",
+                        "description": "Audit RH, conformité sociale, diagnostics organisationnels et accompagnement dans la structuration des procédures RH.",
+                        "icon": "briefcase",
+                    },
+                    {
+                        "title": "Formation Professionnelle",
+                        "description": "Conception et animation de formations adaptées aux besoins opérationnels et au développement des compétences.",
+                        "icon": "academic-cap",
+                    },
+                    {
+                        "title": "Sous-traitance & Appui Opérationnel",
+                        "description": "Gestion externalisée d’activités et d’équipes opérationnelles dans les domaines logistiques, administratifs et techniques.",
+                        "icon": "presentation-chart",
+                    },
+                ]
+   return render(request, 'site_web/services/services.html', {'services': services})
 
-
-def savoir_plus(request):
-    services_details = [
-        {
-            "slug": "recrutement",
-            "title": "Recrutement Stratégique",
-            "full_description": "Nous identifions les talents rares qui partagent vos valeurs et votre vision. Notre processus inclut le sourcing, l'évaluation psychotechnique et l'accompagnement à l'intégration.",
-            "points": ["Chasse de têtes", "Évaluation de potentiel", "Recrutement de masse", "Intégration (Onboarding)"],
-            "icon": "user-group"
-        },
-        {
-            "slug": "interim",
-            "title": "Intérim & Mise à disposition",
-            "full_description": "Une solution flexible pour vos pics d'activité ou vos remplacements urgents. Nous gérons l'intégralité du cycle contractuel et opérationnel.",
-            "points": ["Flexibilité opérationnelle", "Gestion administrative simplifiée", "Remplacement rapide", "Contrats conformes au code du travail malien"],
-            "icon": "clock"
-        },
-        # ... Ajoutez les autres services ici avec leur propre slug
-    ]
-    return render(request, 'site_web/services/savoir_plus.html', {'services_details': services_details})
 
 
 def espace_candidat(request):
-    return render(request, 'site_web/espaces/espace_candidat.html')
+    clients = range(1, 16)
+
+    secteurs = sorted([
+        "Banque & Assurance",
+        "BTP & Infrastructures",
+        "Distribution & FMCG",
+        "Grande Distribution",
+        "Industrie Agroalimentaire",
+        "Mines & Énergie",
+        "Nettoyage & Facility Management",
+        "ONG & Projets Internationaux",
+        "Production Industrielle",
+        "Services Externalisés",
+        "Technologie & IT",
+        "Télécommunications",
+        "Transport & Logistique",
+    ])
+    context = {
+        "clients": clients,
+        "secteurs": secteurs,
+
+    }
+    return render(request, 'site_web/espaces/espace_candidat.html', context)
 
 def espace_consultant(request):
-    return render(request, 'site_web/espaces/espace_consultant.html')
+    clients = range(1, 16)
+
+    secteurs = sorted([
+        "Banque & Assurance",
+        "BTP & Infrastructures",
+        "Distribution & FMCG",
+        "Grande Distribution",
+        "Industrie Agroalimentaire",
+        "Mines & Énergie",
+        "Nettoyage & Facility Management",
+        "ONG & Projets Internationaux",
+        "Production Industrielle",
+        "Services Externalisés",
+        "Technologie & IT",
+        "Télécommunications",
+        "Transport & Logistique",
+    ])
+    context = {
+        "clients": clients,
+        "secteurs": secteurs,
+
+    }
+
+
+    return render(request, 'site_web/espaces/espace_consultant.html',context)
 
 
 def espace_entreprise(request):
@@ -269,63 +266,63 @@ def espace_entreprise(request):
 
     services = [
         {
-            "title": "Recrutement Stratégique",
+            "title": "Recrutement & Évaluation",
             "description": (
-                "Identification et sélection de profils qualifiés "
-                "pour vos besoins en CDD, CDI et postes stratégiques."
+                "Identification, sélection et évaluation de profils qualifiés "
+                "selon les besoins techniques et organisationnels de votre entreprise."
             ),
-            "highlight": "5 à 45 jours",
+            "highlight": "Sélection rigoureuse",
             "icon": "users",
         },
-    
+
         {
             "title": "Intérim & Mise à disposition",
             "description": (
-                "Personnel immédiatement opérationnel avec gestion "
-                "complète de la paie, INPS, AMO et obligations sociales."
+                "Mise à disposition de personnel qualifié avec prise en charge "
+                "administrative, sociale et contractuelle."
             ),
             "highlight": "Gestion RH complète",
             "icon": "briefcase",
         },
-    
+
         {
-            "title": "Externalisation RH",
+            "title": "Gestion Administrative RH",
             "description": (
-                "Antarès agit comme votre DRH externe : contrats, "
-                "administration du personnel et suivi social."
+                "Gestion des contrats, paie, déclarations sociales et suivi "
+                "administratif du personnel conformément à la réglementation malienne."
             ),
-            "highlight": "DRH externalisée",
+            "highlight": "Conformité sociale",
             "icon": "building",
         },
-    
+
         {
-            "title": "Formation et Conseil",
+            "title": "Conseil & Audit Social",
             "description": (
-                "Audit RH, ingénierie de formation et accompagnement "
-                "stratégique pour développer votre capital humain."
+                "Audit RH, diagnostics organisationnels et accompagnement "
+                "dans la structuration des procédures et pratiques RH."
             ),
-            "highlight": "Conseil stratégique",
+            "highlight": "Audit & conformité",
+            "icon": "shield",
+        },
+
+        {
+            "title": "Formation Professionnelle",
+            "description": (
+                "Conception et animation de formations adaptées aux besoins "
+                "opérationnels et au développement des compétences."
+            ),
+            "highlight": "Renforcement des capacités",
             "icon": "graduation",
         },
-    
+
         {
-            "title": "Sous-traitance Opérationnelle",
+            "title": "Sous-traitance & Appui Opérationnel",
             "description": (
-                "Gestion et mise à disposition d'équipes adaptées "
-                "à vos activités terrain et opérations critiques."
+                "Gestion externalisée d’activités et d’équipes opérationnelles "
+                "dans les domaines logistiques, administratifs et techniques."
             ),
             "highlight": "Flexibilité opérationnelle",
             "icon": "layers",
-        },
-    
-        {
-            "title": "Audit Social & Fiscal",
-            "description": (
-                "Conformité réglementaire, audit RH et optimisation "
-                "des charges sociales et administratives."
-            ),
-            "highlight": "Conformité & optimisation",
-            "icon": "shield",
         },
     ]
     context = {

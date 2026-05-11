@@ -6,12 +6,14 @@
 {% block content %}
 <div class="bg-white">
     <!-- 1. HERO SECTION -->
-    {% include 'site_web/espaces/partials/candidat/_hero_section.html' %}
+    {% include 'site_web/espaces/partials/candidat/_hero_candidat.html' %}
 
     <!-- 2. STEPS SECTION -->
     {% include 'site_web/espaces/partials/candidat/_step.html' %}
 
     <!-- 3. ONBOARDING FORM SECTION -->
     {% include 'site_web/espaces/partials/candidat/_forms.html' %}
+        {# 5. CLIENTS : client partenaire #}
+    {% include "site_web/espaces/partials/entreprise/_clients.html" %}
 </div>
 {% endblock %}

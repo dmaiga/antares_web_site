@@ -1,13 +1,79 @@
 {% load i18n %}
-<form action="{% url 'set_language' %}" method="post" class="inline-flex items-center">
+
+<form action="{% url 'set_language' %}" method="post" class="flex items-center">
     {% csrf_token %}
-    <select name="language" onchange="this.form.submit()" class="select select-ghost select-sm focus:bg-transparent font-bold text-xs">
-        {% get_current_language as CURRENT_LANG %}
-        {% get_available_languages as LANGUAGES %}
-        {% for lang in LANGUAGES %}
-            <option value="{{ lang.0 }}" {% if lang.0 == CURRENT_LANG %}selected{% endif %}>
-                {{ lang.0|upper }}
-            </option>
-        {% endfor %}
-    </select>
+
+    <div class="relative">
+
+        <select
+            name="language"
+            onchange="this.form.submit()"
+
+            class="
+                h-8
+                min-h-0
+
+                rounded-xl
+
+                border border-slate-200
+                bg-white
+
+                pl-3 pr-7
+
+                text-[11px]
+                font-black
+                uppercase
+                tracking-[0.15em]
+
+                text-slate-700
+
+                appearance-none
+                cursor-pointer
+
+                focus:outline-none
+                focus:border-slate-300
+            "
+        >
+
+            {% get_current_language as CURRENT_LANG %}
+            {% get_available_languages as LANGUAGES %}
+
+            {% for lang in LANGUAGES %}
+                <option 
+                    value="{{ lang.0 }}"
+                    {% if lang.0 == CURRENT_LANG %}selected{% endif %}
+                >
+                    {{ lang.0|upper }}
+                </option>
+            {% endfor %}
+
+        </select>
+
+        <!-- ICON -->
+        <div class="
+            pointer-events-none
+
+            absolute right-2 top-1/2
+            -translate-y-1/2
+
+            text-slate-400
+        ">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="w-3.5 h-3.5"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7" />
+
+            </svg>
+
+        </div>
+
+    </div>
+
 </form>
