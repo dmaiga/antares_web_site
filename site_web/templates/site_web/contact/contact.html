@@ -262,10 +262,11 @@
     <!-- HEADER -->
     <div class="text-center mb-12">
       <h2 class="text-3xl font-black text-slate-900 mb-3">
-        Questions fréquentes
+        {% trans "Questions fréquentes" %}
       </h2>
+
       <p class="text-slate-500">
-        Les points essentiels sur notre accompagnement RH
+        {% trans "Les points essentiels sur notre accompagnement RH" %}
       </p>
     </div>
 
@@ -274,63 +275,65 @@
       <!-- Q1 -->
       <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
         <input type="radio" name="faq" checked />
+
         <div class="collapse-title font-semibold">
-          Comment se déroule un recrutement chez Antarès ?
+          {% trans "Comment se déroule un recrutement chez Antarès ?" %}
         </div>
+
         <div class="collapse-content text-sm text-slate-600">
-          Notre processus suit une méthodologie structurée : analyse du besoin, 
-          sourcing, tests, entretiens, contrôle des références et présentation 
-          d’une short-list de candidats qualifiés.
+          {% trans "Notre processus suit une méthodologie structurée : analyse du besoin, sourcing, tests, entretiens, contrôle des références et présentation d’une short-list de candidats qualifiés." %}
         </div>
       </div>
 
       <!-- Q2 -->
       <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
         <input type="radio" name="faq" />
+
         <div class="collapse-title font-semibold">
-          En combien de temps pouvez-vous pourvoir un poste ?
+          {% trans "En combien de temps pouvez-vous pourvoir un poste ?" %}
         </div>
+
         <div class="collapse-content text-sm text-slate-600">
-          Le délai varie selon le profil recherché, généralement entre 
-          <strong>5 et 45 jours</strong>, avec un suivi régulier de l’avancement.
+          {% trans "Le délai varie selon le profil recherché, généralement entre 5 et 45 jours, avec un suivi régulier de l’avancement." %}
         </div>
       </div>
 
       <!-- Q3 -->
       <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
         <input type="radio" name="faq" />
+
         <div class="collapse-title font-semibold">
-          Que comprend la mise à disposition de personnel ?
+          {% trans "Que comprend la mise à disposition de personnel ?" %}
         </div>
+
         <div class="collapse-content text-sm text-slate-600">
-          Nous prenons en charge l’ensemble de la gestion administrative, 
-          contractuelle, sociale et fiscale du personnel, vous permettant 
-          de vous concentrer sur votre activité principale.
+          {% trans "Nous prenons en charge l’ensemble de la gestion administrative, contractuelle, sociale et fiscale du personnel, vous permettant de vous concentrer sur votre activité principale." %}
         </div>
       </div>
 
       <!-- Q4 -->
       <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
         <input type="radio" name="faq" />
+
         <div class="collapse-title font-semibold">
-          Sur quoi sont basés vos tarifs ?
+          {% trans "Sur quoi sont basés vos tarifs ?" %}
         </div>
+
         <div class="collapse-content text-sm text-slate-600">
-          Les tarifs dépendent du niveau du poste, du type de mission et du 
-          volume de recrutement. Une étude personnalisée est réalisée pour 
-          chaque besoin.
+          {% trans "Les tarifs dépendent du niveau du poste, du type de mission et du volume de recrutement. Une étude personnalisée est réalisée pour chaque besoin." %}
         </div>
       </div>
 
       <!-- Q5 -->
       <div class="collapse collapse-plus bg-white border rounded-xl shadow-sm">
         <input type="radio" name="faq" />
+
         <div class="collapse-title font-semibold">
-          Travaillez-vous sur le long terme avec vos clients ?
+          {% trans "Travaillez-vous sur le long terme avec vos clients ?" %}
         </div>
+
         <div class="collapse-content text-sm text-slate-600">
-          Oui. Notre approche repose sur un partenariat durable avec nos clients, 
-          en les accompagnant dans la gestion et l’évolution de leurs ressources humaines.
+          {% trans "Oui. Notre approche repose sur un partenariat durable avec nos clients, en les accompagnant dans la gestion et l’évolution de leurs ressources humaines." %}
         </div>
       </div>
 
@@ -338,6 +341,5 @@
 
   </div>
 </section>
-
 
 {% endblock %}

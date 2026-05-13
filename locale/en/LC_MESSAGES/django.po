@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 12:22+0000\n"
+"POT-Creation-Date: 2026-05-13 13:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,6 +217,7 @@ msgid "Gestion de l’intérim, contrats, paie et suivi RH"
 msgstr "Temporary staffing, contracts, payroll, and HR management"
 
 #: site_web/templates/site_web/about/partials/_services.html:51
+#: site_web/views.py:221 site_web/views.py:360
 msgid "Conseil & Audit Social"
 msgstr "HR Consulting & Social Audit"
 
@@ -283,6 +284,7 @@ msgid ""
 msgstr ""
 "Transform your administrative constraints into a structured, compliant, and "
 "high-performing framework."
+
 #: site_web/templates/site_web/about/partials/_values.html:8
 msgid "Valeurs & Engagement"
 msgstr "Values & Commitment"
@@ -330,11 +332,6 @@ msgstr "Strict compliance with local and international regulations."
 msgid "Garantir la sécurité juridique de toutes nos prestations."
 msgstr "Ensuring the legal security of all our services."
 
-#
-#
-#
-#
-#
 #: site_web/templates/site_web/auth/login.html:20
 msgid "Espace Personnel"
 msgstr "Personal Dashboard"
@@ -573,6 +570,76 @@ msgstr "Details of Your Request"
 msgid "Envoyer ma demande"
 msgstr "Submit My Request"
 
+#: site_web/templates/site_web/contact/contact.html:265
+msgid "Questions fréquentes"
+msgstr "Frequently Asked Questions"
+
+#: site_web/templates/site_web/contact/contact.html:269
+msgid "Les points essentiels sur notre accompagnement RH"
+msgstr "Key information about our HR support services"
+
+#: site_web/templates/site_web/contact/contact.html:280
+msgid "Comment se déroule un recrutement chez Antarès ?"
+msgstr "How does recruitment work at Antarès?"
+
+#: site_web/templates/site_web/contact/contact.html:284
+msgid ""
+"Notre processus suit une méthodologie structurée : analyse du besoin, "
+"sourcing, tests, entretiens, contrôle des références et présentation d’une "
+"short-list de candidats qualifiés."
+msgstr ""
+"Our process follows a structured methodology: needs analysis, sourcing, "
+"testing, interviews, reference checks, and presentation of a shortlist of "
+"qualified candidates."
+
+#: site_web/templates/site_web/contact/contact.html:293
+msgid "En combien de temps pouvez-vous pourvoir un poste ?"
+msgstr "How long does it take to fill a position?"
+
+#: site_web/templates/site_web/contact/contact.html:297
+msgid ""
+"Le délai varie selon le profil recherché, généralement entre 5 et 45 jours, "
+"avec un suivi régulier de l’avancement."
+msgstr ""
+"The timeframe depends on the profile being sought, generally between 5 and "
+"45 days, with regular progress updates."
+
+#: site_web/templates/site_web/contact/contact.html:306
+msgid "Que comprend la mise à disposition de personnel ?"
+msgstr "What does staffing support include?"
+
+#: site_web/templates/site_web/contact/contact.html:310
+msgid ""
+"Nous prenons en charge l’ensemble de la gestion administrative, "
+"contractuelle, sociale et fiscale du personnel, vous permettant de vous "
+"concentrer sur votre activité principale."
+msgstr ""
+"We handle all administrative, contractual, social, and tax management of "
+"personnel, allowing you to focus on your core business activities."
+
+#: site_web/templates/site_web/contact/contact.html:319
+msgid "Sur quoi sont basés vos tarifs ?"
+msgstr "How are your fees determined?"
+
+#: site_web/templates/site_web/contact/contact.html:323
+msgid ""
+"Les tarifs dépendent du niveau du poste, du type de mission et du volume de "
+"recrutement. Une étude personnalisée est réalisée pour chaque besoin."
+msgstr ""
+"Fees depend on the level of the position, the type of assignment, and the "
+"recruitment volume. A personalized assessment is carried out for each need."
+
+#: site_web/templates/site_web/contact/contact.html:332
+msgid "Travaillez-vous sur le long terme avec vos clients ?"
+msgstr "Do you work with clients on a long-term basis?"
+
+#: site_web/templates/site_web/contact/contact.html:336
+msgid ""
+"Oui. Notre approche repose sur un partenariat durable avec nos clients, en "
+"les accompagnant dans la gestion et l’évolution de leurs ressources humaines."
+msgstr ""
+"Yes. Our approach is based on long-term partnerships with our clients, "
+"supporting them in the management and development of their human resources."
 #
 #
 #
@@ -1246,6 +1313,7 @@ msgstr "All Opportunities"
 #: site_web/templates/site_web/home/partials/_job_offers_list.html:20
 #: site_web/templates/site_web/home/partials/_job_offers_list.html:71
 #: site_web/templates/site_web/home/partials/_job_offers_list.html:88
+#: site_web/views.py:74
 msgid "Ouvert"
 msgstr "Open"
 
@@ -1258,10 +1326,12 @@ msgid "Consulter"
 msgstr "View"
 
 #: site_web/templates/site_web/home/partials/_job_offers_list.html:37
+#: site_web/views.py:46
 msgid "Urgent"
 msgstr "Urgent"
 
 #: site_web/templates/site_web/home/partials/_job_offers_list.html:54
+#: site_web/views.py:60
 msgid "Fermé"
 msgstr "Closed"
 
@@ -1270,6 +1340,7 @@ msgid "Clôturé"
 msgstr "Expired"
 
 #: site_web/templates/site_web/home/partials/_job_offers_list.html:105
+#: site_web/views.py:32 site_web/views.py:88
 msgid "Nouveau"
 msgstr "New"
 
@@ -1431,7 +1502,7 @@ msgstr "Main Mission"
 msgid "Responsabilités"
 msgstr "Responsibilities"
 
-#: site_web/templates/site_web/jobs/detail_job.html:224
+#: site_web/templates/site_web/jobs/detail_job.html:235
 msgid "Profil recherché"
 msgstr "Required Profile"
 
@@ -1439,15 +1510,21 @@ msgstr "Required Profile"
 #
 #
 #
-#: site_web/templates/site_web/jobs/detail_job.html:245
+#: site_web/templates/site_web/jobs/detail_job.html:267
 msgid "Comment postuler"
 msgstr "How to Apply"
 
-#: site_web/templates/site_web/jobs/detail_job.html:276
+#: site_web/templates/site_web/jobs/detail_job.html:289
+#, fuzzy
+#| msgid "Suivi de Candidature"
+msgid "Email de candidature"
+msgstr "Application Tracking"
+
+#: site_web/templates/site_web/jobs/detail_job.html:316
 msgid "Postuler à cette offre"
 msgstr "Apply for this Position"
 
-#: site_web/templates/site_web/jobs/detail_job.html:281
+#: site_web/templates/site_web/jobs/detail_job.html:321
 msgid ""
 "Envoyez votre candidature et rejoignez une opportunité professionnelle "
 "adaptée à votre profil."
@@ -1455,32 +1532,32 @@ msgstr ""
 "Submit your application and seize a professional opportunity tailored to "
 "your profile."
 
-#: site_web/templates/site_web/jobs/detail_job.html:304
-#: site_web/templates/site_web/jobs/detail_job.html:487
+#: site_web/templates/site_web/jobs/detail_job.html:344
+#: site_web/templates/site_web/jobs/detail_job.html:527
 msgid "Postuler maintenant"
 msgstr "Apply Now"
 
-#: site_web/templates/site_web/jobs/detail_job.html:313
+#: site_web/templates/site_web/jobs/detail_job.html:353
 msgid "Partager"
 msgstr "Share"
 
-#: site_web/templates/site_web/jobs/detail_job.html:405
+#: site_web/templates/site_web/jobs/detail_job.html:445
 msgid "Informations importantes"
 msgstr "Important Information"
 
-#: site_web/templates/site_web/jobs/detail_job.html:415
+#: site_web/templates/site_web/jobs/detail_job.html:455
 msgid "Vérifiez toujours les références de l’offre avant envoi."
 msgstr "Always verify the job references before submitting."
 
-#: site_web/templates/site_web/jobs/detail_job.html:425
+#: site_web/templates/site_web/jobs/detail_job.html:465
 msgid "Seuls les profils présélectionnés seront contactés."
 msgstr "Only shortlisted candidates will be contacted."
 
-#: site_web/templates/site_web/jobs/detail_job.html:435
+#: site_web/templates/site_web/jobs/detail_job.html:475
 msgid "Antarès RH ne demande jamais de frais pendant un recrutement."
 msgstr "Antarès RH never charges any fees during the recruitment process."
 
-#: site_web/templates/site_web/jobs/detail_job.html:449
+#: site_web/templates/site_web/jobs/detail_job.html:489
 msgid "Événements & Formations"
 msgstr "Events & Training"
 
@@ -1563,6 +1640,7 @@ msgstr "Contract Type"
 
 #: site_web/templates/site_web/jobs/partials/_job_filters.html:137
 #: site_web/templates/site_web/services/savoir_plus.html:16
+#: site_web/views.py:77
 msgid "Intérim"
 msgstr "Temporary / Staffing"
 
@@ -1571,10 +1649,13 @@ msgid "Stage"
 msgstr "Internship"
 
 #: site_web/templates/site_web/jobs/partials/_job_filters.html:181
+#: site_web/views.py:33 site_web/views.py:255 site_web/views.py:286
+#: site_web/views.py:318
 msgid "Mines & Énergie"
 msgstr "Mining & Energy"
 
 #: site_web/templates/site_web/jobs/partials/_job_filters.html:205
+#: site_web/views.py:47
 msgid "Banque & Finance"
 msgstr "Banking & Finance"
 
@@ -1860,6 +1941,7 @@ msgid "Flexibilité"
 msgstr "Flexibility"
 
 #: site_web/templates/site_web/services/savoir_plus.html:88
+#: site_web/views.py:211 site_web/views.py:340
 msgid "Intérim & Mise à disposition"
 msgstr "Staffing & Labor Dispatch"
 
@@ -1918,6 +2000,7 @@ msgstr ""
 "drafting of customized job descriptions."
 
 #: site_web/templates/site_web/services/savoir_plus.html:114
+#: site_web/views.py:226 site_web/views.py:370
 msgid "Formation Professionnelle"
 msgstr "Professional Training"
 
@@ -1970,3 +2053,393 @@ msgstr "Expert Advice"
 #: site_web/templates/site_web/services/services.html:66
 msgid "Réponse sous 72h"
 msgstr "Response Within 72 Hours"
+
+#: site_web/views.py:31
+msgid "Chef de Chantier Photovoltaïque"
+msgstr "Photovoltaic Site Supervisor"
+
+#: site_web/views.py:34
+msgid "Kayes, Mali"
+msgstr "Kayes, Mali"
+
+#: site_web/views.py:35 site_web/views.py:49 site_web/views.py:91
+#: site_web/views.py:129
+msgid "CDI"
+msgstr "Permanent Contract"
+
+#: site_web/views.py:37
+msgid ""
+"Supervision des équipes d'installation et respect des normes de sécurité sur "
+"site industriel."
+msgstr ""
+"Supervision of installation teams and compliance with safety standards on "
+"industrial sites."
+
+#: site_web/views.py:40
+msgid "22 Avr. 2026"
+msgstr "Apr 22, 2026"
+
+#: site_web/views.py:41
+msgid "10 Mai 2026"
+msgstr "May 10, 2026"
+
+#: site_web/views.py:45
+msgid "Analyste de Crédit Senior"
+msgstr "Senior Credit Analyst"
+
+#: site_web/views.py:48 site_web/views.py:76 site_web/views.py:90
+#: site_web/views.py:128 site_web/views.py:162
+msgid "Bamako, Mali"
+msgstr "Bamako, Mali"
+
+#: site_web/views.py:51
+msgid ""
+"Analyse de risques financiers pour les comptes entreprises et structuration "
+"de dossiers."
+msgstr ""
+"Financial risk analysis for corporate accounts and structuring of client "
+"files."
+
+#: site_web/views.py:54
+msgid "20 Avr. 2026"
+msgstr "Apr 20, 2026"
+
+#: site_web/views.py:55
+msgid "05 Mai 2026"
+msgstr "May 05, 2026"
+
+#: site_web/views.py:59
+msgid "Responsable Supply Chain"
+msgstr "Supply Chain Manager"
+
+#: site_web/views.py:61
+msgid "Logistique"
+msgstr "Logistics"
+
+#: site_web/views.py:62
+msgid "Sikasso, Mali"
+msgstr "Sikasso, Mali"
+
+#: site_web/views.py:63 site_web/views.py:163
+msgid "CDD"
+msgstr "Fixed-Term Contract"
+
+#: site_web/views.py:65
+msgid ""
+"Optimisation des flux de marchandises et gestion des entrepôts pour une "
+"multinationale."
+msgstr ""
+"Optimization of goods flows and warehouse management for a multinational "
+"company."
+
+#: site_web/views.py:68
+msgid "15 Avr. 2026"
+msgstr "Apr 15, 2026"
+
+#: site_web/views.py:69
+msgid "Expiré"
+msgstr "Expired"
+
+#: site_web/views.py:73
+msgid "Chargé de Recrutement IT"
+msgstr "IT Recruitment Officer"
+
+#: site_web/views.py:75 site_web/views.py:130
+msgid "Ressources Humaines"
+msgstr "Human Resources"
+
+#: site_web/views.py:79
+msgid "Sourcing et évaluation de profils développeurs et ingénieurs data."
+msgstr "Sourcing and assessment of developer and data engineering profiles."
+
+#: site_web/views.py:82
+msgid "25 Avr. 2026"
+msgstr "Apr 25, 2026"
+
+#: site_web/views.py:83
+msgid "20 Mai 2026"
+msgstr "May 20, 2026"
+
+#: site_web/views.py:87
+msgid "Ingénieur Réseaux"
+msgstr "Network Engineer"
+
+#: site_web/views.py:89
+msgid "Télécoms"
+msgstr "Telecommunications"
+
+#: site_web/views.py:93
+msgid "Maintenance de l'infrastructure réseau fibre optique et sécurité."
+msgstr ""
+"Maintenance of fiber optic network infrastructure and security systems."
+
+#: site_web/views.py:96
+msgid "27 Avr. 2026"
+msgstr "Apr 27, 2026"
+
+#: site_web/views.py:97
+msgid "30 Mai 2026"
+msgstr "May 30, 2026"
+
+#: site_web/views.py:126
+msgid "Assistant RH Polyvalent"
+msgstr "HR Administrative Assistant"
+
+#: site_web/views.py:131
+msgid "30 Juin 2026"
+msgstr "Jun 30, 2026"
+
+#: site_web/views.py:135
+msgid ""
+"Assurer le suivi administratif RH et participer aux activités de recrutement "
+"et de gestion du personnel."
+msgstr ""
+"Ensure HR administrative follow-up and support recruitment and workforce "
+"management activities."
+
+#: site_web/views.py:140
+msgid "Suivi administratif des dossiers du personnel"
+msgstr "Administrative follow-up of employee records"
+
+#: site_web/views.py:141
+msgid "Publication des offres et présélection des candidatures"
+msgstr "Publishing job offers and pre-screening applications"
+
+#: site_web/views.py:142
+msgid "Organisation des entretiens"
+msgstr "Interview coordination"
+
+#: site_web/views.py:143
+msgid "Participation au reporting RH"
+msgstr "Participation in HR reporting"
+
+#: site_web/views.py:147
+msgid "Licence en Ressources Humaines ou équivalent"
+msgstr "Bachelor’s degree in Human Resources or equivalent"
+
+#: site_web/views.py:148
+msgid "Première expérience en administration RH"
+msgstr "Initial experience in HR administration"
+
+#: site_web/views.py:149
+msgid "Bonne maîtrise des outils bureautiques"
+msgstr "Good command of office software tools"
+
+#: site_web/views.py:150
+msgid "Bonne communication écrite et orale"
+msgstr "Strong written and verbal communication skills"
+
+#: site_web/views.py:154
+msgid ""
+"Envoyez votre CV et votre lettre de motivation à l’adresse indiquée avant la "
+"date limite."
+msgstr ""
+"Please send your CV and cover letter to the indicated address before the "
+"application deadline."
+
+#: site_web/views.py:160
+msgid "Assistant Comptable"
+msgstr "Accounting Assistant"
+
+#: site_web/views.py:164
+msgid "Finance & Comptabilité"
+msgstr "Finance & Accounting"
+
+#: site_web/views.py:165
+msgid "12 Juillet 2026"
+msgstr "Jul 12, 2026"
+
+#: site_web/views.py:169
+msgid ""
+"Participer au suivi comptable et au traitement des opérations "
+"administratives courantes."
+msgstr ""
+"Assist with accounting follow-up and processing of routine administrative "
+"operations."
+
+#: site_web/views.py:174
+msgid "Saisie des pièces comptables"
+msgstr "Accounting data entry"
+
+#: site_web/views.py:175
+msgid "Classement et archivage des documents"
+msgstr "Filing and archiving documents"
+
+#: site_web/views.py:176
+msgid "Suivi des paiements et rapprochements"
+msgstr "Payment tracking and reconciliations"
+
+#
+#
+#
+#: site_web/views.py:177
+msgid "Appui aux opérations administratives"
+msgstr "Support for administrative operations"
+
+#: site_web/views.py:181
+msgid "Formation en comptabilité ou gestion"
+msgstr "Training in accounting or management"
+
+#: site_web/views.py:182
+msgid "Bonne maîtrise d’Excel"
+msgstr "Good command of Excel"
+
+#: site_web/views.py:183
+msgid "Rigueur et sens de l’organisation"
+msgstr "Strong attention to detail and organizational skills"
+
+#: site_web/views.py:187
+msgid "Merci de transmettre votre candidature complète avant la date indiquée."
+msgstr "Please submit your complete application before the indicated deadline."
+
+#: site_web/views.py:196
+msgid "Cette offre n'existe pas."
+msgstr "This job opportunity does not exist."
+
+#: site_web/views.py:206 site_web/views.py:330
+msgid "Recrutement & Évaluation"
+msgstr "Recruitment & Assessment"
+
+#: site_web/views.py:207
+msgid ""
+"Identification, sélection et évaluation de profils qualifiés selon les "
+"exigences techniques et organisationnelles de votre entreprise."
+msgstr ""
+"Identification, selection, and assessment of qualified profiles according to "
+"your company's technical and organizational requirements."
+
+#: site_web/views.py:212 site_web/views.py:342
+msgid ""
+"Mise à disposition de personnel qualifié avec prise en charge "
+"administrative, sociale et contractuelle."
+msgstr ""
+"Provision of qualified personnel with full administrative, social, and "
+"contractual management."
+
+#: site_web/views.py:216 site_web/views.py:350
+msgid "Gestion Administrative RH"
+msgstr "HR Administrative Management"
+
+#: site_web/views.py:217 site_web/views.py:352
+msgid ""
+"Gestion des contrats, paie, déclarations sociales et suivi administratif du "
+"personnel conformément à la réglementation malienne."
+msgstr ""
+"Management of contracts, payroll, social declarations, and administrative "
+"workforce monitoring in compliance with Malian regulations."
+
+#: site_web/views.py:222
+msgid ""
+"Audit RH, conformité sociale, diagnostics organisationnels et accompagnement "
+"dans la structuration des procédures RH."
+msgstr ""
+"HR audits, social compliance, organizational diagnostics, and support in "
+"structuring HR procedures."
+
+#: site_web/views.py:227 site_web/views.py:372
+msgid ""
+"Conception et animation de formations adaptées aux besoins opérationnels et "
+"au développement des compétences."
+msgstr ""
+"Design and delivery of training programs tailored to operational needs and "
+"skills development."
+
+#: site_web/views.py:231 site_web/views.py:380
+msgid "Sous-traitance & Appui Opérationnel"
+msgstr "Outsourcing & Operational Support"
+
+#: site_web/views.py:232 site_web/views.py:382
+msgid ""
+"Gestion externalisée d’activités et d’équipes opérationnelles dans les "
+"domaines logistiques, administratifs et techniques."
+msgstr ""
+"Outsourced management of activities and operational teams in logistics, "
+"administrative, and technical fields."
+
+#: site_web/views.py:250 site_web/views.py:281 site_web/views.py:313
+msgid "Banque & Assurance"
+msgstr "Banking & Insurance"
+
+#: site_web/views.py:251 site_web/views.py:282 site_web/views.py:314
+msgid "BTP & Infrastructures"
+msgstr "Construction & Infrastructure"
+
+#: site_web/views.py:252 site_web/views.py:283 site_web/views.py:315
+msgid "Distribution & FMCG"
+msgstr "Distribution & FMCG"
+
+#: site_web/views.py:253 site_web/views.py:284 site_web/views.py:316
+msgid "Grande Distribution"
+msgstr "Retail"
+
+#: site_web/views.py:254 site_web/views.py:285 site_web/views.py:317
+msgid "Industrie Agroalimentaire"
+msgstr "Agri-food Industry"
+
+#: site_web/views.py:256 site_web/views.py:287 site_web/views.py:319
+msgid "Nettoyage & Facility Management"
+msgstr "Cleaning & Facility Management"
+
+#: site_web/views.py:257 site_web/views.py:288 site_web/views.py:320
+msgid "ONG & Projets Internationaux"
+msgstr "NGOs & International Projects"
+
+#: site_web/views.py:258 site_web/views.py:289 site_web/views.py:321
+msgid "Production Industrielle"
+msgstr "Industrial Production"
+
+#: site_web/views.py:259 site_web/views.py:290 site_web/views.py:322
+msgid "Services Externalisés"
+msgstr "Outsourced Services"
+
+#: site_web/views.py:260 site_web/views.py:291 site_web/views.py:323
+msgid "Technologie & IT"
+msgstr "Technology & IT"
+
+#: site_web/views.py:261 site_web/views.py:292 site_web/views.py:324
+msgid "Télécommunications"
+msgstr "Telecommunications"
+
+#: site_web/views.py:262 site_web/views.py:293 site_web/views.py:325
+msgid "Transport & Logistique"
+msgstr "Transport & Logistics"
+
+#: site_web/views.py:332
+msgid ""
+"Identification, sélection et évaluation de profils qualifiés selon les "
+"besoins techniques et organisationnels de votre entreprise."
+msgstr ""
+"Identification, selection, and assessment of qualified profiles according to "
+"your company's technical and organizational needs."
+
+#: site_web/views.py:335
+msgid "Sélection rigoureuse"
+msgstr "Rigorous Selection"
+
+#: site_web/views.py:345
+msgid "Gestion RH complète"
+msgstr "Complete HR Management"
+
+#: site_web/views.py:355
+msgid "Conformité sociale"
+msgstr "Social Compliance"
+
+#: site_web/views.py:362
+msgid ""
+"Audit RH, diagnostics organisationnels et accompagnement dans la "
+"structuration des procédures et pratiques RH."
+msgstr ""
+"HR audits, organizational diagnostics, and support in structuring HR "
+"procedures and practices."
+
+#: site_web/views.py:365
+msgid "Audit & conformité"
+msgstr "Audit & Compliance"
+
+#: site_web/views.py:375
+msgid "Renforcement des capacités"
+msgstr "Capacity Building"
+
+#: site_web/views.py:385
+msgid "Flexibilité opérationnelle"
+msgstr "Operational Flexibility"

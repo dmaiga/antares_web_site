@@ -67,7 +67,7 @@
             uppercase
             tracking-[0.15em]
         ">
-            {{ job.contract_type|default:"CDI" }}
+            {{ job.contract|default:"CDI" }}
         </span>
 
     </div>
@@ -170,7 +170,7 @@
             </span>
 
             <p class="text-sm font-semibold text-slate-800">
-                {{ job.created_at|date:"d M Y"|default:"11 Jan 2026" }}
+                {{ job.deadline|default:"30 Juin 2026" }}
             </p>
 
         </div>
@@ -211,7 +211,18 @@
                         prose-strong:text-slate-900
                     ">
 
-                        {{ job.description_html|safe }}
+                        <ul class="space-y-4">
+
+    {% for item in job.responsibilities %}
+    
+        <li class="flex items-start gap-3 text-slate-600 leading-relaxed">
+            <i class="bi bi-check-circle-fill text-antares-blue mt-1"></i>
+            <span>{{ item }}</span>
+        </li>
+
+    {% endfor %}
+
+</ul>
 
                     </div>
 
@@ -232,7 +243,18 @@
                         prose-li:leading-relaxed
                     ">
 
-                        {{ job.profile_html|safe }}
+                       <ul class="space-y-4">
+
+    {% for item in job.profile %}
+    
+        <li class="flex items-start gap-3 text-slate-600 leading-relaxed">
+            <i class="bi bi-dot text-antares-orange text-xl"></i>
+            <span>{{ item }}</span>
+        </li>
+
+    {% endfor %}
+
+</ul>
 
                     </div>
 
@@ -255,7 +277,25 @@
                         prose-a:no-underline
                     ">
 
-                        {{ job.application_html|safe }}
+                        <div class="space-y-5">
+
+    <p class="text-slate-600 leading-relaxed">
+        {{ job.application }}
+    </p>
+
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+
+        <p class="text-xs uppercase tracking-[0.2em] font-black text-slate-400 mb-2">
+            {% trans "Email de candidature" %}
+        </p>
+
+        <p class="font-semibold text-slate-800">
+            {{ job.email }}
+        </p>
+
+    </div>
+
+</div>
 
                     </div>
 

@@ -3,6 +3,12 @@ from django.views.generic import DetailView
 
 from django.views.generic import TemplateView
 from django.http import Http404
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+
+from django.utils.translation import gettext_lazy as _
+
 
 def home(request):
     context = {
@@ -16,68 +22,95 @@ def about(request):
 def contact(request):
     return render(request, 'site_web/contact/contact.html')
 
-from django.shortcuts import render
+
 
 def jobs(request):
     # Simulation d'une base de données pour la démo
     job_list = [
         {
-            "title": "Chef de Chantier Photovoltaïque",
-            "status": "Nouveau",
-            "sector": "Mines & Énergie",
-            "location": "Kayes, Mali",
-            "contract": "CDI",
-            "description": "Supervision des équipes d'installation et respect des normes de sécurité sur site industriel.",
-            "pub_date": "22 Avr. 2026",
-            "deadline": "10 Mai 2026",
+            "title": _("Chef de Chantier Photovoltaïque"),
+            "status": _("Nouveau"),
+            "sector": _("Mines & Énergie"),
+            "location": _("Kayes, Mali"),
+            "contract": _("CDI"),
+            "description": _(
+                "Supervision des équipes d'installation et respect des normes "
+                "de sécurité sur site industriel."
+            ),
+            "pub_date": _("22 Avr. 2026"),
+            "deadline": _("10 Mai 2026"),
         },
+
         {
-            "title": "Analyste de Crédit Senior",
-            "status": "Urgent",
-            "sector": "Banque & Finance",
-            "location": "Bamako, Mali",
-            "contract": "CDI",
-            "description": "Analyse de risques financiers pour les comptes entreprises et structuration de dossiers.",
-            "pub_date": "20 Avr. 2026",
-            "deadline": "05 Mai 2026",
+            "title": _("Analyste de Crédit Senior"),
+            "status": _("Urgent"),
+            "sector": _("Banque & Finance"),
+            "location": _("Bamako, Mali"),
+            "contract": _("CDI"),
+            "description": _(
+                "Analyse de risques financiers pour les comptes entreprises et "
+                "structuration de dossiers."
+            ),
+            "pub_date": _("20 Avr. 2026"),
+            "deadline": _("05 Mai 2026"),
         },
+
         {
-            "title": "Responsable Supply Chain",
-            "status": "Fermé",
-            "sector": "Logistique",
-            "location": "Sikasso, Mali",
-            "contract": "CDD",
-            "description": "Optimisation des flux de marchandises et gestion des entrepôts pour une multinationale.",
-            "pub_date": "15 Avr. 2026",
-            "deadline": "Expiré",
+            "title": _("Responsable Supply Chain"),
+            "status": _("Fermé"),
+            "sector": _("Logistique"),
+            "location": _("Sikasso, Mali"),
+            "contract": _("CDD"),
+            "description": _(
+                "Optimisation des flux de marchandises et gestion des entrepôts "
+                "pour une multinationale."
+            ),
+            "pub_date": _("15 Avr. 2026"),
+            "deadline": _("Expiré"),
         },
+
         {
-            "title": "Chargé de Recrutement IT",
-            "status": "Ouvert",
-            "sector": "Ressources Humaines",
-            "location": "Bamako, Mali",
-            "contract": "Intérim",
-            "description": "Sourcing et évaluation de profils développeurs et ingénieurs data.",
-            "pub_date": "25 Avr. 2026",
-            "deadline": "20 Mai 2026",
+            "title": _("Chargé de Recrutement IT"),
+            "status": _("Ouvert"),
+            "sector": _("Ressources Humaines"),
+            "location": _("Bamako, Mali"),
+            "contract": _("Intérim"),
+            "description": _(
+                "Sourcing et évaluation de profils développeurs et ingénieurs "
+                "data."
+            ),
+            "pub_date": _("25 Avr. 2026"),
+            "deadline": _("20 Mai 2026"),
         },
+
         {
-            "title": "Ingénieur Réseaux",
-            "status": "Nouveau",
-            "sector": "Télécoms",
-            "location": "Bamako, Mali",
-            "contract": "CDI",
-            "description": "Maintenance de l'infrastructure réseau fibre optique et sécurité.",
-            "pub_date": "27 Avr. 2026",
-            "deadline": "30 Mai 2026",
+            "title": _("Ingénieur Réseaux"),
+            "status": _("Nouveau"),
+            "sector": _("Télécoms"),
+            "location": _("Bamako, Mali"),
+            "contract": _("CDI"),
+            "description": _(
+                "Maintenance de l'infrastructure réseau fibre optique et "
+                "sécurité."
+            ),
+            "pub_date": _("27 Avr. 2026"),
+            "deadline": _("30 Mai 2026"),
         },
     ]
 
     context = {
         'jobs': job_list,
     }
-    
-    return render(request, 'site_web/jobs/jobs.html', context)
+
+    return render(
+        request,
+        'site_web/jobs/jobs.html',
+        context
+    )
+
+from django.http import Http404
+from django.utils.translation import gettext_lazy as _
+from django.views.generic import TemplateView
 
 
 class JobDetailView(TemplateView):
@@ -85,109 +118,128 @@ class JobDetailView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         slug = self.kwargs.get('slug')
 
-        # Simulation d'une base de données Antarès
         jobs_data = {
             'assistant-rh-polyvalent': {
-                'title': 'Assistant RH Polyvalent',
-                'reference': 'ANT/00270125AF',
-                'deadline': '27 Février 2025',
-                'email': 'antares.ml@gmail.com',
+                'title': _('Assistant RH Polyvalent'),
+                'reference': 'ANT-RH-2026-01',
+                'location': _('Bamako, Mali'),
+                'contract': _('CDI'),
+                'sector': _('Ressources Humaines'),
+                'deadline': _('30 Juin 2026'),
+                'email': 'recrutement@antares-rh.com',
 
-                'main_mission': """
-                Assister le service RH dans l’administration du personnel, le recrutement,
-                la formation et l’évaluation du personnel.
-                """,
+                'main_mission': _(
+                    "Assurer le suivi administratif RH et participer aux "
+                    "activités de recrutement et de gestion du personnel."
+                ),
 
-                'description_html': """
-                <h1>Recrutement :</h1>
-                <ul>
-                    <li>Analyser les besoins en recrutement</li>
-                    <li>Rédiger fiches de poste et annonces</li>
-                    <li>Faire le tri des CV et élaborer les grilles d’évaluation</li>
-                    <li>Organiser et conduire des entretiens (individuels, collectifs, téléphoniques)</li>
-                    <li>Proposer une sélection de candidats</li>
-                    <li>Accompagner les nouveaux recrutés</li>
-                </ul>
+                'responsibilities': [
+                    _('Suivi administratif des dossiers du personnel'),
+                    _('Publication des offres et présélection des candidatures'),
+                    _('Organisation des entretiens'),
+                    _('Participation au reporting RH'),
+                ],
 
+                'profile': [
+                    _('Licence en Ressources Humaines ou équivalent'),
+                    _('Première expérience en administration RH'),
+                    _('Bonne maîtrise des outils bureautiques'),
+                    _('Bonne communication écrite et orale'),
+                ],
 
+                'application': _(
+                    "Envoyez votre CV et votre lettre de motivation à "
+                    "l’adresse indiquée avant la date limite."
+                ),
+            },
 
-                
-                """,
+            'assistant-comptable': {
+                'title': _('Assistant Comptable'),
+                'reference': 'ANT-FIN-2026-02',
+                'location': _('Bamako, Mali'),
+                'contract': _('CDD'),
+                'sector': _('Finance & Comptabilité'),
+                'deadline': _('12 Juillet 2026'),
+                'email': 'recrutement@antares-rh.com',
 
-                'profile_html': """
-                <ul>
-                    <li>Licence en Ressources Humaines, Administration ou équivalent</li>
-                    <li>Minimum 2 ans d’expérience</li>
-                    <li>Maîtrise du droit du travail et des outils bureautiques</li>
-                    <li>Bonnes capacités rédactionnelles et relationnelles</li>
+                'main_mission': _(
+                    "Participer au suivi comptable et au traitement des "
+                    "opérations administratives courantes."
+                ),
 
-                </ul>
-                """,
+                'responsibilities': [
+                    _('Saisie des pièces comptables'),
+                    _('Classement et archivage des documents'),
+                    _('Suivi des paiements et rapprochements'),
+                    _('Appui aux opérations administratives'),
+                ],
 
-                'application_html': """
-                <p>
-                Merci de transmettre votre <strong>CV détaillé</strong> et votre 
-                <strong>lettre de motivation</strong> au plus tard le 
-                <strong>27 Février 2025</strong> à l’adresse suivante :
-                </p>
+                'profile': [
+                    _('Formation en comptabilité ou gestion'),
+                    _('Bonne maîtrise d’Excel'),
+                    _('Rigueur et sens de l’organisation'),
+                ],
 
-                <p class="font-bold">antares.ml@gmail.com</p>
-
-                <p>
-                Merci de mentionner la référence 
-                <strong>ANT/ARHP/00270125AF</strong> en objet.
-                </p>
-
-                <p class="text-sm text-slate-500 mt-2">
-                NB : seuls les candidats présélectionnés seront contactés.
-                </p>
-                """
-            }
+                'application': _(
+                    "Merci de transmettre votre candidature complète avant "
+                    "la date indiquée."
+                ),
+            },
         }
-        # Récupération de l'offre ou erreur 404
+
         job = jobs_data.get(slug)
+
         if not job:
-            raise Http404("Cette offre n'existe pas.")
+            raise Http404(_("Cette offre n'existe pas."))
 
         context['job'] = job
+
         return context
 
+
 def services(request):
-   services = [
-                    {
-                        "title": "Recrutement & Évaluation",
-                        "description": "Identification, sélection et évaluation de profils qualifiés selon les exigences techniques et organisationnelles de votre entreprise.",
-                        "icon": "user-group",
-                    },
-                    {
-                        "title": "Intérim & Mise à disposition",
-                        "description": "Mise à disposition de personnel qualifié avec prise en charge administrative, sociale et contractuelle.",
-                        "icon": "clock",
-                    },
-                    {
-                        "title": "Gestion Administrative RH",
-                        "description": "Gestion des contrats, paie, déclarations sociales et suivi administratif du personnel conformément à la réglementation malienne.",
-                        "icon": "document-check",
-                    },
-                    {
-                        "title": "Conseil & Audit Social",
-                        "description": "Audit RH, conformité sociale, diagnostics organisationnels et accompagnement dans la structuration des procédures RH.",
-                        "icon": "briefcase",
-                    },
-                    {
-                        "title": "Formation Professionnelle",
-                        "description": "Conception et animation de formations adaptées aux besoins opérationnels et au développement des compétences.",
-                        "icon": "academic-cap",
-                    },
-                    {
-                        "title": "Sous-traitance & Appui Opérationnel",
-                        "description": "Gestion externalisée d’activités et d’équipes opérationnelles dans les domaines logistiques, administratifs et techniques.",
-                        "icon": "presentation-chart",
-                    },
-                ]
-   return render(request, 'site_web/services/services.html', {'services': services})
+    services = [
+        {
+            "title": _("Recrutement & Évaluation"),
+            "description": _("Identification, sélection et évaluation de profils qualifiés selon les exigences techniques et organisationnelles de votre entreprise."),
+            "icon": "user-group",
+        },
+        {
+            "title": _("Intérim & Mise à disposition"),
+            "description": _("Mise à disposition de personnel qualifié avec prise en charge administrative, sociale et contractuelle."),
+            "icon": "clock",
+        },
+        {
+            "title": _("Gestion Administrative RH"),
+            "description": _("Gestion des contrats, paie, déclarations sociales et suivi administratif du personnel conformément à la réglementation malienne."),
+            "icon": "document-check",
+        },
+        {
+            "title": _("Conseil & Audit Social"),
+            "description": _("Audit RH, conformité sociale, diagnostics organisationnels et accompagnement dans la structuration des procédures RH."),
+            "icon": "briefcase",
+        },
+        {
+            "title": _("Formation Professionnelle"),
+            "description": _("Conception et animation de formations adaptées aux besoins opérationnels et au développement des compétences."),
+            "icon": "academic-cap",
+        },
+        {
+            "title": _("Sous-traitance & Appui Opérationnel"),
+            "description": _("Gestion externalisée d’activités et d’équipes opérationnelles dans les domaines logistiques, administratifs et techniques."),
+            "icon": "presentation-chart",
+        },
+    ]
+
+    return render(
+        request,
+        'site_web/services/services.html',
+        {'services': services}
+    )
+
 
 
 
@@ -195,53 +247,62 @@ def espace_candidat(request):
     clients = range(1, 16)
 
     secteurs = sorted([
-        "Banque & Assurance",
-        "BTP & Infrastructures",
-        "Distribution & FMCG",
-        "Grande Distribution",
-        "Industrie Agroalimentaire",
-        "Mines & Énergie",
-        "Nettoyage & Facility Management",
-        "ONG & Projets Internationaux",
-        "Production Industrielle",
-        "Services Externalisés",
-        "Technologie & IT",
-        "Télécommunications",
-        "Transport & Logistique",
+        _("Banque & Assurance"),
+        _("BTP & Infrastructures"),
+        _("Distribution & FMCG"),
+        _("Grande Distribution"),
+        _("Industrie Agroalimentaire"),
+        _("Mines & Énergie"),
+        _("Nettoyage & Facility Management"),
+        _("ONG & Projets Internationaux"),
+        _("Production Industrielle"),
+        _("Services Externalisés"),
+        _("Technologie & IT"),
+        _("Télécommunications"),
+        _("Transport & Logistique"),
     ])
+
     context = {
         "clients": clients,
         "secteurs": secteurs,
-
     }
-    return render(request, 'site_web/espaces/espace_candidat.html', context)
+
+    return render(
+        request,
+        'site_web/espaces/espace_candidat.html',
+        context
+    )
+
 
 def espace_consultant(request):
     clients = range(1, 16)
 
     secteurs = sorted([
-        "Banque & Assurance",
-        "BTP & Infrastructures",
-        "Distribution & FMCG",
-        "Grande Distribution",
-        "Industrie Agroalimentaire",
-        "Mines & Énergie",
-        "Nettoyage & Facility Management",
-        "ONG & Projets Internationaux",
-        "Production Industrielle",
-        "Services Externalisés",
-        "Technologie & IT",
-        "Télécommunications",
-        "Transport & Logistique",
+        _("Banque & Assurance"),
+        _("BTP & Infrastructures"),
+        _("Distribution & FMCG"),
+        _("Grande Distribution"),
+        _("Industrie Agroalimentaire"),
+        _("Mines & Énergie"),
+        _("Nettoyage & Facility Management"),
+        _("ONG & Projets Internationaux"),
+        _("Production Industrielle"),
+        _("Services Externalisés"),
+        _("Technologie & IT"),
+        _("Télécommunications"),
+        _("Transport & Logistique"),
     ])
+
     context = {
         "clients": clients,
         "secteurs": secteurs,
-
     }
 
-
-    return render(request, 'site_web/espaces/espace_consultant.html',context)
+    return render(
+        request,
+        'site_web/espaces/espace_consultant.html',
+        context
+    )
 
 
 def espace_entreprise(request):
@@ -249,82 +310,83 @@ def espace_entreprise(request):
     clients = range(1, 16)
 
     secteurs = sorted([
-        "Banque & Assurance",
-        "BTP & Infrastructures",
-        "Distribution & FMCG",
-        "Grande Distribution",
-        "Industrie Agroalimentaire",
-        "Mines & Énergie",
-        "Nettoyage & Facility Management",
-        "ONG & Projets Internationaux",
-        "Production Industrielle",
-        "Services Externalisés",
-        "Technologie & IT",
-        "Télécommunications",
-        "Transport & Logistique",
+        _("Banque & Assurance"),
+        _("BTP & Infrastructures"),
+        _("Distribution & FMCG"),
+        _("Grande Distribution"),
+        _("Industrie Agroalimentaire"),
+        _("Mines & Énergie"),
+        _("Nettoyage & Facility Management"),
+        _("ONG & Projets Internationaux"),
+        _("Production Industrielle"),
+        _("Services Externalisés"),
+        _("Technologie & IT"),
+        _("Télécommunications"),
+        _("Transport & Logistique"),
     ])
 
     services = [
         {
-            "title": "Recrutement & Évaluation",
-            "description": (
+            "title": _("Recrutement & Évaluation"),
+            "description": _(
                 "Identification, sélection et évaluation de profils qualifiés "
                 "selon les besoins techniques et organisationnels de votre entreprise."
             ),
-            "highlight": "Sélection rigoureuse",
+            "highlight": _("Sélection rigoureuse"),
             "icon": "users",
         },
 
         {
-            "title": "Intérim & Mise à disposition",
-            "description": (
+            "title": _("Intérim & Mise à disposition"),
+            "description": _(
                 "Mise à disposition de personnel qualifié avec prise en charge "
                 "administrative, sociale et contractuelle."
             ),
-            "highlight": "Gestion RH complète",
+            "highlight": _("Gestion RH complète"),
             "icon": "briefcase",
         },
 
         {
-            "title": "Gestion Administrative RH",
-            "description": (
+            "title": _("Gestion Administrative RH"),
+            "description": _(
                 "Gestion des contrats, paie, déclarations sociales et suivi "
                 "administratif du personnel conformément à la réglementation malienne."
             ),
-            "highlight": "Conformité sociale",
+            "highlight": _("Conformité sociale"),
             "icon": "building",
         },
 
         {
-            "title": "Conseil & Audit Social",
-            "description": (
+            "title": _("Conseil & Audit Social"),
+            "description": _(
                 "Audit RH, diagnostics organisationnels et accompagnement "
                 "dans la structuration des procédures et pratiques RH."
             ),
-            "highlight": "Audit & conformité",
+            "highlight": _("Audit & conformité"),
             "icon": "shield",
         },
 
         {
-            "title": "Formation Professionnelle",
-            "description": (
+            "title": _("Formation Professionnelle"),
+            "description": _(
                 "Conception et animation de formations adaptées aux besoins "
                 "opérationnels et au développement des compétences."
             ),
-            "highlight": "Renforcement des capacités",
+            "highlight": _("Renforcement des capacités"),
             "icon": "graduation",
         },
 
         {
-            "title": "Sous-traitance & Appui Opérationnel",
-            "description": (
+            "title": _("Sous-traitance & Appui Opérationnel"),
+            "description": _(
                 "Gestion externalisée d’activités et d’équipes opérationnelles "
                 "dans les domaines logistiques, administratifs et techniques."
             ),
-            "highlight": "Flexibilité opérationnelle",
+            "highlight": _("Flexibilité opérationnelle"),
             "icon": "layers",
         },
     ]
+
     context = {
         "clients": clients,
         "secteurs": secteurs,
@@ -337,10 +399,6 @@ def espace_entreprise(request):
         context
     )
 
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
-from django.utils.translation import gettext as _
 
 def login_view(request):
    
