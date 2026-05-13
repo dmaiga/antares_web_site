@@ -3,366 +3,180 @@
 
 {% block content %}
 
-<section class="bg-white overflow-hidden lg:py-8">
-
-    <div class="max-w-7xl mx-auto lg:rounded-[2.5rem] lg:shadow-2xl overflow-hidden">
-
-        <div class="grid lg:grid-cols-2 min-h-[600px]">
-
-            <!-- FORM -->
-            <div class="flex items-center justify-center px-6 py-8 lg:px-12 bg-[#f5f5f5]">
-
-                <div class="w-full max-w-[460px]">
-
-                    <!-- HEADER -->
-                    <div class="mb-6">
-
-                        <span id="header-badge"
-                              class="text-antares-blue font-black uppercase tracking-[0.25em] text-[10px] transition-all">
-
-                            {% trans "Inscription" %}
-
-                        </span>
-
-                        <h1 class="mt-2 text-3xl font-black text-slate-900 tracking-tighter leading-tight">
-                            {% trans "Créer votre espace" %}
-                        </h1>
-
-                    </div>
-
-                    <!-- TABS -->
-                    <div class="flex bg-slate-50 p-1 rounded-2xl mb-8">
-
-                        <button type="button"
-                                onclick="switchTab('candidat')"
-                                id="tab-candidat"
-                                class="tab-btn flex-1 py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all bg-antares-blue text-white">
-
-                            {% trans "Candidat" %}
-
-                        </button>
-
-                        <button type="button"
-                                onclick="switchTab('entreprise')"
-                                id="tab-entreprise"
-                                class="tab-btn flex-1 py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400">
-
-                            {% trans "Entreprise" %}
-
-                        </button>
-
-                        <button type="button"
-                                onclick="switchTab('consultant')"
-                                id="tab-consultant"
-                                class="tab-btn flex-1 py-3 text-[10px] font-black uppercase tracking-widest rounded-xl transition-all text-slate-400">
-
-                            {% trans "Consultant" %}
-
-                        </button>
-
-                    </div>
-
-                    <!-- FORM -->
-                    <form method="POST"
-                          enctype="multipart/form-data"
-                          class="space-y-5">
-
-                        {% csrf_token %}
-
-                        <input type="hidden"
-                               name="profile_type"
-                               id="profile_type"
-                               value="candidat">
-
-                        <!-- CANDIDAT -->
-                        <div id="form-candidat" class="space-y-4">
-
-                            <div class="grid grid-cols-2 gap-3">
-
-                                <div class="space-y-1">
-
-                                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                        {% trans "Prénom" %}
-                                    </label>
-
-                                    <input type="text"
-                                           name="candidate_first_name"
-                                           class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-blue focus:outline-none">
-
-                                </div>
-
-                                <div class="space-y-1">
-
-                                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                        {% trans "Nom" %}
-                                    </label>
-
-                                    <input type="text"
-                                           name="candidate_last_name"
-                                           class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-blue focus:outline-none">
-
-                                </div>
-
-                            </div>
-
-                            <div class="space-y-1">
-
-                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                    {% trans "Email" %}
-                                </label>
-
-                                <input type="email"
-                                       name="candidate_email"
-                                       class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-blue focus:outline-none">
-
-                            </div>
-
-                            <div class="space-y-1">
-
-                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                    {% trans "Téléphone" %}
-                                </label>
-
-                                <input type="tel"
-                                       name="candidate_phone"
-                                       class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-blue focus:outline-none">
-
-                            </div>
-
-                        </div>
-
-                        <!-- ENTREPRISE -->
-                        <div id="form-entreprise" class="hidden space-y-4">
-                        
-                            <!-- ENTREPRISE -->
-                            <div class="space-y-1">
-                            
-                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                    {% trans "Nom de l’entreprise" %}
-                                </label>
-                            
-                                <input type="text"
-                                       name="company_name"
-                                       class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-orange focus:outline-none">
-                            
-                            </div>
-                        
-                            <div class="space-y-1">
-                            
-                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                    {% trans "Secteur d’activité" %}
-                                </label>
-                            
-                                <input type="text"
-                                       name="sector"
-                                       placeholder="EX: Industrie, BTP, Distribution..."
-                                       class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-orange focus:outline-none">
-                            
-                            </div>
-                        
-                            <!-- REPRESENTANT -->
-                            <div class="pt-2 border-t border-slate-100">
-                            
-                                <p class="text-[10px] text-center font-black uppercase tracking-[0.18em] text-antares-orange mb-4">
-                                    {% trans "Informations du représentant" %}
-                                </p>
-                            
-                                <div class="grid grid-cols-2 gap-3 mb-3">
-                                
-                                    <div class="space-y-1">
-                                    
-                                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                            {% trans "Prénom" %}
-                                        </label>
-                                    
-                                        <input type="text"
-                                               name="representant_first_name"
-                                               class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-orange focus:outline-none">
-                                    
-                                    </div>
-                                
-                                    <div class="space-y-1">
-                                    
-                                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                            {% trans "Nom" %}
-                                        </label>
-                                    
-                                        <input type="text"
-                                               name="representant_last_name"
-                                               class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-orange focus:outline-none">
-                                    
-                                    </div>
-                                
-                                </div>
-                            
-                                <div class="grid grid-cols-2 gap-3 mb-3">
-                                
-                                    <div class="space-y-1">
-                                    
-                                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                            {% trans "Email professionnel" %}
-                                        </label>
-                                    
-                                        <input type="email"
-                                               name="company_email"
-                                               class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-orange focus:outline-none">
-                                    
-                                    </div>
-                                
-                                    <div class="space-y-1">
-                                    
-                                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                            {% trans "Téléphone" %}
-                                        </label>
-                                    
-                                        <input type="tel"
-                                               name="company_phone"
-                                               class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-orange focus:outline-none">
-                                    
-                                    </div>
-                                
-                                </div>
-                            
-                                <div class="space-y-1">
-                                
-                                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                        {% trans "Poste occupé" %}
-                                    </label>
-                                
-                                    <input type="text"
-                                           name="position"
-                                           class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-orange focus:outline-none">
-                                
-                                </div>
-                            
-                            </div>
-                        
-                        </div>
-
-                        <!-- CONSULTANT -->
-                        <div id="form-consultant" class="hidden space-y-4">
-
-                            <div class="alert border border-emerald-100 rounded-xl">
-
-                                <span class="text-[12px] font-bold  ">
-
-                                    {% trans "Profil réservé aux consultants disposant de plus de 10 ans d’expérience." %}
-
-                                </span>
-
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-3">
-
-                                <div class="space-y-1">
-
-                                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                        {% trans "Prénom" %}
-                                    </label>
-
-                                    <input type="text"
-                                           name="consultant_first_name"
-                                           class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-vert focus:outline-none">
-
-                                </div>
-
-                                <div class="space-y-1">
-
-                                    <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                        {% trans "Nom" %}
-                                    </label>
-
-                                    <input type="text"
-                                           name="consultant_last_name"
-                                           class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-vert focus:outline-none">
-
-                                </div>
-
-                            </div>
-
-                            <div class="space-y-1">
-
-                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                    {% trans "Email" %}
-                                </label>
-
-                                <input type="email"
-                                       name="consultant_email"
-                                       class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-vert focus:outline-none">
-
-                            </div>
-
-                            <div class="space-y-1">
-
-                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                    {% trans "Téléphone" %}
-                                </label>
-
-                                <input type="tel"
-                                       name="consultant_phone"
-                                       class="input input-bordered w-full rounded-xl border-slate-200 focus:border-antares-vert focus:outline-none">
-
-                            </div>
-
-                            <div class="space-y-1">
-
-                                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                                    {% trans "CV (PDF ou Word)" %}
-                                </label>
-
-                                <input type="file"
-                                       name="cv"
-                                       accept=".pdf,.doc,.docx"
-                                       class="file-input file-input-bordered w-full rounded-xl border-slate-200 focus:border-antares-vert">
-
-                            </div>
-
-                        </div>
-
-                        <!-- BUTTON -->
-                        <div class="pt-3">
-
-                            <button type="submit"
-                                    id="submit-button"
-                                    class="btn w-full rounded-xl border-0 bg-antares-blue hover:brightness-105 text-white font-black uppercase tracking-[0.18em] text-[11px]">
-
-                                {% trans "Soumettre ma demande" %}
-
-                            </button>
-
-                            <p class="text-center mt-4 text-[13px] leading-relaxed text-slate-800">
-
-                                {% trans "Les identifiants d’accès seront transmis par email après validation de votre profil par les équipes Antarès." %}
-
-                            </p>
-
-                            <p class="text-center mt-5 text-xs text-slate-500">
-
-                                {% trans "Déjà un compte ?" %}
-
-                                <a href="{% url 'login' %}"
-                                   class="ml-1 font-black text-antares-blue hover:underline">
-
-                                    {% trans "Se connecter" %}
-
-                                </a>
-
+<section class="bg-[#f5f5f5] py-6 md:py-12 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+
+        <div class="max-w-7xl mx-auto bg-white rounded-[2rem] lg:rounded-[3rem] shadow-2xl border border-slate-100 overflow-hidden">
+
+            <div class="w-full px-6 py-8 md:px-12 md:py-14 lg:px-16 lg:py-16">
+
+
+                <!-- HEADER -->
+                <div class="max-w-3xl mx-auto text-center mb-10 md:mb-14">
+                
+                    <span class="inline-flex items-center px-4 py-1 rounded-full bg-slate-100 text-slate-500 text-[10px] font-black uppercase tracking-[0.25em]">
+                        {% trans "Antarès RH" %}
+                    </span>
+                
+                    <h1 class="mt-5 text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.05] tracking-tight">
+                        {% trans "Créer votre espace" %}
+                    </h1>
+                
+                    <p class="mt-4 text-sm md:text-lg text-slate-600 leading-relaxed">
+                        {% trans "Choisissez votre profil pour poursuivre votre inscription." %}
+                    </p>
+                
+                </div>
+
+                <!-- CARDS -->
+                <div class="flex flex-col lg:grid lg:grid-cols-3 gap-5 lg:gap-7">
+
+                    <!-- CANDIDAT -->
+                    <a href="{% url 'espace_candidat' %}#enroulement-form"
+                       class="group flex items-center justify-between lg:flex-col lg:items-start lg:justify-between gap-5 bg-slate-100 hover:bg-antares-blue rounded-[1.7rem] lg:rounded-[2.2rem] p-5 md:p-7 lg:p-8 border border-slate-100 hover:border-antares-blue transition-all duration-300 lg:min-h-[300px]">
+
+                        <div class="min-w-0">
+
+                            <span class="inline-block text-[10px] font-black uppercase tracking-[0.2em] text-antares-blue group-hover:text-blue-100 mb-3">
+                                {% trans "Candidat" %}
+                            </span>
+
+                            <h3 class="text-lg md:text-2xl font-black text-slate-900 group-hover:text-white leading-tight">
+                                {% trans "Rejoignez notre réseau" %}
+                            </h3>
+
+                            <p class="hidden lg:block text-sm text-slate-600 mt-4 leading-relaxed group-hover:text-blue-100">
+                                {% trans "Accédez aux offres d’emploi et suivez vos candidatures depuis votre espace personnel." %}
                             </p>
 
                         </div>
 
-                    </form>
+                        <div class="flex-shrink-0 lg:mt-auto">
+
+                            <div class="w-11 h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white flex items-center justify-center shadow-sm group-hover:bg-white/10 transition-all">
+
+                                <svg class="w-5 h-5 text-antares-blue group-hover:text-white"
+                                     fill="none"
+                                     stroke="currentColor"
+                                     viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M9 5l7 7-7 7"></path>
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                    <!-- ENTREPRISE -->
+                    <a href="{% url 'espace_entreprise' %}#enroulement-form"
+                       class="group flex items-center justify-between lg:flex-col lg:items-start lg:justify-between gap-5 bg-slate-100 hover:bg-antares-orange rounded-[1.7rem] lg:rounded-[2.2rem] p-5 md:p-7 lg:p-8 border border-slate-100 hover:border-antares-orange transition-all duration-300 lg:min-h-[300px]">
+
+                        <div class="min-w-0">
+
+                            <span class="inline-block text-[10px] font-black uppercase tracking-[0.2em] text-antares-orange group-hover:text-orange-100 mb-3">
+                                {% trans "Entreprise" %}
+                            </span>
+
+                            <h3 class="text-lg md:text-2xl font-black text-slate-900 group-hover:text-white leading-tight">
+                                {% trans "Gérez votre capital humain" %}
+                            </h3>
+
+                            <p class="hidden lg:block text-sm text-slate-600 mt-4 leading-relaxed group-hover:text-orange-100">
+                                {% trans "Accédez à nos services RH et pilotez vos demandes depuis une interface dédiée." %}
+                            </p>
+
+                        </div>
+
+                        <div class="flex-shrink-0 lg:mt-auto">
+
+                            <div class="w-11 h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white flex items-center justify-center shadow-sm group-hover:bg-white/10 transition-all">
+
+                                <svg class="w-5 h-5 text-antares-orange group-hover:text-white"
+                                     fill="none"
+                                     stroke="currentColor"
+                                     viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M9 5l7 7-7 7"></path>
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                    <!-- CONSULTANT -->
+                    <a href="{% url 'espace_consultant' %}#enroulement-form"
+                       class="group flex items-center justify-between lg:flex-col lg:items-start lg:justify-between gap-5 bg-slate-100 hover:bg-emerald-600 rounded-[1.7rem] lg:rounded-[2.2rem] p-5 md:p-7 lg:p-8 border border-slate-100 hover:border-emerald-600 transition-all duration-300 lg:min-h-[300px]">
+
+                        <div class="min-w-0">
+
+                            <span class="inline-block text-[10px] font-black uppercase tracking-[0.2em] text-emerald-700 group-hover:text-emerald-100 mb-3">
+                                {% trans "Consultant" %}
+                            </span>
+
+                            <h3 class="text-lg md:text-2xl font-black text-slate-900 group-hover:text-white leading-tight">
+                                {% trans "Valorisez votre expertise" %}
+                            </h3>
+
+                            <p class="hidden lg:block text-sm text-slate-600 mt-4 leading-relaxed group-hover:text-emerald-100">
+                                {% trans "Rejoignez notre réseau de consultants et participez à des missions stratégiques." %}
+                            </p>
+
+                        </div>
+
+                        <div class="flex-shrink-0 lg:mt-auto">
+
+                            <div class="w-11 h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white flex items-center justify-center shadow-sm group-hover:bg-white/10 transition-all">
+
+                                <svg class="w-5 h-5 text-emerald-700 group-hover:text-white"
+                                     fill="none"
+                                     stroke="currentColor"
+                                     viewBox="0 0 24 24">
+
+                                    <path stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M9 5l7 7-7 7"></path>
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                    </a>
 
                 </div>
 
-            </div>
+                <!-- LOGIN -->
+                <div class="mt-10 md:mt-14 text-center">
 
-            <!-- IMAGE -->
-            <div class="hidden lg:block relative h-full">
+                    <p class="text-sm md:text-base text-slate-500">
 
-                <img src="{% static 'images/home/about_image.webp' %}"
-                     alt="Antarès RH"
-                     class="w-full h-full object-cover">
+                        {% trans "Déjà un compte ?" %}
+
+                        <a href="{% url 'login' %}"
+                           class="ml-1 font-black text-antares-blue hover:underline">
+
+                            {% trans "Se connecter" %}
+
+                        </a>
+
+                    </p>
+
+                </div>
 
             </div>
 
@@ -371,78 +185,5 @@
     </div>
 
 </section>
-
-<script>
-
-function switchTab(type) {
-
-    document.getElementById('profile_type').value = type;
-
-    const tabs = ['candidat', 'entreprise', 'consultant'];
-
-    tabs.forEach(tab => {
-
-        const btn = document.getElementById('tab-' + tab);
-
-        btn.classList.remove(
-            'bg-antares-blue',
-            'bg-antares-orange',
-            'bg-antares-vert',
-            'text-white'
-        );
-
-        btn.classList.add('text-slate-400');
-
-        document.getElementById('form-' + tab).classList.add('hidden');
-
-    });
-
-    const activeBtn = document.getElementById('tab-' + type);
-    const submitButton = document.getElementById('submit-button');
-    const headerBadge = document.getElementById('header-badge');
-
-    submitButton.classList.remove(
-        'bg-antares-blue',
-        'bg-antares-orange',
-        'bg-antares-vert'
-    );
-
-    headerBadge.classList.remove(
-        'text-antares-blue',
-        'text-antares-orange',
-        'text-antares-vert'
-    );
-
-    if (type === 'candidat') {
-
-        activeBtn.classList.add('bg-antares-blue');
-        submitButton.classList.add('bg-antares-blue');
-        headerBadge.classList.add('text-antares-blue');
-
-    }
-
-    if (type === 'entreprise') {
-
-        activeBtn.classList.add('bg-antares-orange');
-        submitButton.classList.add('bg-antares-orange');
-        headerBadge.classList.add('text-antares-orange');
-
-    }
-
-    if (type === 'consultant') {
-
-        activeBtn.classList.add('bg-antares-vert');
-        submitButton.classList.add('bg-antares-vert');
-        headerBadge.classList.add('text-antares-vert');
-
-    }
-
-    activeBtn.classList.add('text-white');
-    activeBtn.classList.remove('text-slate-400');
-
-    document.getElementById('form-' + type).classList.remove('hidden');
-}
-
-</script>
 
 {% endblock %}
