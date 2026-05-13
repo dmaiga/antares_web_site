@@ -1,0 +1,1972 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-13 12:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: antares_web/settings.py:130
+msgid "Français"
+msgstr ""
+
+#: antares_web/settings.py:131
+msgid "English"
+msgstr ""
+
+#: site_web/templates/base.html:10
+msgid "Conseil RH & Recrutement en Afrique"
+msgstr "HR Consulting & Recruitment in Africa"
+
+#: site_web/templates/base.html:20
+msgid "Plus de 15 ans d\\"
+msgstr "More than 15 years of"
+
+#: site_web/templates/site_web/about/about.html:4
+msgid "À propos de nous"
+msgstr "About Us"
+
+#: site_web/templates/site_web/about/partials/_cta_about.html:12
+msgid "Prêt à collaborer avec nous ?"
+msgstr "Ready to work with us?"
+
+#: site_web/templates/site_web/about/partials/_cta_about.html:16
+msgid ""
+"Rejoignez les organisations qui nous font confiance pour structurer et "
+"valoriser leur capital humain."
+msgstr ""
+"Join the organizations that trust us to structure and enhance their human "
+"capital."
+
+#: site_web/templates/site_web/about/partials/_cta_about.html:22
+msgid "Voir nos Offres"
+msgstr "View Our Opportunities"
+
+#: site_web/templates/site_web/about/partials/_cta_about.html:26
+msgid "Devenir Client"
+msgstr "Become a Client"
+
+#: site_web/templates/site_web/about/partials/_cta_about.html:30
+msgid "Nos services"
+msgstr "Our Services"
+
+#: site_web/templates/site_web/about/partials/_history.html:19
+msgid "20 ans d'expertise au service du capital humain"
+msgstr "20 years of expertise serving human capital"
+
+#: site_web/templates/site_web/about/partials/_history.html:24
+msgid ""
+"Depuis 2007, Antarès RH accompagne aussi bien les entreprises locales que "
+"les multinationales en Afrique de l'Ouest dans la gestion et le "
+"développement de leurs ressources humaines."
+msgstr ""
+"Since 2007, Antarès RH has been supporting both local companies and "
+"multinational organizations across West Africa in the management and "
+"development of their human resources."
+
+#: site_web/templates/site_web/about/partials/_history.html:28
+msgid ""
+"Notre rôle dépasse le recrutement : nous bâtissons des ponts durables entre "
+"organisations et talents, en apportant des solutions concrètes aux défis RH. "
+"Grâce à une méthodologie éprouvée, nous aidons nos clients à transformer un "
+"environnement parfois informel en un cadre structuré, conforme et performant."
+msgstr ""
+"Our role goes beyond recruitment: we build lasting bridges between "
+"organizations and talent by providing practical HR solutions. Through a "
+"proven methodology, we help our clients transform informal environments into "
+"structured, compliant, and high-performing organizations."
+
+#: site_web/templates/site_web/about/partials/_history.html:32
+msgid ""
+"Recruter, mettre à disposition, conseiller et accompagner : telle est notre "
+"mission."
+msgstr ""
+"Recruiting, staffing, advising, and supporting organizations: this is our "
+"mission."
+
+#: site_web/templates/site_web/about/partials/_history.html:43
+msgid "Années d'expertise"
+msgstr "Years of Expertise"
+
+#: site_web/templates/site_web/about/partials/_history.html:52
+#: site_web/templates/site_web/contact/contact.html:71
+msgid "Experts RH"
+msgstr "HR Experts"
+
+#: site_web/templates/site_web/about/partials/_history.html:61
+msgid "Partenaires"
+msgstr "Partners"
+
+#: site_web/templates/site_web/about/partials/_history.html:70
+msgid "Vivier de talents"
+msgstr "Talent Pool"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:8
+msgid "Une expertise multisectorielle"
+msgstr "Multisector Expertise"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:11
+msgid ""
+"Plus de 18 ans d'accompagnement opérationnel auprès des acteurs clés de "
+"l'économie."
+msgstr ""
+"More than 18 years of operational support alongside key players in the "
+"economy."
+
+#: site_web/templates/site_web/about/partials/_secteur.html:18
+msgid "Public & Institutionnel"
+msgstr "Public & Institutional"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:20
+msgid "Administrations publiques, organismes d'État et projets de gouvernance."
+msgstr ""
+"Public administrations, government institutions, and governance projects."
+
+#: site_web/templates/site_web/about/partials/_secteur.html:25
+msgid "Secteur Privé"
+msgstr "Private Sector"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:27
+msgid "Accompagnement des PME, PMI et grandes entreprises structurées."
+msgstr ""
+"Support for SMEs, industrial companies, and large structured organizations."
+
+#: site_web/templates/site_web/about/partials/_secteur.html:32
+msgid "Industrie & BTP"
+msgstr "Industry & Construction"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:34
+msgid "Mines, agro-industrie, infrastructures et chantiers d'envergure."
+msgstr ""
+"Mining, agribusiness, infrastructure, and large-scale construction projects."
+
+#: site_web/templates/site_web/about/partials/_secteur.html:39
+msgid "Services & Tertiaire"
+msgstr "Services & Tertiary Sector"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:41
+msgid "Banques, assurances, télécommunications et cabinets de conseil."
+msgstr ""
+"Banks, insurance companies, telecommunications firms, and consulting "
+"agencies."
+
+#: site_web/templates/site_web/about/partials/_secteur.html:46
+msgid "ONG & International"
+msgstr "NGOs & International Organizations"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:48
+msgid ""
+"Organisations internationales et projets de développement à impact social."
+msgstr ""
+"International organizations and development projects with social impact."
+
+#: site_web/templates/site_web/about/partials/_secteur.html:57
+msgid "Conformité Sociale"
+msgstr "Social Compliance"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:61
+msgid "Zone d'Intervention"
+msgstr "Area of Operations"
+
+#: site_web/templates/site_web/about/partials/_secteur.html:65
+msgid "Multisectorielle"
+msgstr "Multisector"
+
+#: site_web/templates/site_web/about/partials/_services.html:8
+msgid "Expertise Opérationnelle"
+msgstr "Operational Expertise"
+
+#: site_web/templates/site_web/about/partials/_services.html:11
+msgid "Nos Pôles d'Excellence"
+msgstr "Our Areas of Excellence"
+
+#: site_web/templates/site_web/about/partials/_services.html:14
+msgid ""
+"De la stratégie à l'exécution administrative, nous couvrons l'intégralité du "
+"cycle de vie des ressources humaines."
+msgstr ""
+"From strategy to administrative execution, we cover the entire human "
+"resources lifecycle."
+
+#: site_web/templates/site_web/about/partials/_services.html:25
+msgid "Recrutement & Gestion de Personnel"
+msgstr "Recruitment & Workforce Management"
+
+#: site_web/templates/site_web/about/partials/_services.html:31
+msgid "Recrutement, évaluation et sélection de profils qualifiés"
+msgstr "Recruitment, assessment, and selection of qualified profiles"
+
+#: site_web/templates/site_web/about/partials/_services.html:36
+msgid "Mise à disposition et gestion administrative du personnel"
+msgstr "Staffing and administrative workforce management"
+
+#: site_web/templates/site_web/about/partials/_services.html:41
+msgid "Gestion de l’intérim, contrats, paie et suivi RH"
+msgstr "Temporary staffing, contracts, payroll, and HR management"
+
+#: site_web/templates/site_web/about/partials/_services.html:51
+msgid "Conseil & Audit Social"
+msgstr "HR Consulting & Social Audit"
+
+#: site_web/templates/site_web/about/partials/_services.html:57
+msgid "Audit RH, conformité sociale et diagnostics organisationnels"
+msgstr "HR audits, social compliance, and organizational diagnostics"
+
+#: site_web/templates/site_web/about/partials/_services.html:62
+msgid "Rédaction de procédures, politiques et manuels RH"
+msgstr "Drafting HR procedures, policies, and manuals"
+
+#: site_web/templates/site_web/about/partials/_services.html:67
+msgid "Accompagnement stratégique et optimisation des pratiques RH"
+msgstr "Strategic support and optimization of HR practices"
+
+#: site_web/templates/site_web/about/partials/_services.html:77
+msgid "Formation & Appui Opérationnel"
+msgstr "Training & Operational Support"
+
+#: site_web/templates/site_web/about/partials/_services.html:83
+msgid "Renforcement des capacités et formations professionnelles"
+msgstr "Capacity building and professional training"
+
+#: site_web/templates/site_web/about/partials/_services.html:88
+msgid "Management, leadership, communication et sécurité au travail"
+msgstr "Management, leadership, communication, and workplace safety"
+
+#: site_web/templates/site_web/about/partials/_services.html:93
+msgid "Sous-traitance et gestion d’équipes opérationnelles"
+msgstr "Outsourcing and operational workforce management"
+
+#: site_web/templates/site_web/about/partials/_services.html:104
+msgid "Externalisation Sociale & Administrative"
+msgstr "Social & Administrative Outsourcing"
+
+#: site_web/templates/site_web/about/partials/_services.html:107
+msgid ""
+"Nous sécurisons vos relations avec les organismes sociaux et garantissons la "
+"conformité de vos obligations employeur au Mali."
+msgstr ""
+"We secure your relationships with social institutions and ensure compliance "
+"with employer obligations in Mali."
+
+#: site_web/templates/site_web/about/partials/_services.html:112
+msgid "INPS & AMO"
+msgstr "INPS & AMO"
+
+#: site_web/templates/site_web/about/partials/_services.html:116
+msgid "Immatriculation"
+msgstr "Registration"
+
+#: site_web/templates/site_web/about/partials/_services.html:120
+msgid "Suivi Médical"
+msgstr "Medical Monitoring"
+
+#: site_web/templates/site_web/about/partials/_services.html:124
+msgid "Allocations"
+msgstr "Benefits"
+
+#: site_web/templates/site_web/about/partials/_services.html:131
+msgid ""
+"Transformez vos contraintes administratives en un cadre structuré, conforme "
+"et performant."
+msgstr ""
+"Transform your administrative constraints into a structured, compliant, and "
+"high-performing framework."
+#: site_web/templates/site_web/about/partials/_values.html:8
+msgid "Valeurs & Engagement"
+msgstr "Values & Commitment"
+
+#: site_web/templates/site_web/about/partials/_values.html:12
+msgid "Le choix d'un partenaire efficace, solide ... et discret"
+msgstr "The choice of an efficient, reliable... and discreet partner"
+
+#: site_web/templates/site_web/about/partials/_values.html:25
+msgid "Éthique"
+msgstr "Ethics"
+
+#: site_web/templates/site_web/about/partials/_values.html:28
+msgid ""
+"Nous agissons avec intégrité, respect et confidentialité dans toutes nos "
+"interventions."
+msgstr ""
+"We act with integrity, respect, and confidentiality in all our engagements."
+
+#: site_web/templates/site_web/about/partials/_values.html:31
+msgid "La déontologie guide chaque décision et chaque recommandation."
+msgstr "Professional ethics guide every decision and recommendation."
+
+#: site_web/templates/site_web/about/partials/_values.html:45
+msgid "Transparence"
+msgstr "Transparency"
+
+#: site_web/templates/site_web/about/partials/_values.html:48
+msgid "Communication claire, processus ouverts et relations de confiance."
+msgstr "Clear communication, transparent processes, and trusted relationships."
+
+#: site_web/templates/site_web/about/partials/_values.html:51
+msgid "Bâtir des partenariats durables par la clarté des échanges."
+msgstr "Building long-term partnerships through transparent communication."
+
+#: site_web/templates/site_web/about/partials/_values.html:64
+msgid "Conformité"
+msgstr "Compliance"
+
+#: site_web/templates/site_web/about/partials/_values.html:67
+msgid "Respect strict des réglementations locales et internationales."
+msgstr "Strict compliance with local and international regulations."
+
+#: site_web/templates/site_web/about/partials/_values.html:70
+msgid "Garantir la sécurité juridique de toutes nos prestations."
+msgstr "Ensuring the legal security of all our services."
+
+#
+#
+#
+#
+#
+#: site_web/templates/site_web/auth/login.html:20
+msgid "Espace Personnel"
+msgstr "Personal Dashboard"
+
+#: site_web/templates/site_web/auth/login.html:24
+msgid "Accédez à votre espace"
+msgstr "Access your portal"
+
+#: site_web/templates/site_web/auth/login.html:39
+msgid "Email ou téléphone"
+msgstr "Email or phone number"
+
+#: site_web/templates/site_web/auth/login.html:55
+msgid "Mot de passe"
+msgstr "Password"
+
+#: site_web/templates/site_web/auth/login.html:61
+msgid "Oublié ?"
+msgstr "Forgot password?"
+
+#: site_web/templates/site_web/auth/login.html:115
+msgid "Se souvenir de moi"
+msgstr "Remember me"
+
+#: site_web/templates/site_web/auth/login.html:127
+msgid "Connexion"
+msgstr "Sign In"
+
+#: site_web/templates/site_web/auth/login.html:138
+msgid "Pas encore de compte ?"
+msgstr "Don't have an account yet?"
+
+#: site_web/templates/site_web/auth/login.html:143
+msgid "Créer un compte"
+msgstr "Create an account"
+
+#: site_web/templates/site_web/auth/register.html:19
+#: site_web/templates/site_web/contact/contact.html:40
+msgid "Antarès RH"
+msgstr "Antarès RH"
+
+#: site_web/templates/site_web/auth/register.html:23
+msgid "Créer votre espace"
+msgstr "Create your workspace"
+
+#: site_web/templates/site_web/auth/register.html:27
+msgid "Choisissez votre profil pour poursuivre votre inscription."
+msgstr "Select your profile to continue registration."
+
+#: site_web/templates/site_web/auth/register.html:42
+#: site_web/templates/site_web/partials/_footer.html:50
+#: site_web/templates/site_web/partials/_navbar.html:34
+msgid "Candidat"
+msgstr "Candidate"
+
+#: site_web/templates/site_web/auth/register.html:46
+msgid "Rejoignez notre réseau"
+msgstr "Join our talent network"
+
+#: site_web/templates/site_web/auth/register.html:50
+msgid ""
+"Accédez aux offres d’emploi et suivez vos candidatures depuis votre espace "
+"personnel."
+msgstr ""
+"Access job openings and track your applications directly from your personal "
+"dashboard."
+
+#: site_web/templates/site_web/auth/register.html:84
+#: site_web/templates/site_web/partials/_footer.html:51
+#: site_web/templates/site_web/partials/_navbar.html:41
+msgid "Entreprise"
+msgstr "Employer"
+
+#: site_web/templates/site_web/auth/register.html:88
+#: site_web/templates/site_web/home/partials/_profils.html:97
+msgid "Gérez votre capital humain"
+msgstr "Manage your human capital"
+
+#: site_web/templates/site_web/auth/register.html:92
+msgid ""
+"Accédez à nos services RH et pilotez vos demandes depuis une interface "
+"dédiée."
+msgstr ""
+"Access our HR services and manage your requests through a dedicated "
+"interface."
+
+#: site_web/templates/site_web/auth/register.html:126
+#: site_web/templates/site_web/partials/_footer.html:52
+#: site_web/templates/site_web/partials/_navbar.html:48
+msgid "Consultant"
+msgstr "Consultant"
+
+#: site_web/templates/site_web/auth/register.html:130
+msgid "Valorisez votre expertise"
+msgstr "Showcase your expertise"
+
+#: site_web/templates/site_web/auth/register.html:134
+msgid ""
+"Rejoignez notre réseau de consultants et participez à des missions "
+"stratégiques."
+msgstr "Join our consultant network and take part in strategic assignments."
+
+#: site_web/templates/site_web/auth/register.html:168
+msgid "Déjà un compte ?"
+msgstr "Already have an account?"
+
+#: site_web/templates/site_web/auth/register.html:173
+#: site_web/templates/site_web/partials/_navbar.html:70
+#: site_web/templates/site_web/partials/_navbar.html:118
+msgid "Se connecter"
+msgstr "Login"
+
+#
+#
+#
+#
+#: site_web/templates/site_web/contact/contact.html:27
+msgid "Contact & Assistance"
+msgstr "Contact & Support"
+
+#: site_web/templates/site_web/contact/contact.html:36
+msgid "Contactez"
+msgstr "Contact"
+
+#: site_web/templates/site_web/contact/contact.html:49
+msgid ""
+"Votre partenaire en solutions ressources humaines, recrutement et "
+"accompagnement organisationnel au Mali."
+msgstr ""
+"Your partner for HR solutions, recruitment, and organizational support in "
+"Mali."
+
+#: site_web/templates/site_web/contact/contact.html:71
+msgid "Contactez nos"
+msgstr "Contact our"
+
+#: site_web/templates/site_web/contact/contact.html:73
+msgid "Réponse sous 72h ouvrées."
+msgstr "Response within 72 business hours."
+
+#: site_web/templates/site_web/contact/contact.html:84
+msgid "Informations"
+msgstr "Information"
+
+#: site_web/templates/site_web/contact/contact.html:95
+msgid "Siège Social"
+msgstr "Head Office"
+
+#: site_web/templates/site_web/contact/contact.html:105
+msgid "Ouvrir dans Google Maps"
+msgstr "Open in Google Maps"
+
+#: site_web/templates/site_web/contact/contact.html:116
+msgid "Ligne Directe"
+msgstr "Direct Line"
+
+#: site_web/templates/site_web/contact/contact.html:129
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:34
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:58
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:101
+msgid "Email"
+msgstr "Email"
+
+#: site_web/templates/site_web/contact/contact.html:146
+msgid "Horaires d'ouverture"
+msgstr "Opening Hours"
+
+#: site_web/templates/site_web/contact/contact.html:150
+msgid "Lun - Jeu"
+msgstr "Mon - Thu"
+
+#: site_web/templates/site_web/contact/contact.html:154
+msgid "Vendredi"
+msgstr "Friday"
+
+#: site_web/templates/site_web/contact/contact.html:172
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:28
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:45
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:98
+msgid "Prénom"
+msgstr "First Name"
+
+#: site_web/templates/site_web/contact/contact.html:188
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:24
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:50
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:96
+msgid "Nom"
+msgstr "Last Name"
+
+#: site_web/templates/site_web/contact/contact.html:204
+msgid "Email de contact"
+msgstr "Contact Email"
+
+#: site_web/templates/site_web/contact/contact.html:220
+msgid "Type de demande"
+msgstr "Request Type"
+
+#: site_web/templates/site_web/contact/contact.html:226
+msgid "Sélectionnez votre besoin"
+msgstr "Select your request"
+
+#: site_web/templates/site_web/contact/contact.html:229
+#: site_web/templates/site_web/services/savoir_plus.html:66
+msgid "Recrutement de personnel"
+msgstr "Recruitment Services"
+
+#: site_web/templates/site_web/contact/contact.html:230
+msgid "Mise à disposition de personnel"
+msgstr "Staffing Services"
+
+#: site_web/templates/site_web/contact/contact.html:231
+msgid "Gestion RH externalisée"
+msgstr "Outsourced HR Management"
+
+#: site_web/templates/site_web/contact/contact.html:232
+msgid "Conseil en ressources humaines"
+msgstr "Human Resources Consulting"
+
+#: site_web/templates/site_web/contact/contact.html:233
+msgid "Audit RH"
+msgstr "HR Audit"
+
+#: site_web/templates/site_web/contact/contact.html:234
+msgid "Formation du personnel"
+msgstr "Staff Training"
+
+#: site_web/templates/site_web/contact/contact.html:235
+msgid "Autre"
+msgstr "Other"
+
+#: site_web/templates/site_web/contact/contact.html:240
+msgid "Détails de votre besoin"
+msgstr "Details of Your Request"
+
+#: site_web/templates/site_web/contact/contact.html:246
+msgid "Envoyer ma demande"
+msgstr "Submit My Request"
+
+#
+#
+#
+#: site_web/templates/site_web/espaces/espace_candidat.html:4
+msgid "Espace Candidat | Antarès RH"
+msgstr "Candidate Area | Antarès RH"
+
+#: site_web/templates/site_web/espaces/espace_entreprise.html:5
+msgid "Espace Entreprise | Antarès SARL - Expert RH au Mali"
+msgstr "Business Area | Antarès SARL - HR Experts in Mali"
+
+#: site_web/templates/site_web/espaces/espace_entreprise.html:19
+#: site_web/templates/site_web/services/partials/_card_services.html:21
+msgid "Des solutions RH sur-mesure"
+msgstr "Tailored HR Solutions"
+
+#: site_web/templates/site_web/espaces/espace_entreprise.html:22
+msgid ""
+"Nous accompagnons les entreprises maliennes et étrangères dans "
+"l'optimisation de leur capital humain."
+msgstr ""
+"We support Malian and international companies in optimizing their human "
+"capital."
+
+#: site_web/templates/site_web/espaces/espace_entreprise.html:34
+msgid "Processus de recrutement"
+msgstr "Recruitment Process"
+
+#: site_web/templates/site_web/espaces/espace_entreprise.html:38
+msgid "Une approche structurée pour sécuriser vos recrutements"
+msgstr "A structured approach to secure your recruitment process"
+
+#: site_web/templates/site_web/espaces/espace_entreprise.html:42
+msgid ""
+"De l’analyse du besoin à l’intégration du collaborateur, Antarès applique un "
+"processus rigoureux pour identifier les profils les plus adaptés à votre "
+"environnement."
+msgstr ""
+"From needs assessment to employee integration, Antarès applies a rigorous "
+"process to identify the profiles best suited to your organization."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:13
+msgid "Rejoignez notre réseau de talents"
+msgstr "Join Our Talent Network"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:16
+msgid ""
+"Inscrivez-vous gratuitement et augmentez vos chances de trouver l'emploi "
+"idéal."
+msgstr ""
+"Register for free and increase your chances of finding the right opportunity."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:39
+msgid "Numéro de téléphone"
+msgstr "Phone Number"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:45
+msgid "Créer mon compte"
+msgstr "Create My Account"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:56
+msgid "Vos Avantages"
+msgstr "Your Benefits"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:66
+msgid "Alertes Personnalisées"
+msgstr "Personalized Alerts"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:67
+msgid "Recevez des notifications dès qu'un poste vous correspond."
+msgstr "Receive notifications whenever a position matches your profile."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:75
+msgid "Suivi de Candidature"
+msgstr "Application Tracking"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:76
+msgid "Consultez l'état d'avancement de vos dossiers en temps réel."
+msgstr "Track the progress of your applications in real time."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:84
+msgid "Réseau Privé"
+msgstr "Private Network"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:85
+msgid "Soyez visible par nos recruteurs avant même la publication des offres."
+msgstr "Get noticed by our recruiters before job offers are even published."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:93
+msgid "Accès Prioritaire"
+msgstr "Priority Access"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:94
+msgid "Postulez en un clic aux offres exclusives CDI, CDD et Intérim."
+msgstr ""
+"Apply in one click to exclusive permanent, temporary, and contract jobs."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:101
+#: site_web/templates/site_web/jobs/partials/_job_empty_state.html:24
+msgid "Candidature Spontanée"
+msgstr "Spontaneous Application"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:103
+msgid "Votre inscription fait office de candidature spontanée permanente."
+msgstr "Your registration acts as an ongoing spontaneous application."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:27
+#: site_web/templates/site_web/partials/_navbar.html:102
+msgid "Espace Candidat"
+msgstr "Candidate Area"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:35
+msgid "Propulsez votre"
+msgstr "Unlock your"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:38
+msgid "potentiel"
+msgstr "potential"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:46
+msgid ""
+"Rejoignez notre réseau de talents et accédez à des opportunités "
+"professionnelles dans divers secteurs au Mali et à l’international."
+msgstr ""
+"Join our talent network and access career opportunities across multiple "
+"industries in Mali and internationally."
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:56
+msgid "S’inscrire"
+msgstr "Sign Up"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:63
+msgid "Voir les offres"
+msgstr "View Opportunities"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:75
+msgid "Profils"
+msgstr "Profiles"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:82
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:83
+msgid "Entreprises"
+msgstr "Companies"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:89
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:90
+msgid "Ans d’expérience"
+msgstr "Years of Experience"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:96
+msgid "Réactivité"
+msgstr "Responsiveness"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:110
+msgid "Espace Candidat Antarès RH"
+msgstr "Antarès RH Candidate Area"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:121
+#: site_web/templates/site_web/services/partials/_hero.html:261
+msgid "Réseau Antarès"
+msgstr "Antarès Network"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:125
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:90
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:33
+#: site_web/templates/site_web/services/partials/_hero.html:267
+msgid "Talents"
+msgstr "Talents"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:10
+msgid "Comment ça marche ?"
+msgstr "How Does It Work?"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:13
+msgid "Rejoignez notre réseau en 4 étapes"
+msgstr "Join Our Network in 4 Steps"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:35
+msgid "Inscrivez-vous"
+msgstr "Register"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:36
+msgid "Créez votre compte rapidement"
+msgstr "Create your account quickly"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:51
+msgid "Complétez le profil"
+msgstr "Complete Your Profile"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:52
+msgid "Ajoutez vos compétences"
+msgstr "Add your skills"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:67
+msgid "Recevez des offres"
+msgstr "Receive Opportunities"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:68
+msgid "Opportunités sur mesure"
+msgstr "Tailored Opportunities"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:83
+msgid "Postulez facile"
+msgstr "Apply Easily"
+
+#: site_web/templates/site_web/espaces/partials/candidat/_step.html:84
+msgid "En un clic depuis votre mobile"
+msgstr "Apply in one click from your mobile"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:19
+msgid "Rejoignez l'élite au Mali."
+msgstr "Join the elite in Mali."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:22
+msgid ""
+"Antarès connecte votre expertise aux projets les plus stratégiques de la "
+"sous-région."
+msgstr ""
+"Antarès connects your expertise with the most strategic projects across the "
+"region."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:36
+msgid "Expertise confirmée requise (+10 ans)"
+msgstr "Confirmed expertise required (+10 years)"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:63
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:106
+msgid "Téléphone"
+msgstr "Phone"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:70
+msgid "Votre CV"
+msgstr "Your Resume"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:78
+msgid "Joindre mon CV"
+msgstr "Upload My Resume"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:79
+msgid "PDF - WORD uniquement • Max 5MB"
+msgstr "PDF - WORD only • Max 5MB"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:88
+msgid "Soumettre mon profil"
+msgstr "Submit My Profile"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:25
+#: site_web/templates/site_web/partials/_navbar.html:104
+msgid "Espace Consultant"
+msgstr "Consultant Area"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:32
+msgid "Rejoignez notre réseau de"
+msgstr "Join our network of"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:35
+msgid "consultants experts"
+msgstr "expert consultants"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:42
+msgid ""
+"Accédez à des missions qualifiées, collaborez avec des entreprises "
+"multisectorielles et développez votre activité."
+msgstr ""
+"Access qualified assignments, collaborate with multisector companies, and "
+"grow your business."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:51
+msgid "Je m’inscris"
+msgstr "Register"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:58
+msgid "Découvrir"
+msgstr "Discover"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:69
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:118
+msgid "Experts"
+msgstr "Experts"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:76
+msgid "Missions"
+msgstr "Assignments"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:83
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:156
+msgid "Secteurs"
+msgstr "Industries"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:104
+msgid "Espace Consultant Antarès RH"
+msgstr "Antarès RH Consultant Area"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_hero_consultant.html:114
+msgid "Consultants Antarès"
+msgstr "Antarès Consultants"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:8
+msgid "Networking & Opportunités"
+msgstr "Networking & Opportunities"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:11
+msgid "Intégrez un réseau d'influence majeur."
+msgstr "Join a high-impact professional network."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:14
+msgid ""
+"Connectez votre expertise aux leaders du marché et propulsez votre carrière "
+"au sein d'un écosystème d'élite."
+msgstr ""
+"Connect your expertise with market leaders and elevate your career within an "
+"elite ecosystem."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:25
+msgid "Orientation & Suivi"
+msgstr "Guidance & Support"
+
+#
+#
+#
+#
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:30
+msgid "Accompagnement personnalisé sur chaque mission."
+msgstr "Personalized guidance for every assignment."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:34
+msgid "Support juridique et assurance professionnelle."
+msgstr "Legal support and professional liability insurance."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:38
+msgid "Sécurité et conformité contractuelle garantie."
+msgstr "Guaranteed security and contractual compliance."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:48
+msgid "Accès Privilégié"
+msgstr "Priority Access"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:53
+msgid "Réseau étendu d'entreprises leaders au Mali."
+msgstr "Extensive network of leading companies in Mali."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:57
+msgid "Missions variées : conseil, intérim, formation ..."
+msgstr "Diverse missions: consulting, staffing, training ..."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:61
+msgid "Visibilité exclusive sur des projets stratégiques."
+msgstr "Exclusive visibility on strategic projects."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:71
+msgid "Performance"
+msgstr "Performance"
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:76
+#, python-format
+msgid "Gestion administrative 100%% simplifiée."
+msgstr "100%% streamlined administrative management."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:80
+msgid "Rémunération transparente et compétitive."
+msgstr "Transparent and competitive compensation."
+
+#: site_web/templates/site_web/espaces/partials/consultant/_why_join_us.html:84
+msgid "Programmes de développement et certifications."
+msgstr "Professional development and certification programs."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_clients.html:12
+msgid "Ils nous font"
+msgstr "They"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_clients.html:13
+msgid "confiance."
+msgstr "trust us."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:11
+msgid "Votre pilotage RH commence ici."
+msgstr "Your HR management starts here."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:14
+#, fuzzy
+#| msgid ""
+#| "Un écosystème digital conçu pour centraliser vos besoins, optimiser vos "
+#| "costs et suivre vos performances en temps réel."
+msgid ""
+"Un écosystème digital conçu pour centraliser vos besoins, optimiser vos "
+"coûts et suivre vos performances en temps réel."
+msgstr ""
+"A digital ecosystem designed to centralize your needs, optimize costs, and "
+"track performance in real-time."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:24
+msgid "Tableau de bord complet"
+msgstr "Comprehensive Dashboard"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:25
+msgid "Indicateurs de performance et gestion centralisée de vos processus RH."
+msgstr ""
+"Performance indicators and centralized management of your HR processes."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:34
+msgid "Accès aux Experts"
+msgstr "Expert Access"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:35
+msgid "Bénéficiez de consultants spécialisés par secteur d'activité."
+msgstr "Benefit from consultants specialized by industry sector."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:44
+msgid "Optimisation des coûts"
+msgstr "Cost Optimization"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:45
+msgid "Réduction de vos dépenses via nos solutions d'externalisation."
+msgstr "Reduce expenditures through our outsourcing solutions."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:53
+msgid "Processus d'adhésion"
+msgstr "Onboarding Process"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:57
+msgid "Examen du dossier sous 72h"
+msgstr "Application review within 72h"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:61
+msgid "Réception des accès par email"
+msgstr "Login credentials sent by email"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:65
+msgid "Pilotage et demande de services"
+msgstr "Management and service requests"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:79
+msgid "Identité de l'Organisation"
+msgstr "Organization Identity"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:83
+msgid "Raison sociale"
+msgstr "Legal Entity Name"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:85
+msgid "Secteur d'activité"
+msgstr "Industry Sector"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:93
+msgid "Contact Référent"
+msgstr "Point of Contact"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:104
+msgid "Poste occupé "
+msgstr "Job Title"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:113
+msgid "Soumettre mon enrôlement"
+msgstr "Submit Enrollment"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:117
+msgid ""
+"Nos équipes pourront vous contacter pour le suivi de votre demande, "
+"l’activation de votre espace et votre accompagnement."
+msgstr ""
+"Our teams may contact you to follow up on your request, activate your "
+"portal, and provide support."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:25
+#: site_web/templates/site_web/partials/_navbar.html:103
+msgid "Espace Entreprise"
+msgstr "Employer Portal"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:32
+msgid "Recrutez l’excellence pour votre"
+msgstr "Recruit excellence for your"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:35
+msgid "croissance"
+msgstr "growth"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:42
+msgid ""
+"Optimisez votre capital humain grâce à une équipe de consultants "
+"expérimentés et des solutions RH adaptées à vos enjeux."
+msgstr ""
+"Optimize your human capital with a team of experienced consultants and HR "
+"solutions tailored to your challenges."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:51
+msgid "Démarrer une collaboration"
+msgstr "Start a Collaboration"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:58
+msgid "Découvrir nos solutions"
+msgstr "Discover Our Solutions"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:69
+msgid "Ans d’expertise"
+msgstr "Years of Expertise"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:76
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:17
+msgid "Consultants"
+msgstr "Consultants"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:104
+msgid "Espace Entreprise Antarès RH"
+msgstr "Antarès RH Employer Workspace"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_services_grid.html:110
+#: site_web/templates/site_web/jobs/partials/_special_offer_card.html:51
+msgid "En savoir plus"
+msgstr "Learn more"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:9
+msgid "Ans d'expertise"
+msgstr "Years of expertise"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:11
+msgid "Au service des entreprises au Mali."
+msgstr "Serving businesses in Mali."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:19
+msgid "Experts permanents pluridisciplinaires."
+msgstr "Multidisciplinary permanent experts."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:25
+msgid "Âge moyen"
+msgstr "Average age"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:27
+msgid "Une équipe dynamique et réactive."
+msgstr "A dynamic and responsive team."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:35
+msgid "Profils qualifiés en base de données."
+msgstr "Qualified profiles in our database."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:18
+msgid "Analyse"
+msgstr "Analysis"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:19
+msgid "Immersion dans votre culture et définition précise du profil recherché."
+msgstr ""
+"Immersion in your culture and precise definition of the target profile."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:34
+msgid "Sourcing"
+msgstr "Sourcing"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:35
+msgid "Activation de notre vivier de +3000 talents et chasse directe."
+msgstr "Activation of our 3,000+ talent pool and direct headhunting."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:50
+msgid "Évaluation"
+msgstr "Assessment"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:51
+msgid "Tests métiers et entretiens approfondis sur les soft skills."
+msgstr "Technical tests and in-depth soft skills interviews."
+
+#
+#
+#
+#
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:66
+msgid "Sélection"
+msgstr "Selection"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:67
+msgid "Présentation de la short-list et prise de références."
+msgstr "Presentation of the shortlist and reference checks."
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:82
+msgid "Succès"
+msgstr "Success"
+
+#: site_web/templates/site_web/espaces/partials/entreprise/_steps_recruteur.html:83
+msgid "Intégration réussie et suivi de performance post-embauche."
+msgstr "Successful onboarding and post-hire performance monitoring."
+
+#: site_web/templates/site_web/home/home.html:4
+#: site_web/templates/site_web/jobs/detail_job.html:19
+#: site_web/templates/site_web/partials/_footer.html:40
+#: site_web/templates/site_web/partials/_navbar.html:18
+#: site_web/templates/site_web/partials/_navbar.html:92
+msgid "Accueil"
+msgstr "Home"
+
+#: site_web/templates/site_web/home/home.html:21
+msgid "Au service du"
+msgstr "Empowering"
+
+#: site_web/templates/site_web/home/home.html:21
+#: site_web/templates/site_web/home/partials/_cta_section.html:46
+msgid "Capital Humain"
+msgstr "Human Capital"
+
+#: site_web/templates/site_web/home/home.html:21
+msgid "en Afrique"
+msgstr "Across Africa"
+
+#: site_web/templates/site_web/home/home.html:25
+msgid ""
+"20 ans d'expérience en recrutement, conseil et structuration RH. Nous aidons "
+"les entreprises locales comme les multinationales à bâtir des équipes "
+"solides."
+msgstr ""
+"20 years of experience in recruitment, HR consulting, and workforce "
+"structuring. We help local companies and multinational organizations build "
+"strong teams."
+
+#: site_web/templates/site_web/home/home.html:30
+msgid "NOS SERVICES"
+msgstr "OUR SERVICES"
+
+#: site_web/templates/site_web/home/home.html:33
+msgid "NOUS CONTACTER"
+msgstr "CONTACT US"
+
+#: site_web/templates/site_web/home/home.html:46
+msgid "Talents Accompagnés"
+msgstr "Talents Supported"
+
+#: site_web/templates/site_web/home/home.html:54
+msgid "Consultants experts"
+msgstr "Expert Consultants"
+
+#: site_web/templates/site_web/home/home.html:61
+msgid "Entreprises partenaires"
+msgstr "Partner Companies"
+
+#: site_web/templates/site_web/home/home.html:68
+msgid "Offres gérées / an"
+msgstr "Opportunities Managed / Year"
+
+#: site_web/templates/site_web/home/partials/_cta_section.html:45
+msgid "Prêt à transformer votre"
+msgstr "Ready to transform your"
+
+#: site_web/templates/site_web/home/partials/_cta_section.html:50
+msgid ""
+"Nos experts vous accompagnent avec discrétion et rigueur pour relever vos "
+"défis sur le continent."
+msgstr ""
+"Our experts support you with discretion and rigor to help you overcome your "
+"challenges across the continent."
+
+#: site_web/templates/site_web/home/partials/_cta_section.html:55
+msgid "DÉPOSER UNE MISSION"
+msgstr "SUBMIT A PROJECT"
+
+#: site_web/templates/site_web/home/partials/_cta_section.html:59
+msgid "REJOINDRE LE ROSTER"
+msgstr "JOIN THE ROSTER"
+
+#: site_web/templates/site_web/home/partials/_cta_section.html:71
+msgid "Ils nous font confiance"
+msgstr "They Trust Us"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:8
+msgid "Opportunités"
+msgstr "Opportunities"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:9
+msgid "Offres d'emploi récentes"
+msgstr "Latest Job Opportunities"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:12
+msgid "Toutes nos offres"
+msgstr "All Opportunities"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:20
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:71
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:88
+msgid "Ouvert"
+msgstr "Open"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:32
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:49
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:83
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:100
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:117
+msgid "Consulter"
+msgstr "View"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:37
+msgid "Urgent"
+msgstr "Urgent"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:54
+msgid "Fermé"
+msgstr "Closed"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:66
+msgid "Clôturé"
+msgstr "Expired"
+
+#: site_web/templates/site_web/home/partials/_job_offers_list.html:105
+msgid "Nouveau"
+msgstr "New"
+
+#: site_web/templates/site_web/home/partials/_profils.html:10
+msgid "Nos Solutions"
+msgstr "Our Solutions"
+
+#: site_web/templates/site_web/home/partials/_profils.html:14
+msgid "Un accompagnement pensé pour chaque acteur."
+msgstr "Support designed for every stakeholder."
+
+#: site_web/templates/site_web/home/partials/_profils.html:18
+msgid ""
+"Antarès combine expertise humaine et outils modernes pour offrir des espaces "
+"de travail simples, structurés et adaptés aux besoins des candidats, "
+"entreprises et experts."
+msgstr ""
+"Antarès combines human expertise and modern tools to provide simple, "
+"structured, and efficient workspaces tailored to candidates, companies, and "
+"experts."
+
+#: site_web/templates/site_web/home/partials/_profils.html:33
+msgid "CANDIDATS"
+msgstr "CANDIDATES"
+
+#: site_web/templates/site_web/home/partials/_profils.html:37
+msgid "Accélérez votre carrière"
+msgstr "Accelerate Your Career"
+
+#: site_web/templates/site_web/home/partials/_profils.html:49
+msgid "Offres :"
+msgstr "Opportunities:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:51
+msgid "Accès exclusif aux opportunités de nos partenaires."
+msgstr "Exclusive access to opportunities from our partners."
+
+#: site_web/templates/site_web/home/partials/_profils.html:59
+msgid "Carrière :"
+msgstr "Career:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:61
+msgid "Coaching et conseils pour valoriser votre profil."
+msgstr "Coaching and guidance to strengthen your profile."
+
+#: site_web/templates/site_web/home/partials/_profils.html:69
+msgid "Suivi :"
+msgstr "Tracking:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:71
+msgid "Gestion simplifiée des candidatures et documents."
+msgstr "Simplified management of applications and documents."
+
+#: site_web/templates/site_web/home/partials/_profils.html:81
+msgid "Espace candidat"
+msgstr "Candidate Area"
+
+#: site_web/templates/site_web/home/partials/_profils.html:93
+msgid "ENTREPRISES"
+msgstr "COMPANIES"
+
+#: site_web/templates/site_web/home/partials/_profils.html:108
+msgid "Dashboard :"
+msgstr "Dashboard:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:110
+msgid "Suivi en temps réel des recrutements et effectifs."
+msgstr "Real-time monitoring of recruitment and workforce."
+
+#: site_web/templates/site_web/home/partials/_profils.html:118
+msgid "Gestion RH :"
+msgstr "HR Management:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:120
+msgid "Centralisation des demandes et accès simplifié."
+msgstr "Centralized requests and simplified access."
+
+#: site_web/templates/site_web/home/partials/_profils.html:128
+msgid "Conformité :"
+msgstr "Compliance:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:130
+msgid "Gestion administrative et juridique sécurisée."
+msgstr "Secure administrative and legal management."
+
+#: site_web/templates/site_web/home/partials/_profils.html:139
+msgid "Espace entreprise"
+msgstr "Business Area"
+
+#: site_web/templates/site_web/home/partials/_profils.html:151
+msgid "EXPERTS"
+msgstr "EXPERTS"
+
+#: site_web/templates/site_web/home/partials/_profils.html:155
+msgid "Déployez votre savoir-faire"
+msgstr "Deploy Your Expertise"
+
+#: site_web/templates/site_web/home/partials/_profils.html:166
+msgid "Networking :"
+msgstr "Networking:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:168
+msgid "Accès à un réseau de missions stratégiques."
+msgstr "Access to a network of strategic assignments."
+
+#: site_web/templates/site_web/home/partials/_profils.html:176
+msgid "Collaboration :"
+msgstr "Collaboration:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:178
+msgid "Outils facilitant le suivi des interventions."
+msgstr "Tools designed to simplify assignment tracking."
+
+#: site_web/templates/site_web/home/partials/_profils.html:186
+msgid "Support :"
+msgstr "Support:"
+
+#: site_web/templates/site_web/home/partials/_profils.html:188
+msgid "Gestion administrative et logistique des missions."
+msgstr "Administrative and logistical management of assignments."
+
+#: site_web/templates/site_web/home/partials/_profils.html:197
+msgid "Espace consultant"
+msgstr "Consultant Area"
+
+#: site_web/templates/site_web/jobs/detail_job.html:25
+#: site_web/templates/site_web/partials/_footer.html:43
+#: site_web/templates/site_web/partials/_navbar.html:21
+#: site_web/templates/site_web/partials/_navbar.html:95
+msgid "Offres"
+msgstr "Opportunities"
+
+#: site_web/templates/site_web/jobs/detail_job.html:54
+msgid "Offre d'emploi"
+msgstr "Job Opportunity"
+
+#: site_web/templates/site_web/jobs/detail_job.html:106
+msgid "Référence"
+msgstr "Reference"
+
+#: site_web/templates/site_web/jobs/detail_job.html:127
+msgid "Localisation"
+msgstr "Location"
+
+#: site_web/templates/site_web/jobs/detail_job.html:148
+msgid "Secteur"
+msgstr "Industry"
+
+#: site_web/templates/site_web/jobs/detail_job.html:169
+#: site_web/templates/site_web/jobs/partials/_job_card.html:48
+msgid "Publication"
+msgstr "Published"
+
+#: site_web/templates/site_web/jobs/detail_job.html:186
+msgid "Mission principale"
+msgstr "Main Mission"
+
+#: site_web/templates/site_web/jobs/detail_job.html:199
+msgid "Responsabilités"
+msgstr "Responsibilities"
+
+#: site_web/templates/site_web/jobs/detail_job.html:224
+msgid "Profil recherché"
+msgstr "Required Profile"
+
+#
+#
+#
+#
+#: site_web/templates/site_web/jobs/detail_job.html:245
+msgid "Comment postuler"
+msgstr "How to Apply"
+
+#: site_web/templates/site_web/jobs/detail_job.html:276
+msgid "Postuler à cette offre"
+msgstr "Apply for this Position"
+
+#: site_web/templates/site_web/jobs/detail_job.html:281
+msgid ""
+"Envoyez votre candidature et rejoignez une opportunité professionnelle "
+"adaptée à votre profil."
+msgstr ""
+"Submit your application and seize a professional opportunity tailored to "
+"your profile."
+
+#: site_web/templates/site_web/jobs/detail_job.html:304
+#: site_web/templates/site_web/jobs/detail_job.html:487
+msgid "Postuler maintenant"
+msgstr "Apply Now"
+
+#: site_web/templates/site_web/jobs/detail_job.html:313
+msgid "Partager"
+msgstr "Share"
+
+#: site_web/templates/site_web/jobs/detail_job.html:405
+msgid "Informations importantes"
+msgstr "Important Information"
+
+#: site_web/templates/site_web/jobs/detail_job.html:415
+msgid "Vérifiez toujours les références de l’offre avant envoi."
+msgstr "Always verify the job references before submitting."
+
+#: site_web/templates/site_web/jobs/detail_job.html:425
+msgid "Seuls les profils présélectionnés seront contactés."
+msgstr "Only shortlisted candidates will be contacted."
+
+#: site_web/templates/site_web/jobs/detail_job.html:435
+msgid "Antarès RH ne demande jamais de frais pendant un recrutement."
+msgstr "Antarès RH never charges any fees during the recruitment process."
+
+#: site_web/templates/site_web/jobs/detail_job.html:449
+msgid "Événements & Formations"
+msgstr "Events & Training"
+
+#: site_web/templates/site_web/jobs/partials/_cta.html:16
+msgid "Ne ratez plus aucune"
+msgstr "Never miss an"
+
+#: site_web/templates/site_web/jobs/partials/_cta.html:17
+msgid "Opportunité"
+msgstr "Opportunity"
+
+#: site_web/templates/site_web/jobs/partials/_cta.html:20
+msgid ""
+"Inscrivez-vous pour recevoir les dernières offres par email et propulsez "
+"votre carrière avec Antarès."
+msgstr ""
+"Subscribe to receive the latest job alerts by email and boost your career "
+"with Antarès."
+
+#: site_web/templates/site_web/jobs/partials/_cta.html:34
+msgid "Votre adresse email..."
+msgstr "Your email address..."
+
+#: site_web/templates/site_web/jobs/partials/_cta.html:39
+msgid "M’inscrire"
+msgstr "Subscribe"
+
+#: site_web/templates/site_web/jobs/partials/_cta.html:43
+msgid ""
+"ADPD & RGPD : Vos données sont sécurisées et vous pouvez vous désinscrire à "
+"tout moment."
+msgstr ""
+"Data Privacy & GDPR: Your data is secure and you can unsubscribe at any time."
+
+#: site_web/templates/site_web/jobs/partials/_job_card.html:52
+msgid "Date Limite"
+msgstr "Application Deadline"
+
+#: site_web/templates/site_web/jobs/partials/_job_card.html:62
+msgid "Voir l'offre"
+msgstr "View Job"
+
+#: site_web/templates/site_web/jobs/partials/_job_empty_state.html:12
+msgid "Aucune offre ne correspond"
+msgstr "No matching positions found"
+
+#: site_web/templates/site_web/jobs/partials/_job_empty_state.html:15
+msgid ""
+"Nous n'avons pas trouvé d'opportunités correspondant exactement à vos "
+"critères. Essayez de modifier vos filtres ou de réinitialiser la recherche."
+msgstr ""
+"We couldn't find any opportunities matching your criteria. Try adjusting "
+"your filters or resetting the search."
+
+#: site_web/templates/site_web/jobs/partials/_job_empty_state.html:21
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:307
+msgid "Réinitialiser"
+msgstr "Reset"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:32
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:60
+msgid "Filtres"
+msgstr "Filters"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:64
+msgid "Affiner les offres"
+msgstr "Refine your search"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:82
+msgid "Recherche"
+msgstr "Search"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:91
+msgid "Poste, entreprise..."
+msgstr "Position, company..."
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:119
+msgid "Type de contrat"
+msgstr "Contract Type"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:137
+#: site_web/templates/site_web/services/savoir_plus.html:16
+msgid "Intérim"
+msgstr "Temporary / Staffing"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:144
+msgid "Stage"
+msgstr "Internship"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:181
+msgid "Mines & Énergie"
+msgstr "Mining & Energy"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:205
+msgid "Banque & Finance"
+msgstr "Banking & Finance"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:229
+msgid "Humanitaire (ONG)"
+msgstr "NGO / Humanitarian"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:253
+msgid "IT & Télécoms"
+msgstr "IT & Telecoms"
+
+#: site_web/templates/site_web/jobs/partials/_job_filters.html:277
+msgid "Transport & Log."
+msgstr "Transport & Logistics"
+
+#: site_web/templates/site_web/jobs/partials/_job_hero.html:9
+msgid "Trouvez votre"
+msgstr "Find your"
+
+#: site_web/templates/site_web/jobs/partials/_job_hero.html:10
+msgid "prochaine opportunité"
+msgstr "next opportunity"
+
+#: site_web/templates/site_web/jobs/partials/_job_hero.html:14
+msgid ""
+"Explorez des opportunités exclusives au Mali. Antarès vous connecte aux "
+"entreprises qui façonnent l'avenir."
+msgstr ""
+"Explore exclusive opportunities in Mali. Antarès connects you with the "
+"companies shaping the future."
+
+#: site_web/templates/site_web/jobs/partials/_sidebar_ad.html:47
+#: site_web/templates/site_web/jobs/partials/_special_offer_card.html:15
+#: site_web/templates/site_web/partials/_footer.html:61
+#: site_web/templates/site_web/services/savoir_plus.html:14
+msgid "Formation"
+msgstr "Training"
+
+#: site_web/templates/site_web/jobs/partials/_sidebar_ad.html:51
+msgid "Formation GRH Certifiante : Devenir Expert en Recrutement"
+msgstr "HRM Certification: Become a Recruitment Expert"
+
+#: site_web/templates/site_web/jobs/partials/_sidebar_ad.html:99
+msgid "Événement"
+msgstr "Event"
+
+#: site_web/templates/site_web/jobs/partials/_sidebar_ad.html:103
+msgid "Colloque International : L'avenir du Secteur Minier au Mali"
+msgstr "International Symposium: The Future of the Mining Sector in Mali"
+
+#: site_web/templates/site_web/jobs/partials/_special_offer_card.html:17
+msgid "Séminaire"
+msgstr "Seminar"
+
+#: site_web/templates/site_web/jobs/partials/_special_offer_card.html:19
+msgid "Annonce"
+msgstr "Announcement"
+
+#: site_web/templates/site_web/jobs/partials/_special_offer_card.html:28
+msgid "Boostez votre carrière avec nos experts"
+msgstr "Boost your career with our experts"
+
+#: site_web/templates/site_web/jobs/partials/_special_offer_card.html:30
+msgid "Participez à nos événements exclusifs"
+msgstr "Join our exclusive events"
+
+#: site_web/templates/site_web/jobs/partials/_special_offer_card.html:44
+msgid "Prochaine session"
+msgstr "Next session"
+
+#: site_web/templates/site_web/partials/_footer.html:12
+msgid ""
+"Votre partenaire RH pour des solutions humaines innovantes et performantes."
+msgstr "Your HR partner for innovative and high-performance human solutions."
+
+#: site_web/templates/site_web/partials/_footer.html:38
+msgid "Pages"
+msgstr "Pages"
+
+#: site_web/templates/site_web/partials/_footer.html:41
+msgid "A propos"
+msgstr "About Us"
+
+#: site_web/templates/site_web/partials/_footer.html:42
+#: site_web/templates/site_web/partials/_footer.html:57
+#: site_web/templates/site_web/partials/_navbar.html:20
+#: site_web/templates/site_web/partials/_navbar.html:94
+#: site_web/templates/site_web/services/services.html:4
+msgid "Services"
+msgstr "Services"
+
+#: site_web/templates/site_web/partials/_footer.html:48
+#: site_web/templates/site_web/partials/_navbar.html:25
+#: site_web/templates/site_web/partials/_navbar.html:100
+msgid "Espaces"
+msgstr "Portals"
+
+#: site_web/templates/site_web/partials/_footer.html:59
+#: site_web/templates/site_web/services/savoir_plus.html:12
+msgid "Recrutement"
+msgstr "Recruitment"
+
+#: site_web/templates/site_web/partials/_footer.html:60
+#: site_web/templates/site_web/services/partials/_hero.html:25
+msgid "Gestion RH"
+msgstr "HR Management"
+
+#: site_web/templates/site_web/partials/_footer.html:67
+#: site_web/templates/site_web/partials/_navbar.html:55
+#: site_web/templates/site_web/partials/_navbar.html:109
+msgid "Contact"
+msgstr "Contact"
+
+#: site_web/templates/site_web/partials/_footer.html:79
+msgid "Mentions légales"
+msgstr "Legal Notice"
+
+#: site_web/templates/site_web/partials/_footer.html:80
+msgid "Confidentialité"
+msgstr "Privacy Policy"
+
+#: site_web/templates/site_web/partials/_navbar.html:19
+#: site_web/templates/site_web/partials/_navbar.html:93
+msgid "À propos"
+msgstr "About"
+
+#: site_web/templates/site_web/services/partials/_card_services.html:17
+msgid "Nos Services RH"
+msgstr "Our HR Services"
+
+#: site_web/templates/site_web/services/partials/_card_services.html:25
+msgid ""
+"Nous accompagnons les entreprises maliennes et internationales dans "
+"l’optimisation de leur capital humain avec une approche simple, humaine et "
+"moderne."
+msgstr ""
+"We support Malian and international companies in optimizing their human "
+"capital with a simple, human, and modern approach."
+
+#: site_web/templates/site_web/services/partials/_hero.html:29
+msgid "externalisée & opérationnelle"
+msgstr "outsourced & operational"
+
+#: site_web/templates/site_web/services/partials/_hero.html:38
+msgid ""
+"Antarès accompagne les entreprises maliennes et internationales dans la "
+"construction d’équipes performantes, la structuration de leurs organisations "
+"et le développement des compétences."
+msgstr ""
+"Antarès assists Malian and international companies in building high-"
+"performing teams, structuring their organizations, and developing skills."
+
+#: site_web/templates/site_web/services/partials/_hero.html:48
+msgid "Découvrir nos services"
+msgstr "Explore Our Services"
+
+#: site_web/templates/site_web/services/partials/_hero.html:55
+msgid "Nous contacter"
+msgstr "Contact Us"
+
+#: site_web/templates/site_web/services/partials/_hero.html:66
+msgid "Nos repères"
+msgstr "Our Milestones"
+
+#: site_web/templates/site_web/services/partials/_hero.html:101
+#: site_web/templates/site_web/services/partials/_hero.html:250
+msgid "Années d’expérience"
+msgstr "Years of Experience"
+
+#: site_web/templates/site_web/services/partials/_hero.html:132
+msgid "Consultants permanents"
+msgstr "Permanent Consultants"
+
+#
+#
+#
+#
+#: site_web/templates/site_web/services/partials/_hero.html:138
+msgid "Compétences transversales & multisectorielles"
+msgstr "Cross-functional & multi-sector expertise"
+
+#: site_web/templates/site_web/services/partials/_hero.html:169
+msgid "Plusieurs milliers de profils"
+msgstr "Thousands of candidate profiles"
+
+#: site_web/templates/site_web/services/partials/_hero.html:175
+msgid "Base de talents active et qualifiée"
+msgstr "Active and qualified talent pool"
+
+#: site_web/templates/site_web/services/partials/_hero.html:206
+msgid "Présence nationale"
+msgstr "National presence"
+
+#: site_web/templates/site_web/services/partials/_hero.html:212
+msgid "Présence sur tout le Mali"
+msgstr "Operating across all of Mali"
+
+#: site_web/templates/site_web/services/partials/_hero.html:232
+msgid "Antarès Services RH"
+msgstr "Antarès HR Services"
+
+#: site_web/templates/site_web/services/partials/_hero.html:244
+msgid "Expertise RH"
+msgstr "HR Expertise"
+
+#: site_web/templates/site_web/services/savoir_plus.html:9
+msgid "Présentation du Cabinet"
+msgstr "Firm Profile"
+
+#: site_web/templates/site_web/services/savoir_plus.html:27
+msgid ""
+"Le cabinet Antarès a été créé en 2007 pour accompagner les entreprises "
+"Maliennes et étrangères dans le développement de leurs ressources humaines. "
+"Avec une trentaine de consultants permanents, nous intervenons sur "
+"l'ensemble du territoire national."
+msgstr ""
+"Founded in 2007, Antarès supports Malian and international companies in "
+"developing their human resources. With thirty permanent consultants, we "
+"operate throughout the entire national territory."
+
+#: site_web/templates/site_web/services/savoir_plus.html:30
+msgid ""
+"Notre différence réside dans notre capacité à appréhender de manière "
+"transversale les problématiques RH, en proposant des solutions sur-mesure "
+"basées sur une connaissance fine du tissu économique local."
+msgstr ""
+"Our competitive edge lies in our ability to address HR challenges through a "
+"cross-functional approach, offering tailor-made solutions based on in-depth "
+"knowledge of the local economic landscape."
+
+#: site_web/templates/site_web/services/savoir_plus.html:39
+msgid "Statut"
+msgstr "Legal Status"
+
+#: site_web/templates/site_web/services/savoir_plus.html:43
+msgid "Siège"
+msgstr "Headquarters"
+
+#: site_web/templates/site_web/services/savoir_plus.html:47
+msgid "Assurance"
+msgstr "Liability Insurance"
+
+#: site_web/templates/site_web/services/savoir_plus.html:65
+msgid "Service Expert"
+msgstr "Expert Services"
+
+#: site_web/templates/site_web/services/savoir_plus.html:68
+msgid ""
+"Nous disposons d'une base de données de plus de 3.000 profils. Notre "
+"méthodologie rigoureuse en 10 étapes garantit l'adéquation parfaite entre le "
+"candidat et votre culture d'entreprise."
+msgstr ""
+"We maintain a database of over 3,000 profiles. Our rigorous 10-step "
+"methodology ensures a perfect match between the candidate and your corporate "
+"culture."
+
+#: site_web/templates/site_web/services/savoir_plus.html:71
+msgid "Analyse des besoins & fiche de poste"
+msgstr "Needs analysis & job description"
+
+#: site_web/templates/site_web/services/savoir_plus.html:72
+msgid "Validation technique & psychotechnique"
+msgstr "Technical & psychometric validation"
+
+#: site_web/templates/site_web/services/savoir_plus.html:73
+msgid "Contrôle des références"
+msgstr "Reference checking"
+
+#: site_web/templates/site_web/services/savoir_plus.html:74
+msgid "Short-list de 3 à 5 candidats"
+msgstr "Shortlist of 3 to 5 candidates"
+
+#: site_web/templates/site_web/services/savoir_plus.html:78
+msgid "Délai moyen"
+msgstr "Average Lead Time"
+
+#: site_web/templates/site_web/services/savoir_plus.html:80
+msgid "Jours ouvrés"
+msgstr "Business days"
+
+#: site_web/templates/site_web/services/savoir_plus.html:87
+msgid "Flexibilité"
+msgstr "Flexibility"
+
+#: site_web/templates/site_web/services/savoir_plus.html:88
+msgid "Intérim & Mise à disposition"
+msgstr "Staffing & Labor Dispatch"
+
+#: site_web/templates/site_web/services/savoir_plus.html:90
+msgid ""
+"Antarès reste l'unique employeur de votre personnel délégué. Nous gérons "
+"l'intégralité du cycle administratif, fiscal et social pour vous permettre "
+"de vous concentrer sur votre métier."
+msgstr ""
+"Antarès remains the sole employer of your assigned personnel. We manage the "
+"entire administrative, tax, and social security cycle, allowing you to focus "
+"on your core business."
+
+#: site_web/templates/site_web/services/savoir_plus.html:93
+msgid "Édition & validation des contrats"
+msgstr "Contract drafting & validation"
+
+#
+#
+#
+#
+#: site_web/templates/site_web/services/savoir_plus.html:94
+msgid "Gestion de la paie & ITS"
+msgstr "Payroll & ITS Management"
+
+#: site_web/templates/site_web/services/savoir_plus.html:95
+msgid "Déclarations INPS & AMO"
+msgstr "INPS & AMO Declarations"
+
+#: site_web/templates/site_web/services/savoir_plus.html:96
+msgid "Couverture Responsabilité Civile"
+msgstr "Civil Liability Coverage"
+
+#: site_web/templates/site_web/services/savoir_plus.html:100
+msgid ""
+"Libérez-vous des contraintes juridiques et sociales liées au personnel "
+"temporaire."
+msgstr ""
+"Free yourself from the legal and social constraints related to temporary "
+"staff."
+
+#: site_web/templates/site_web/services/savoir_plus.html:101
+msgid "Plus d'infos"
+msgstr "Learn More"
+
+#: site_web/templates/site_web/services/savoir_plus.html:108
+msgid "Conseil & Externalisation RH"
+msgstr "HR Consulting & Outsourcing"
+
+#: site_web/templates/site_web/services/savoir_plus.html:110
+msgid ""
+"Audit social, missions d'optimisation fiscale, assistance en gestion de "
+"litiges et rédaction de fiches de poste personnalisées."
+msgstr ""
+"Social audits, tax optimization assignments, dispute management support, and "
+"drafting of customized job descriptions."
+
+#: site_web/templates/site_web/services/savoir_plus.html:114
+msgid "Formation Professionnelle"
+msgstr "Professional Training"
+
+#: site_web/templates/site_web/services/savoir_plus.html:116
+msgid ""
+"Développement des compétences de vos collaborateurs à travers des modules "
+"adaptés aux contraintes du marché malien."
+msgstr ""
+"Develop your employees' skills through training modules tailored to the "
+"constraints of the Malian market."
+
+#: site_web/templates/site_web/services/savoir_plus.html:129
+msgid "Besoin d'un accompagnement personnalisé ?"
+msgstr "Need personalized support?"
+
+#: site_web/templates/site_web/services/savoir_plus.html:132
+msgid "Contacter un consultant"
+msgstr "Contact a Consultant"
+
+#: site_web/templates/site_web/services/services.html:23
+msgid "Échangeons sur vos enjeux"
+msgstr "Let's Discuss Your Challenges"
+
+#: site_web/templates/site_web/services/services.html:27
+msgid "Une question ou un besoin particulier ?"
+msgstr "A question or a specific need?"
+
+#: site_web/templates/site_web/services/services.html:31
+msgid ""
+"Que vous ayez un projet déjà défini ou que vous souhaitiez simplement "
+"obtenir des informations sur nos services RH au Mali, nos experts sont à "
+"votre écoute pour vous conseiller."
+msgstr ""
+"Whether you already have a defined project or simply want more information "
+"about our HR services in Mali, our experts are available to guide and advise "
+"you."
+
+#: site_web/templates/site_web/services/services.html:40
+msgid "Préciser mon besoin"
+msgstr "Describe My Needs"
+
+#: site_web/templates/site_web/services/services.html:47
+msgid "OU"
+msgstr "OR"
+
+#: site_web/templates/site_web/services/services.html:62
+msgid "Conseils d'experts"
+msgstr "Expert Advice"
+
+#: site_web/templates/site_web/services/services.html:66
+msgid "Réponse sous 72h"
+msgstr "Response Within 72 Hours"
