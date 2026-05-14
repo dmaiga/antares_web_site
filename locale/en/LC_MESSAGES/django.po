@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 13:05+0000\n"
+"POT-Creation-Date: 2026-05-14 14:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -640,6 +640,7 @@ msgid ""
 msgstr ""
 "Yes. Our approach is based on long-term partnerships with our clients, "
 "supporting them in the management and development of their human resources."
+
 #
 #
 #
@@ -1258,21 +1259,17 @@ msgstr "OUR SERVICES"
 msgid "NOUS CONTACTER"
 msgstr "CONTACT US"
 
-#: site_web/templates/site_web/home/home.html:46
+#: site_web/templates/site_web/home/home.html:45
 msgid "Talents Accompagnés"
 msgstr "Talents Supported"
 
-#: site_web/templates/site_web/home/home.html:54
+#: site_web/templates/site_web/home/home.html:53
 msgid "Consultants experts"
 msgstr "Expert Consultants"
 
-#: site_web/templates/site_web/home/home.html:61
+#: site_web/templates/site_web/home/home.html:60
 msgid "Entreprises partenaires"
 msgstr "Partner Companies"
-
-#: site_web/templates/site_web/home/home.html:68
-msgid "Offres gérées / an"
-msgstr "Opportunities Managed / Year"
 
 #: site_web/templates/site_web/home/partials/_cta_section.html:45
 msgid "Prêt à transformer votre"
@@ -1349,8 +1346,9 @@ msgid "Nos Solutions"
 msgstr "Our Solutions"
 
 #: site_web/templates/site_web/home/partials/_profils.html:14
-msgid "Un accompagnement pensé pour chaque acteur."
-msgstr "Support designed for every stakeholder."
+msgid "Un accompagnement sur-mesure pour chaque acteur."
+msgstr "Tailored support for every stakeholder."
+
 
 #: site_web/templates/site_web/home/partials/_profils.html:18
 msgid ""
@@ -2321,9 +2319,13 @@ msgid "Gestion Administrative RH"
 msgstr "HR Administrative Management"
 
 #: site_web/views.py:217 site_web/views.py:352
+#, fuzzy
+#| msgid ""
+#| "Gestion des contrats, paie, déclarations sociales et suivi administratif "
+#| "du personnel conformément à la réglementation malienne."
 msgid ""
 "Gestion des contrats, paie, déclarations sociales et suivi administratif du "
-"personnel conformément à la réglementation malienne."
+"personnel conformément à la réglementation Malienne."
 msgstr ""
 "Management of contracts, payroll, social declarations, and administrative "
 "workforce monitoring in compliance with Malian regulations."
@@ -2443,3 +2445,6 @@ msgstr "Capacity Building"
 #: site_web/views.py:385
 msgid "Flexibilité opérationnelle"
 msgstr "Operational Flexibility"
+
+#~ msgid "Offres gérées / an"
+#~ msgstr "Opportunities Managed / Year"

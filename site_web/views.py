@@ -214,7 +214,7 @@ def services(request):
         },
         {
             "title": _("Gestion Administrative RH"),
-            "description": _("Gestion des contrats, paie, déclarations sociales et suivi administratif du personnel conformément à la réglementation malienne."),
+            "description": _("Gestion des contrats, paie, déclarations sociales et suivi administratif du personnel conformément à la réglementation Malienne."),
             "icon": "document-check",
         },
         {
@@ -350,7 +350,7 @@ def espace_entreprise(request):
             "title": _("Gestion Administrative RH"),
             "description": _(
                 "Gestion des contrats, paie, déclarations sociales et suivi "
-                "administratif du personnel conformément à la réglementation malienne."
+                "administratif du personnel conformément à la réglementation Malienne."
             ),
             "highlight": _("Conformité sociale"),
             "icon": "building",
