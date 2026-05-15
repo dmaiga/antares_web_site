@@ -6,8 +6,27 @@ from django.http import Http404
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.http import Http404
+from django.utils.translation import gettext as _
+from django.views.generic import TemplateView
+from django.shortcuts import render
 
-from django.utils.translation import gettext_lazy as _
+from site_web.forms import (
+    CandidatEnrolementForm,
+    ConsultantEnrolementForm,
+    EntrepriseEnrolementForm,
+)
+
+from site_web.services.contextes import (
+    contexte_espaces
+)
+
+from site_web.services.contenus import (
+    SERVICES_ENTREPRISE
+)
+
+from django.shortcuts import render, redirect
+
 
 
 def home(request):
@@ -108,9 +127,6 @@ def jobs(request):
         context
     )
 
-from django.http import Http404
-from django.utils.translation import gettext_lazy as _
-from django.views.generic import TemplateView
 
 
 class JobDetailView(TemplateView):
@@ -201,70 +217,59 @@ class JobDetailView(TemplateView):
 
 
 def services(request):
-    services = [
-        {
-            "title": _("Recrutement & Évaluation"),
-            "description": _("Identification, sélection et évaluation de profils qualifiés selon les exigences techniques et organisationnelles de votre entreprise."),
-            "icon": "user-group",
-        },
-        {
-            "title": _("Intérim & Mise à disposition"),
-            "description": _("Mise à disposition de personnel qualifié avec prise en charge administrative, sociale et contractuelle."),
-            "icon": "clock",
-        },
-        {
-            "title": _("Gestion Administrative RH"),
-            "description": _("Gestion des contrats, paie, déclarations sociales et suivi administratif du personnel conformément à la réglementation Malienne."),
-            "icon": "document-check",
-        },
-        {
-            "title": _("Conseil & Audit Social"),
-            "description": _("Audit RH, conformité sociale, diagnostics organisationnels et accompagnement dans la structuration des procédures RH."),
-            "icon": "briefcase",
-        },
-        {
-            "title": _("Formation Professionnelle"),
-            "description": _("Conception et animation de formations adaptées aux besoins opérationnels et au développement des compétences."),
-            "icon": "academic-cap",
-        },
-        {
-            "title": _("Sous-traitance & Appui Opérationnel"),
-            "description": _("Gestion externalisée d’activités et d’équipes opérationnelles dans les domaines logistiques, administratifs et techniques."),
-            "icon": "presentation-chart",
-        },
-    ]
-
+    context = {
+        **contexte_espaces(),
+      
+    }
     return render(
         request,
         'site_web/services/services.html',
-        {'services': services}
+        context
     )
 
 
 
-
 def espace_candidat(request):
-    clients = range(1, 16)
 
-    secteurs = sorted([
-        _("Banque & Assurance"),
-        _("BTP & Infrastructures"),
-        _("Distribution & FMCG"),
-        _("Grande Distribution"),
-        _("Industrie Agroalimentaire"),
-        _("Mines & Énergie"),
-        _("Nettoyage & Facility Management"),
-        _("ONG & Projets Internationaux"),
-        _("Production Industrielle"),
-        _("Services Externalisés"),
-        _("Technologie & IT"),
-        _("Télécommunications"),
-        _("Transport & Logistique"),
-    ])
+    if request.method == 'POST':
+
+        form = CandidatEnrolementForm(request.POST)
+
+        if form.is_valid():
+
+            enrolement = form.save(commit=False)
+
+            enrolement.type_profil = 'candidat'
+
+            enrolement.save()
+
+            request.session['enrolement_success'] = {
+
+                'titre': _(
+                    "Votre demande a bien été reçue."
+                ),
+
+                'message': _(
+                    "Nos équipes vont examiner votre "
+                    "profil et procéder à la validation "
+                    "de votre enrôlement."
+                ),
+
+                'details': _(
+                    "Une fois votre accès approuvé, "
+                    "vos identifiants de connexion "
+                    "vous seront transmis par email."
+                ),
+            }
+
+            return redirect('enrolement_success')
+
+    else:
+        form = CandidatEnrolementForm()
 
     context = {
-        "clients": clients,
-        "secteurs": secteurs,
+        **contexte_espaces(),
+        'form': form,
     }
 
     return render(
@@ -275,27 +280,49 @@ def espace_candidat(request):
 
 
 def espace_consultant(request):
-    clients = range(1, 16)
 
-    secteurs = sorted([
-        _("Banque & Assurance"),
-        _("BTP & Infrastructures"),
-        _("Distribution & FMCG"),
-        _("Grande Distribution"),
-        _("Industrie Agroalimentaire"),
-        _("Mines & Énergie"),
-        _("Nettoyage & Facility Management"),
-        _("ONG & Projets Internationaux"),
-        _("Production Industrielle"),
-        _("Services Externalisés"),
-        _("Technologie & IT"),
-        _("Télécommunications"),
-        _("Transport & Logistique"),
-    ])
+    if request.method == 'POST':
+
+        form = ConsultantEnrolementForm(
+            request.POST,
+            request.FILES
+        )
+
+        if form.is_valid():
+
+            enrolement = form.save(commit=False)
+
+            enrolement.type_profil = 'consultant'
+
+            enrolement.save()
+
+            request.session['enrolement_success'] = {
+
+                'titre': _(
+                    "Votre profil consultant a bien été soumis."
+                ),
+
+                'message': _(
+                    "Nos équipes procéderont à la "
+                    "vérification de votre expérience "
+                    "et de vos références professionnelles."
+                ),
+
+                'details': _(
+                    "Après validation de votre dossier, "
+                    "vos identifiants de connexion vous "
+                    "seront envoyés par email."
+                ),
+            }
+
+            return redirect('enrolement_success')
+
+    else:
+        form = ConsultantEnrolementForm()
 
     context = {
-        "clients": clients,
-        "secteurs": secteurs,
+        **contexte_espaces(),
+        'form': form,
     }
 
     return render(
@@ -307,97 +334,86 @@ def espace_consultant(request):
 
 def espace_entreprise(request):
 
-    clients = range(1, 16)
+    if request.method == 'POST':
 
-    secteurs = sorted([
-        _("Banque & Assurance"),
-        _("BTP & Infrastructures"),
-        _("Distribution & FMCG"),
-        _("Grande Distribution"),
-        _("Industrie Agroalimentaire"),
-        _("Mines & Énergie"),
-        _("Nettoyage & Facility Management"),
-        _("ONG & Projets Internationaux"),
-        _("Production Industrielle"),
-        _("Services Externalisés"),
-        _("Technologie & IT"),
-        _("Télécommunications"),
-        _("Transport & Logistique"),
-    ])
+        form = EntrepriseEnrolementForm(request.POST)
 
-    services = [
-        {
-            "title": _("Recrutement & Évaluation"),
-            "description": _(
-                "Identification, sélection et évaluation de profils qualifiés "
-                "selon les besoins techniques et organisationnels de votre entreprise."
-            ),
-            "highlight": _("Sélection rigoureuse"),
-            "icon": "users",
-        },
+        if form.is_valid():
 
-        {
-            "title": _("Intérim & Mise à disposition"),
-            "description": _(
-                "Mise à disposition de personnel qualifié avec prise en charge "
-                "administrative, sociale et contractuelle."
-            ),
-            "highlight": _("Gestion RH complète"),
-            "icon": "briefcase",
-        },
+            enrolement = form.save(commit=False)
 
-        {
-            "title": _("Gestion Administrative RH"),
-            "description": _(
-                "Gestion des contrats, paie, déclarations sociales et suivi "
-                "administratif du personnel conformément à la réglementation Malienne."
-            ),
-            "highlight": _("Conformité sociale"),
-            "icon": "building",
-        },
+            enrolement.type_profil = 'entreprise'
 
-        {
-            "title": _("Conseil & Audit Social"),
-            "description": _(
-                "Audit RH, diagnostics organisationnels et accompagnement "
-                "dans la structuration des procédures et pratiques RH."
-            ),
-            "highlight": _("Audit & conformité"),
-            "icon": "shield",
-        },
+            enrolement.save()
 
-        {
-            "title": _("Formation Professionnelle"),
-            "description": _(
-                "Conception et animation de formations adaptées aux besoins "
-                "opérationnels et au développement des compétences."
-            ),
-            "highlight": _("Renforcement des capacités"),
-            "icon": "graduation",
-        },
+            request.session['enrolement_success'] = {
 
-        {
-            "title": _("Sous-traitance & Appui Opérationnel"),
-            "description": _(
-                "Gestion externalisée d’activités et d’équipes opérationnelles "
-                "dans les domaines logistiques, administratifs et techniques."
-            ),
-            "highlight": _("Flexibilité opérationnelle"),
-            "icon": "layers",
-        },
-    ]
+                'titre': _(
+                    "Votre demande d’enrôlement entreprise "
+                    "a bien été enregistrée."
+                ),
+
+                'message': _(
+                    "Un conseiller Antarès RH prendra "
+                    "prochainement contact avec votre "
+                    "organisation afin de vous accompagner "
+                    "dans votre onboarding."
+                ),
+
+                'details': _(
+                    "Après validation de votre dossier, "
+                    "vos identifiants de connexion vous "
+                    "seront envoyés par email."
+                ),
+            }
+
+            return redirect('enrolement_success')
+
+    else:
+        form = EntrepriseEnrolementForm()
 
     context = {
-        "clients": clients,
-        "secteurs": secteurs,
-        "services": services,
+        **contexte_espaces(),
+
+        'services': SERVICES_ENTREPRISE,
+
+        'form': form,
     }
 
     return render(
         request,
-        "site_web/espaces/espace_entreprise.html",
+        'site_web/espaces/espace_entreprise.html',
         context
     )
+
+
+def enrolement_success(request):
+
+    data = request.session.get(
+        'enrolement_success'
+    )
+
+    if not data:
+        return redirect('home')
+
+    context = {
+
+        'titre': data.get('titre'),
+
+        'message': data.get('message'),
+
+        'details': data.get('details'),
+    }
+
+    del request.session['enrolement_success']
+
+    return render(
+        request,
+        'site_web/espaces/enrolement_success.html',
+        context
+    )
+
+
 
 
 def login_view(request):

@@ -12,6 +12,7 @@ urlpatterns = [
     path('espace-candidat/', espace_candidat, name='espace_candidat'),
     path('espace-entreprise/', espace_entreprise, name='espace_entreprise'),  
     path('espace-consultant/', espace_consultant, name='espace_consultant'),
+    path('enrolement-success/', enrolement_success, name='enrolement_success'),
     path('login/', login_view, name='login'),
     path('register/', register_view, name='register'),
 

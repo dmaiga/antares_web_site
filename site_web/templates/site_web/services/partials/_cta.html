@@ -1,0 +1,63 @@
+{% load i18n static %}
+    <!-- Section CTA : Solutions sur mesure -->
+    <div  class="mt-6 p-6 md:p-6 text-center relative">
+        <!-- Élément de design discret (ligne d'arrière-plan) -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-center -z-10">
+            <div class="w-full max-w-5xl h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+        </div>
+    
+        <!-- Container avec bordure en dégradé subtil -->
+        <div class="inline-block  bg-gradient-to-r from-antares-blue to-antares-orange p-[1px] p-[1px] rounded-[2rem] shadow-sm">
+            <div class="bg-white px-8 py-10 md:px-20 md:py-14 rounded-[calc(2rem-1px)]">
+                
+                <div class="badge badge-outline border-slate-300 text-slate-500 font-bold mb-6 px-4 py-3 uppercase tracking-[0.2em] text-[10px]">
+                    {% trans "Échangeons sur vos enjeux" %}
+                </div>
+            
+                <h4 class="text-2xl md:text-3xl font-black text-slate-900 mb-4 tracking-tighter  ">
+                    {% trans "Une question ou un besoin particulier ?" %}
+                </h4>
+                
+                <p class="text-slate-900 text-sm md:text-base mb-10 max-w-xl mx-auto font-light leading-relaxed">
+                    {% trans "Que vous ayez un projet déjà défini ou que vous souhaitiez simplement obtenir des informations sur nos services RH au Mali, nos experts sont à votre écoute pour vous conseiller." %}
+                </p>
+            
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <!-- CTA Principal -->
+                    
+                    <a href="{% url 'contact' %}"
+                       class="w-full md:w-auto inline-flex items-center justify-center gap-3 text-xs font-black text-white bg-slate-900 hover:bg-antares-blue px-10 py-5 rounded-xl transition-all duration-300 shadow-xl group">
+                        
+                        <span class="uppercase tracking-widest">{% trans "Préciser mon besoin" %}</span>
+                        
+                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                
+                    <span class="text-slate-300 font-bold text-[10px] uppercase tracking-widest">{% trans "OU" %}</span>
+                
+                    <!-- CTA Secondaire (Téléphone) -->
+                    <a href="tel:+22320292040" class="text-slate-900 font-black text-sm hover:text-antares-blue transition-colors flex items-center gap-2 group">
+                        <div class="w-8 h-8 bg-slate-50 rounded-full flex items-center justify-center group-hover:bg-antares-blue/10">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <span>+223 20 29 20 40</span>
+                    </a>
+                </div>
+            
+                <!-- Pied de carte : Rassurance -->
+                <div class="mt-10 pt-8 border-t border-slate-50 flex flex-wrap justify-center gap-8 opacity-60">
+                    <div class="flex items-center gap-2 text-slate-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">{% trans "Conseils d'experts" %}</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-500">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-[10px] font-bold uppercase tracking-widest">{% trans "Réponse sous 72h" %}</span>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>

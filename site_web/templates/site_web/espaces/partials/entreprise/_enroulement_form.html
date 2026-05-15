@@ -68,58 +68,242 @@
                 </div>
             </div>
 
-<div class="w-full lg:w-7/12">
-    <div class="bg-white p-8 md:p-14 rounded-[3rem] shadow-2xl shadow-slate-200/50 border border-white">
-        <form method="POST" class="space-y-10">
-            {% csrf_token %}
-            
-            <div class="space-y-5">
-                <div class="flex items-center gap-3">
-                    <span class="w-1 h-4 bg-antares-orange rounded-full "></span>
-                    <label class="text-[10px] font-black uppercase tracking-[0.2em] ">{% trans "Identité de l'Organisation" %}</label>
-                </div>
-
-                <div class="grid grid-cols-1 gap-4">
-                    <input type="text" placeholder="{% trans "Raison sociale" %}" 
-                           class="w-full px-6 py-5 bg-slate-100 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
-                    <input type="text" placeholder="{% trans "Secteur d'activité" %}" 
-                           class="w-full px-6 py-5 bg-slate-100 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
-                   
-            </div>
-
-            <div class="space-y-5">
-                <div class="flex items-center gap-3">
-                    <span class="w-1 h-4 bg-antares-orange rounded-full"></span>
-                    <label class="text-[10px] font-black uppercase tracking-[0.2em] ">{% trans "Contact Référent" %}</label>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" placeholder="{% trans "Nom" %}" 
-                           class="w-full px-6 py-5 bg-slate-100 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
-                    <input type="text" placeholder="{% trans "Prénom" %}" 
-                           class="w-full px-6 py-5 bg-slate-100 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
+            <div class="w-full lg:w-7/12">
+                <div class="bg-white p-8 md:p-14 rounded-[3rem] shadow-2xl shadow-slate-200/50 border border-white">
+                    {% if form.non_field_errors %}
+                                    
+                        <div class="mb-6 p-4 rounded-2xl border border-red-200 bg-red-50">
+                        
+                            {% for error in form.non_field_errors %}
+                        
+                                <p class="text-sm font-medium text-red-600">
+                                    {{ error }}
+                                </p>
+                            
+                            {% endfor %}
+                            
+                        </div>
                     
-                    <input type="email" placeholder="{% trans "Email" %}" 
-                           class="w-full px-6 py-5 bg-slate-100 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700 md:col-span-2">
+                    {% endif %}
                     
-                    <input type="text" placeholder="{% trans "Poste occupé " %}" 
-                           class="w-full px-6 py-5 bg-slate-100 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
-                    <input type="tel" placeholder="{% trans "Téléphone" %}" 
-                           class="w-full px-6 py-5 bg-slate-100 border-none rounded-2xl focus:ring-2 focus:ring-antares-orange/20 transition-all outline-none text-sm font-medium text-slate-700">
+                    <form method="POST" class="space-y-10">
+                    
+                        {% csrf_token %}
+                    
+                        <div class="space-y-5">
+                        
+                            <div class="flex items-center gap-3">
+                            
+                                <span class="w-1 h-4 bg-antares-orange rounded-full"></span>
+                            
+                                <label class="text-[10px] font-black uppercase tracking-[0.2em]">
+                                    {% trans "Identité de l'Organisation" %}
+                                </label>
+                            
+                            </div>
+                        
+                            <div class="grid grid-cols-1 gap-4">
+                            
+                                <div>
+                                
+                                    {{ form.entreprise }}
+                                
+                                    {% if form.entreprise.errors %}
+                                
+                                        <div class="space-y-1 mt-2">
+                                        
+                                            {% for error in form.entreprise.errors %}
+                                        
+                                                <p class="text-[11px] font-medium text-red-500">
+                                                    {{ error }}
+                                                </p>
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    
+                                    {% endif %}
+                                    
+                                </div>
+                            
+                                <div>
+                                
+                                    {{ form.secteur_activite }}
+                                
+                                    {% if form.secteur_activite.errors %}
+                                
+                                        <div class="space-y-1 mt-2">
+                                        
+                                            {% for error in form.secteur_activite.errors %}
+                                        
+                                                <p class="text-[11px] font-medium text-red-500">
+                                                    {{ error }}
+                                                </p>
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    
+                                    {% endif %}
+                                    
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
+                    
+                        <div class="space-y-5">
+                        
+                            <div class="flex items-center gap-3">
+                            
+                                <span class="w-1 h-4 bg-antares-orange rounded-full"></span>
+                            
+                                <label class="text-[10px] font-black uppercase tracking-[0.2em]">
+                                    {% trans "Contact Référent" %}
+                                </label>
+                            
+                            </div>
+                        
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            
+                                <div>
+                                
+                                    {{ form.nom }}
+                                
+                                    {% if form.nom.errors %}
+                                
+                                        <div class="space-y-1 mt-2">
+                                        
+                                            {% for error in form.nom.errors %}
+                                        
+                                                <p class="text-[11px] font-medium text-red-500">
+                                                    {{ error }}
+                                                </p>
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    
+                                    {% endif %}
+                                    
+                                </div>
+                            
+                                <div>
+                                
+                                    {{ form.prenom }}
+                                
+                                    {% if form.prenom.errors %}
+                                
+                                        <div class="space-y-1 mt-2">
+                                        
+                                            {% for error in form.prenom.errors %}
+                                        
+                                                <p class="text-[11px] font-medium text-red-500">
+                                                    {{ error }}
+                                                </p>
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    
+                                    {% endif %}
+                                    
+                                </div>
+                            
+                                <div class="md:col-span-2">
+                                
+                                    {{ form.email }}
+                                
+                                    {% if form.email.errors %}
+                                
+                                        <div class="space-y-1 mt-2">
+                                        
+                                            {% for error in form.email.errors %}
+                                        
+                                                <p class="text-[11px] font-medium text-red-500">
+                                                    {{ error }}
+                                                </p>
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    
+                                    {% endif %}
+                                    
+                                </div>
+                            
+                                <div>
+                                
+                                    {{ form.poste }}
+                                
+                                    {% if form.poste.errors %}
+                                
+                                        <div class="space-y-1 mt-2">
+                                        
+                                            {% for error in form.poste.errors %}
+                                        
+                                                <p class="text-[11px] font-medium text-red-500">
+                                                    {{ error }}
+                                                </p>
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    
+                                    {% endif %}
+                                    
+                                </div>
+                            
+                                <div>
+                                
+                                    {{ form.telephone }}
+                                
+                                    {% if form.telephone.errors %}
+                                
+                                        <div class="space-y-1 mt-2">
+                                        
+                                            {% for error in form.telephone.errors %}
+                                        
+                                                <p class="text-[11px] font-medium text-red-500">
+                                                    {{ error }}
+                                                </p>
+                                            
+                                            {% endfor %}
+                                            
+                                        </div>
+                                    
+                                    {% endif %}
+                                    
+                                </div>
+                            
+                            </div>
+                        
+                        </div>
+                    
+                        <div class="pt-4">
+                        
+                            <button
+                                type="submit"
+                                class="w-full group relative px-8 py-6 bg-slate-900 text-white hover:bg-antares-orange text-[11px] font-black uppercase tracking-[0.3em] rounded-2xl overflow-hidden transition-all duration-500 shadow-xl shadow-slate-900/10"
+                            >
+                        
+                                <span class="relative z-10">
+                                    {% trans "Soumettre mon enrôlement" %}
+                                </span>
+                            
+                            </button>
+                        
+                            <p class="text-[10px] text-center text-slate-600 mt-6 font-medium">
+                            
+                                {% trans "Nos équipes pourront vous contacter pour le suivi de votre demande, l’activation de votre espace et votre accompagnement." %}
+                            
+                            </p>
+                        
+                        </div>
+                    
+                    </form>
                 </div>
             </div>
-
-            <div class="pt-4">
-                <button type="submit" class="w-full group relative px-8 py-6 bg-slate-900 text-white hover:bg-antares-orange text-[11px] font-black uppercase tracking-[0.3em] rounded-2xl overflow-hidden transition-all duration-500 shadow-xl shadow-slate-900/10">
-                    <span class="relative z-10">{% trans "Soumettre mon enrôlement" %}</span>
-                   
-                </button>
-                <p class="text-[10px] text-center text-slate-600 mt-6 font-medium">
-                  {% trans "Nos équipes pourront vous contacter pour le suivi de votre demande, l’activation de votre espace et votre accompagnement." %}
-                </p>
-            </div>
-        </form>
-    </div>
-</div>
         </div>
     </div>
 </section>
