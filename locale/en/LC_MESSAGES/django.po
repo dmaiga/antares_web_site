@@ -2468,48 +2468,57 @@ msgstr "Please submit your complete application before the indicated deadline."
 #: site_web/views.py:212
 msgid "Cette offre n'existe pas."
 msgstr "This job opportunity does not exist."
-
 #: site_web/views.py:249
 msgid "Votre demande a bien été reçue."
-msgstr ""
+msgstr "Your request has been successfully received."
 
 #: site_web/views.py:253
 msgid ""
 "Nos équipes vont examiner votre profil et procéder à la validation de votre "
 "enrôlement."
 msgstr ""
+"Our teams will review your profile and proceed with the validation of your "
+"enrollment."
 
 #: site_web/views.py:259
 msgid ""
 "Une fois votre accès approuvé, vos identifiants de connexion vous seront "
 "transmis par email."
 msgstr ""
+"Once your access has been approved, your login credentials will be sent to "
+"you by email."
 
 #: site_web/views.py:302
 msgid "Votre profil consultant a bien été soumis."
-msgstr ""
+msgstr "Your consultant profile has been successfully submitted."
 
 #: site_web/views.py:306
 msgid ""
 "Nos équipes procéderont à la vérification de votre expérience et de vos "
 "références professionnelles."
 msgstr ""
+"Our teams will verify your professional experience and references."
 
 #: site_web/views.py:312 site_web/views.py:364
 msgid ""
 "Après validation de votre dossier, vos identifiants de connexion vous seront "
 "envoyés par email."
 msgstr ""
+"After validation of your application, your login credentials will be sent "
+"to you by email."
 
 #: site_web/views.py:352
 msgid "Votre demande d’enrôlement entreprise a bien été enregistrée."
-msgstr ""
+msgstr "Your company enrollment request has been successfully registered."
 
 #: site_web/views.py:357
 msgid ""
 "Un conseiller Antarès RH prendra prochainement contact avec votre "
 "organisation afin de vous accompagner dans votre onboarding."
 msgstr ""
+"An Antarès RH advisor will contact your organization shortly to assist you "
+"with your onboarding process."
+
 
 #~ msgid "Joindre mon CV"
 #~ msgstr "Upload My Resume"
