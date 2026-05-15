@@ -846,7 +846,7 @@ msgstr ""
 
 #: site_web/templates/site_web/espaces/enrolement_success.html:40
 msgid "Validation reçue"
-msgstr ""
+msgstr "Request received"
 
 #: site_web/templates/site_web/espaces/enrolement_success.html:64
 #: site_web/templates/site_web/home/home.html:4
