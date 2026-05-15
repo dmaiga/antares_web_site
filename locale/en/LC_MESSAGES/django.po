@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 11:52+0000\n"
+"POT-Creation-Date: 2026-05-15 15:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,7 @@ msgstr ""
 #: antares_web/settings.py:137
 msgid "English"
 msgstr ""
+
 #: site_web/forms.py:113
 msgid "Le nom est obligatoire."
 msgstr "Last name is required."
@@ -64,7 +65,6 @@ msgstr "Invalid phone number."
 #: site_web/forms.py:211
 msgid "Un enrôlement existe déjà avec ce numéro de téléphone."
 msgstr "An enrollment already exists with this phone number."
-
 
 #: site_web/services/contenus.py:8
 msgid "Banque & Assurance"
@@ -164,7 +164,6 @@ msgid ""
 msgstr ""
 "Management of contracts, payroll, social declarations, and administrative "
 "workforce monitoring in compliance with Malian regulations."
-
 
 #: site_web/services/contenus.py:52
 msgid "Conformité sociale"
@@ -843,7 +842,6 @@ msgstr ""
 "Yes. Our approach is based on long-term partnerships with our clients, "
 "supporting them in the management and development of their human resources."
 
-
 #: site_web/templates/site_web/espaces/enrolement_success.html:40
 msgid "Validation reçue"
 msgstr "Request received"
@@ -917,56 +915,65 @@ msgstr ""
 "Register for free and increase your chances of finding the right opportunity."
 
 #: site_web/templates/site_web/espaces/partials/candidat/_forms.html:124
+#: site_web/templates/site_web/legal/politique_confidentialite.html:148
 msgid "Numéro de téléphone"
 msgstr "Phone Number"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:153
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:156
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:254
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:291
+msgid ""
+"J’accepte la politique de confidentialité et les conditions générales "
+"d’utilisation de la plateforme Antarès RH."
+msgstr ""
+
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:167
 msgid "Créer mon compte"
 msgstr "Create My Account"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:166
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:181
 msgid "Vos Avantages"
 msgstr "Your Benefits"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:176
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:191
 msgid "Alertes Personnalisées"
 msgstr "Personalized Alerts"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:177
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:192
 msgid "Recevez des notifications dès qu'un poste vous correspond."
 msgstr "Receive notifications whenever a position matches your profile."
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:185
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:200
 msgid "Suivi de Candidature"
 msgstr "Application Tracking"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:186
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:201
 msgid "Consultez l'état d'avancement de vos dossiers en temps réel."
 msgstr "Track the progress of your applications in real time."
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:194
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:209
 msgid "Réseau Privé"
 msgstr "Private Network"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:195
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:210
 msgid "Soyez visible par nos recruteurs avant même la publication des offres."
 msgstr "Get noticed by our recruiters before job offers are even published."
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:203
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:218
 msgid "Accès Prioritaire"
 msgstr "Priority Access"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:204
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:219
 msgid "Postulez en un clic aux offres exclusives CDI, CDD et Intérim."
 msgstr ""
 "Apply in one click to exclusive permanent, temporary, and contract jobs."
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:211
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:226
 #: site_web/templates/site_web/jobs/partials/_job_empty_state.html:24
 msgid "Candidature Spontanée"
 msgstr "Spontaneous Application"
 
-#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:213
+#: site_web/templates/site_web/espaces/partials/candidat/_forms.html:228
 msgid "Votre inscription fait office de candidature spontanée permanente."
 msgstr "Your registration acts as an ongoing spontaneous application."
 
@@ -1005,6 +1012,7 @@ msgstr "Profiles"
 
 #: site_web/templates/site_web/espaces/partials/candidat/_hero_candidat.html:82
 #: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:83
+#: site_web/templates/site_web/legal/cgu.html:215
 msgid "Entreprises"
 msgstr "Companies"
 
@@ -1105,7 +1113,7 @@ msgstr ""
 msgid "PDF • WORD • Taille maximale 10 MB"
 msgstr ""
 
-#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:250
+#: site_web/templates/site_web/espaces/partials/consultant/_enrollment_form.html:264
 msgid "Soumettre mon profil"
 msgstr "Submit My Profile"
 
@@ -1249,8 +1257,6 @@ msgstr ""
 "A digital ecosystem designed to centralize your needs, optimize your costs, "
 "and monitor your performance in real time."
 
-
-
 #: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:24
 msgid "Tableau de bord complet"
 msgstr "Comprehensive Dashboard"
@@ -1300,11 +1306,11 @@ msgstr "Organization Identity"
 msgid "Contact Référent"
 msgstr "Point of Contact"
 
-#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:291
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:303
 msgid "Soumettre mon enrôlement"
 msgstr "Submit Enrollment"
 
-#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:298
+#: site_web/templates/site_web/espaces/partials/entreprise/_enroulement_form.html:310
 msgid ""
 "Nos équipes pourront vous contacter pour le suivi de votre demande, "
 "l’activation de votre espace et votre accompagnement."
@@ -1347,6 +1353,7 @@ msgstr "Years of Expertise"
 
 #: site_web/templates/site_web/espaces/partials/entreprise/_hero_entreprise.html:76
 #: site_web/templates/site_web/espaces/partials/entreprise/_stats.html:17
+#: site_web/templates/site_web/legal/cgu.html:193
 msgid "Consultants"
 msgstr "Consultants"
 
@@ -1915,6 +1922,932 @@ msgstr "Join our exclusive events"
 msgid "Prochaine session"
 msgstr "Next session"
 
+##
+###
+####
+#####
+#: site_web/templates/site_web/legal/cgu.html:5
+msgid "Conditions Générales d’Utilisation | Antarès RH"
+msgstr "Terms and Conditions of Use | Antarès RH"
+
+#: site_web/templates/site_web/legal/cgu.html:25
+msgid "Conditions d’utilisation"
+msgstr "Terms of Use"
+
+#: site_web/templates/site_web/legal/cgu.html:31
+msgid "Conditions Générales d’Utilisation"
+msgstr "General Terms and Conditions of Use"
+
+#: site_web/templates/site_web/legal/cgu.html:37
+msgid ""
+"Les présentes Conditions Générales d’Utilisation définissent les modalités "
+"d’accès et d’utilisation de la plateforme Antarès RH."
+msgstr ""
+"These General Terms and Conditions of Use define the terms of access to and "
+"use of the Antarès RH platform."
+
+#: site_web/templates/site_web/legal/cgu.html:41
+#: site_web/templates/site_web/legal/mentions_legales.html:41
+msgid "Dernière mise à jour : 01/05/2026"
+msgstr "Last updated: 01/05/2026"
+
+#: site_web/templates/site_web/legal/cgu.html:57
+msgid "1. Objet"
+msgstr "1. Purpose"
+
+#: site_web/templates/site_web/legal/cgu.html:65
+msgid ""
+"Les présentes Conditions Générales d’Utilisation ont pour objet de définir "
+"les conditions d’accès et d’utilisation de la plateforme Antarès RH "
+"accessible à l’adresse :"
+msgstr ""
+"These General Terms and Conditions of Use are intended to define the "
+"conditions of access to and use of the Antarès RH platform available at:"
+
+#: site_web/templates/site_web/legal/cgu.html:70
+msgid ""
+"L’utilisation du site implique l’acceptation pleine et entière des présentes "
+"conditions."
+msgstr ""
+"Use of the website implies full and unconditional acceptance of these terms."
+
+#: site_web/templates/site_web/legal/cgu.html:85
+msgid "2. Présentation de la plateforme"
+msgstr "2. Platform Overview"
+
+#: site_web/templates/site_web/legal/cgu.html:93
+msgid ""
+"ANTARES RH est une plateforme développée par ANTARES SARL dans le cadre de "
+"ses activités de recrutement, conseil RH, mise à disposition de personnel, "
+"accompagnement RH et gestion des talents."
+msgstr ""
+"ANTARES RH is a platform developed by ANTARES SARL as part of its "
+"recruitment, HR consulting, staffing, HR support, and talent management "
+"activities."
+
+#: site_web/templates/site_web/legal/cgu.html:97
+msgid "La plateforme peut notamment permettre :"
+msgstr "The platform may notably provide:"
+
+#: site_web/templates/site_web/legal/cgu.html:102
+msgid "L’enrôlement de candidats"
+msgstr "Candidate onboarding"
+
+#: site_web/templates/site_web/legal/cgu.html:104
+msgid "L’enrôlement de consultants"
+msgstr "Consultant onboarding"
+
+#: site_web/templates/site_web/legal/cgu.html:106
+msgid "L’enrôlement d’entreprises"
+msgstr "Company onboarding"
+
+#: site_web/templates/site_web/legal/cgu.html:108
+msgid "La gestion future d’espaces RH sécurisés"
+msgstr "Future management of secure HR spaces"
+
+#: site_web/templates/site_web/legal/cgu.html:110
+msgid "Des fonctionnalités d’onboarding RH"
+msgstr "HR onboarding features"
+
+#: site_web/templates/site_web/legal/cgu.html:112
+msgid "Des services RH numériques évolutifs"
+msgstr "Scalable digital HR services"
+
+#: site_web/templates/site_web/legal/cgu.html:128
+msgid "3. Accès au site"
+msgstr "3. Access to the Website"
+
+#: site_web/templates/site_web/legal/cgu.html:136
+msgid ""
+"L’accès au site est ouvert à tout utilisateur disposant d’un accès internet."
+msgstr ""
+"Access to the website is open to any user with internet access."
+
+#: site_web/templates/site_web/legal/cgu.html:140
+msgid ""
+"Certaines fonctionnalités peuvent être réservées aux utilisateurs disposant "
+"d’un compte validé par ANTARES RH."
+msgstr ""
+"Certain features may be reserved for users with an account validated by "
+"ANTARES RH."
+
+#: site_web/templates/site_web/legal/cgu.html:144
+msgid ""
+"ANTARES RH se réserve le droit de suspendre, limiter ou interrompre l’accès "
+"à tout ou partie de la plateforme pour des raisons techniques, de sécurité, "
+"de maintenance ou d’organisation."
+msgstr ""
+"ANTARES RH reserves the right to suspend, limit, or interrupt access to all "
+"or part of the platform for technical, security, maintenance, or "
+"organizational reasons."
+
+#: site_web/templates/site_web/legal/cgu.html:159
+msgid "4. Création et validation des comptes"
+msgstr "4. Account Creation and Validation"
+
+#: site_web/templates/site_web/legal/cgu.html:171
+msgid "Candidats"
+msgstr "Candidates"
+
+#: site_web/templates/site_web/legal/cgu.html:177
+msgid ""
+"Les candidats peuvent transmettre leurs informations professionnelles dans "
+"le cadre d’un enrôlement sur la plateforme."
+msgstr ""
+"Candidates may submit their professional information as part of the "
+"platform onboarding process."
+
+#: site_web/templates/site_web/legal/cgu.html:181
+msgid ""
+"Les identifiants d’accès peuvent être transmis après validation par ANTARES "
+"RH."
+msgstr ""
+"Access credentials may be provided after validation by ANTARES RH."
+
+#: site_web/templates/site_web/legal/cgu.html:199
+msgid ""
+"Les consultants doivent justifier d’une expérience professionnelle "
+"suffisante conformément aux critères définis par ANTARES RH."
+msgstr ""
+"Consultants must demonstrate sufficient professional experience in "
+"accordance with the criteria defined by ANTARES RH."
+
+#: site_web/templates/site_web/legal/cgu.html:203
+msgid ""
+"La validation des profils peut nécessiter l’analyse des CV et documents "
+"transmis."
+msgstr ""
+"Profile validation may require analysis of submitted CVs and documents."
+
+#: site_web/templates/site_web/legal/cgu.html:220
+msgid ""
+"Les entreprises peuvent être soumises à un processus d’onboarding et de "
+"vérification avant activation complète des services."
+msgstr ""
+"Companies may be subject to an onboarding and verification process before "
+"full activation of services."
+
+#: site_web/templates/site_web/legal/cgu.html:238
+msgid "5. Obligations des utilisateurs"
+msgstr "5. User Obligations"
+
+#: site_web/templates/site_web/legal/cgu.html:245
+msgid "Les utilisateurs s’engagent à :"
+msgstr "Users agree to:"
+
+#: site_web/templates/site_web/legal/cgu.html:252
+msgid "Fournir des informations exactes et à jour"
+msgstr "Provide accurate and up-to-date information"
+
+#: site_web/templates/site_web/legal/cgu.html:254
+msgid "Ne pas transmettre de documents falsifiés"
+msgstr "Not submit falsified documents"
+
+#: site_web/templates/site_web/legal/cgu.html:256
+msgid "Respecter les lois et réglementations applicables"
+msgstr "Comply with applicable laws and regulations"
+
+#: site_web/templates/site_web/legal/cgu.html:258
+msgid "Préserver la confidentialité de leurs identifiants"
+msgstr "Maintain the confidentiality of their credentials"
+
+#: site_web/templates/site_web/legal/cgu.html:260
+msgid "Ne pas porter atteinte à la sécurité du site"
+msgstr "Not compromise the security of the website"
+
+#: site_web/templates/site_web/legal/cgu.html:262
+msgid "Utiliser la plateforme de manière loyale et licite"
+msgstr "Use the platform lawfully and fairly"
+
+#: site_web/templates/site_web/legal/cgu.html:268
+msgid ""
+"Toute utilisation frauduleuse, abusive ou contraire aux présentes CGU peut "
+"entraîner la suspension ou la suppression du compte concerné."
+msgstr ""
+"Any fraudulent, abusive, or non-compliant use of these Terms may result in "
+"the suspension or deletion of the relevant account."
+
+#: site_web/templates/site_web/legal/cgu.html:282
+msgid "6. Documents et contenus transmis"
+msgstr "6. Submitted Documents and Content"
+
+#: site_web/templates/site_web/legal/cgu.html:290
+msgid ""
+"Les utilisateurs demeurent responsables des documents et informations "
+"transmis via la plateforme."
+msgstr ""
+"Users remain responsible for the documents and information submitted through "
+"the platform."
+
+#: site_web/templates/site_web/legal/cgu.html:294
+msgid ""
+"Les CV, documents professionnels et autres contenus transmis doivent être "
+"authentiques, licites et conformes aux finalités prévues par ANTARES RH."
+msgstr ""
+"CVs, professional documents, and other submitted content must be authentic, "
+"lawful, and consistent with the purposes defined by ANTARES RH."
+
+#: site_web/templates/site_web/legal/cgu.html:298
+msgid ""
+"Les entreprises utilisatrices s’engagent à utiliser les informations et "
+"profils transmis uniquement dans le cadre des services RH concernés."
+msgstr ""
+"Client companies agree to use submitted information and profiles solely "
+"within the scope of the relevant HR services."
+
+#: site_web/templates/site_web/legal/cgu.html:302
+msgid ""
+"Toute extraction, diffusion ou réutilisation non autorisée des données ou "
+"profils est interdite."
+msgstr ""
+"Any unauthorized extraction, distribution, or reuse of data or profiles is "
+"prohibited."
+
+#: site_web/templates/site_web/legal/cgu.html:317
+msgid "7. Confidentialité"
+msgstr "7. Confidentiality"
+
+#####
+####
+####
+#: site_web/templates/site_web/legal/cgu.html:325
+msgid ""
+"ANTARES RH accorde une importance particulière à la confidentialité des "
+"informations traitées dans le cadre de ses activités."
+msgstr ""
+"ANTARES RH places particular importance on the confidentiality of "
+"information processed as part of its activities."
+
+#: site_web/templates/site_web/legal/cgu.html:329
+msgid ""
+"Les collaborateurs et intervenants autorisés sont soumis à des engagements "
+"de confidentialité et de non-divulgation."
+msgstr ""
+"Authorized employees and stakeholders are bound by confidentiality and "
+"non-disclosure obligations."
+
+#: site_web/templates/site_web/legal/cgu.html:344
+#: site_web/templates/site_web/legal/politique_confidentialite.html:325
+msgid "8. Droits des personnes concernées"
+msgstr "8. Rights of Data Subjects"
+
+#: site_web/templates/site_web/legal/cgu.html:354
+msgid ""
+"Conformément à la réglementation applicable, toute personne concernée "
+"dispose du droit d’être informée sur :"
+msgstr ""
+"In accordance with applicable regulations, every data subject has the right "
+"to be informed about:"
+
+#: site_web/templates/site_web/legal/cgu.html:359
+#: site_web/templates/site_web/legal/politique_confidentialite.html:341
+msgid "L’identité du responsable du traitement"
+msgstr "The identity of the data controller"
+
+#: site_web/templates/site_web/legal/cgu.html:361
+#: site_web/templates/site_web/legal/politique_confidentialite.html:343
+msgid "Les finalités du traitement"
+msgstr "The purposes of the processing"
+
+#: site_web/templates/site_web/legal/cgu.html:363
+#: site_web/templates/site_web/legal/politique_confidentialite.html:345
+msgid "Les catégories de données collectées"
+msgstr "The categories of data collected"
+
+#: site_web/templates/site_web/legal/cgu.html:365
+#: site_web/templates/site_web/legal/politique_confidentialite.html:347
+msgid "Les destinataires des données"
+msgstr "The recipients of the data"
+
+#: site_web/templates/site_web/legal/cgu.html:367
+#: site_web/templates/site_web/legal/politique_confidentialite.html:349
+msgid "La durée de conservation"
+msgstr "The data retention period"
+
+#: site_web/templates/site_web/legal/cgu.html:369
+#: site_web/templates/site_web/legal/politique_confidentialite.html:351
+msgid "Les éventuels transferts de données hors du Mali"
+msgstr "Any transfers of data outside Mali"
+
+#: site_web/templates/site_web/legal/cgu.html:371
+msgid "Le caractère obligatoire ou facultatif des informations demandées"
+msgstr "Whether the requested information is mandatory or optional"
+
+#: site_web/templates/site_web/legal/cgu.html:380
+#: site_web/templates/site_web/legal/politique_confidentialite.html:360
+msgid "Droit d’opposition"
+msgstr "Right to Object"
+
+#: site_web/templates/site_web/legal/cgu.html:384
+#: site_web/templates/site_web/legal/politique_confidentialite.html:365
+msgid ""
+"Toute personne concernée peut s’opposer, pour des motifs légitimes, au "
+"traitement de ses données personnelles dans les limites prévues par la "
+"réglementation applicable."
+msgstr ""
+"Any data subject may object, on legitimate grounds, to the processing of "
+"their personal data within the limits provided by applicable regulations."
+
+#: site_web/templates/site_web/legal/cgu.html:392
+#: site_web/templates/site_web/legal/politique_confidentialite.html:374
+msgid "Droit d’accès et de rectification"
+msgstr "Right of Access and Rectification"
+
+#: site_web/templates/site_web/legal/cgu.html:398
+#: site_web/templates/site_web/legal/politique_confidentialite.html:380
+msgid ""
+"Toute personne concernée peut demander l’accès aux données personnelles la "
+"concernant ainsi que leur rectification, mise à jour ou suppression lorsque "
+"cela est applicable."
+msgstr ""
+"Any data subject may request access to their personal data as well as its "
+"rectification, updating, or deletion where applicable."
+
+#: site_web/templates/site_web/legal/cgu.html:402
+#: site_web/templates/site_web/legal/politique_confidentialite.html:384
+msgid ""
+"ANTARES RH peut demander des informations complémentaires afin de vérifier "
+"l’identité du demandeur avant traitement de la demande."
+msgstr ""
+"ANTARES RH may request additional information in order to verify the "
+"identity of the requester before processing the request."
+
+#: site_web/templates/site_web/legal/cgu.html:406
+#: site_web/templates/site_web/legal/politique_confidentialite.html:388
+msgid ""
+"Les demandes sont traitées dans les meilleurs délais conformément à la "
+"réglementation applicable."
+msgstr ""
+"Requests are processed as promptly as possible in accordance with applicable "
+"regulations."
+
+#: site_web/templates/site_web/legal/cgu.html:425
+msgid "9. Responsabilité"
+msgstr "9. Liability"
+
+#: site_web/templates/site_web/legal/cgu.html:433
+msgid ""
+"ANTARES RH met en œuvre des moyens raisonnables afin d’assurer le bon "
+"fonctionnement de la plateforme."
+msgstr ""
+"ANTARES RH implements reasonable measures to ensure the proper functioning "
+"of the platform."
+
+#: site_web/templates/site_web/legal/cgu.html:437
+msgid "Toutefois, ANTARES RH ne saurait être tenue responsable :"
+msgstr ""
+"However, ANTARES RH cannot be held liable for:"
+
+#: site_web/templates/site_web/legal/cgu.html:442
+msgid "Des interruptions temporaires du service"
+msgstr "Temporary service interruptions"
+
+#: site_web/templates/site_web/legal/cgu.html:444
+msgid "Des incidents liés au réseau internet"
+msgstr "Incidents related to the internet network"
+######
+######
+######
+######
+#: site_web/templates/site_web/legal/cgu.html:446
+msgid "D’une mauvaise utilisation de la plateforme"
+msgstr "Improper use of the platform"
+
+#: site_web/templates/site_web/legal/cgu.html:448
+msgid "Des dommages indirects liés à l’utilisation des services"
+msgstr "Indirect damages related to the use of the services"
+
+#: site_web/templates/site_web/legal/cgu.html:464
+msgid "10. Suspension ou suppression de compte"
+msgstr "10. Account Suspension or Deletion"
+
+#: site_web/templates/site_web/legal/cgu.html:472
+msgid "ANTARES RH se réserve le droit de suspendre ou supprimer tout compte :"
+msgstr ""
+"ANTARES RH reserves the right to suspend or delete any account:"
+
+#: site_web/templates/site_web/legal/cgu.html:477
+msgid "En cas de non-respect des présentes CGU"
+msgstr "In the event of non-compliance with these Terms"
+
+#: site_web/templates/site_web/legal/cgu.html:479
+msgid "En cas d’utilisation frauduleuse"
+msgstr "In the event of fraudulent use"
+
+#: site_web/templates/site_web/legal/cgu.html:481
+msgid "En cas de transmission de fausses informations"
+msgstr "In the event of submission of false information"
+
+#: site_web/templates/site_web/legal/cgu.html:483
+msgid "Pour des raisons de sécurité ou de conformité"
+msgstr "For security or compliance reasons"
+
+#: site_web/templates/site_web/legal/cgu.html:499
+msgid "11. Évolution de la plateforme"
+msgstr "11. Platform Evolution"
+
+#: site_web/templates/site_web/legal/cgu.html:506
+msgid ""
+"La plateforme Antarès RH étant en cours de développement et d’évolution, "
+"certaines fonctionnalités peuvent être ajoutées, modifiées ou supprimées à "
+"tout moment."
+msgstr ""
+"As the Antarès RH platform is under continuous development and evolution, "
+"certain features may be added, modified, or removed at any time."
+
+#: site_web/templates/site_web/legal/cgu.html:520
+msgid "12. Droit applicable"
+msgstr "12. Applicable Law"
+
+#: site_web/templates/site_web/legal/cgu.html:528
+msgid ""
+"Les présentes conditions sont régies par les lois et réglementations "
+"applicables en République du Mali."
+msgstr ""
+"These terms are governed by the laws and regulations applicable in the "
+"Republic of Mali."
+
+#: site_web/templates/site_web/legal/cgu.html:532
+msgid ""
+"Tout litige relatif à l’utilisation de la plateforme relève des juridictions "
+"compétentes du Mali."
+msgstr ""
+"Any dispute relating to the use of the platform falls under the jurisdiction "
+"of the competent courts of Mali."
+
+#: site_web/templates/site_web/legal/cgu.html:546
+msgid "13. Contact"
+msgstr "13. Contact"
+
+#: site_web/templates/site_web/legal/cgu.html:561
+#: site_web/templates/site_web/legal/mentions_legales.html:325
+#: site_web/templates/site_web/legal/politique_confidentialite.html:419
+msgid "Contact général"
+msgstr "General Contact"
+
+#: site_web/templates/site_web/legal/cgu.html:579
+#: site_web/templates/site_web/legal/mentions_legales.html:343
+#: site_web/templates/site_web/legal/politique_confidentialite.html:25
+#: site_web/templates/site_web/legal/politique_confidentialite.html:434
+msgid "Protection des données"
+msgstr "Data Protection"
+
+
+
+#: site_web/templates/site_web/legal/mentions_legales.html:5
+msgid "Mentions légales | Antarès RH"
+msgstr "Legal Notice | Antarès RH"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:25
+msgid "Informations légales"
+msgstr "Legal Information"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:31
+#: site_web/templates/site_web/partials/_footer.html:86
+msgid "Mentions légales"
+msgstr "Legal Notice"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:37
+msgid ""
+"Informations relatives à l’édition, l’hébergement, la réglementation "
+"applicable et l’exploitation de la plateforme Antarès RH."
+msgstr ""
+"Information relating to the publication, hosting, applicable regulations, "
+"and operation of the Antarès RH platform."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:56
+msgid "1. Éditeur du site"
+msgstr "1. Website Publisher"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:68
+msgid ""
+"Cabinet spécialisé dans les Ressources Humaines, le recrutement, l’intérim, "
+"la sous-traitance, le conseil RH et la gestion externalisée des ressources "
+"humaines."
+msgstr ""
+"Firm specialized in Human Resources, recruitment, temporary staffing, "
+"outsourcing, HR consulting, and outsourced human resources management."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:72
+msgid "Forme juridique :"
+msgstr "Legal form:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:77
+msgid "Année de création :"
+msgstr "Year of establishment:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:87
+msgid "Adresse :"
+msgstr "Address:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:89
+#: site_web/templates/site_web/legal/politique_confidentialite.html:100
+msgid "Immeuble Boubacar Kanté, 1er étage"
+msgstr "Boubacar Kanté Building, 1st Floor"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:91
+msgid "Hamdallaye – ACI Place CAN"
+msgstr "Hamdallaye – ACI Place CAN"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:93
+#: site_web/views.py:67 site_web/views.py:95 site_web/views.py:109
+#: site_web/views.py:144 site_web/views.py:178
+msgid "Bamako, Mali"
+msgstr "Bamako, Mali"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:97
+#: site_web/templates/site_web/legal/politique_confidentialite.html:108
+msgid "Téléphone :"
+msgstr "Phone:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:102
+#: site_web/templates/site_web/legal/politique_confidentialite.html:113
+msgid "Email :"
+msgstr "Email:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:107
+msgid "Site web :"
+msgstr "Website:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:124
+msgid "2. Responsable de publication"
+msgstr "2. Publishing Director"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:132
+msgid "Le responsable de publication du site est ANTARES SARL."
+msgstr ""
+"The publishing director of the website is ANTARES SARL."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:147
+msgid "3. Hébergement"
+msgstr "3. Hosting"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:156
+msgid "Le site Antarès RH est actuellement hébergé chez :"
+msgstr ""
+"The Antarès RH website is currently hosted by:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:167
+msgid "Type d’hébergement :"
+msgstr "Hosting type:"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:168
+msgid "Hébergement mutualisé"
+msgstr "Shared hosting"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:174
+msgid ""
+"L’infrastructure technique peut évoluer vers une architecture VPS ou une "
+"infrastructure dédiée selon les besoins opérationnels et techniques de la "
+"plateforme."
+msgstr ""
+"The technical infrastructure may evolve toward a VPS architecture or a "
+"dedicated infrastructure depending on the platform’s operational and "
+"technical needs."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:178
+msgid ""
+"Certaines données techniques peuvent être temporairement hébergées sur des "
+"infrastructures situées hors du Mali."
+msgstr ""
+"Certain technical data may be temporarily hosted on infrastructures located "
+"outside Mali."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:194
+msgid "4. Développement et maintenance"
+msgstr "4. Development and Maintenance"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:203
+msgid ""
+"Le développement, l’administration et la maintenance de la plateforme sont "
+"assurés en interne par les équipes d’ANTARES SARL."
+msgstr ""
+"The development, administration, and maintenance of the platform are "
+"handled internally by ANTARES SARL teams."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:207
+msgid ""
+"Les collaborateurs intervenant sur les systèmes d’information et les données "
+"sont soumis à des obligations de confidentialité ainsi qu’à des engagements "
+"de non-divulgation."
+msgstr ""
+"Employees involved in information systems and data management are subject "
+"to confidentiality obligations and non-disclosure agreements."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:223
+msgid "5. Propriété intellectuelle"
+msgstr "5. Intellectual Property"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:232
+msgid ""
+"L’ensemble des contenus présents sur le site Antarès RH, incluant notamment "
+"les textes, visuels, logos, illustrations, éléments graphiques, documents, "
+"marques et contenus techniques, est protégé par les dispositions applicables "
+"relatives à la propriété intellectuelle."
+msgstr ""
+"All content available on the Antarès RH website, including texts, visuals, "
+"logos, illustrations, graphic elements, documents, trademarks, and technical "
+"content, is protected under applicable intellectual property laws."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:236
+msgid ""
+"Toute reproduction, représentation, diffusion ou exploitation non autorisée, "
+"totale ou partielle, est interdite sauf autorisation écrite préalable "
+"d’ANTARES SARL."
+msgstr ""
+"Any unauthorized reproduction, representation, distribution, or use, in "
+"whole or in part, is prohibited without prior written authorization from "
+"ANTARES SARL."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:252
+msgid "6. Responsabilité"
+msgstr "6. Liability"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:261
+msgid ""
+"ANTARES SARL s’efforce de fournir des informations exactes et régulièrement "
+"mises à jour."
+msgstr ""
+"ANTARES SARL strives to provide accurate and regularly updated information."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:265
+msgid ""
+"Toutefois, la société ne saurait garantir l’absence totale d’erreurs, "
+"d’interruptions ou d’indisponibilités techniques."
+msgstr ""
+"However, the company cannot guarantee the complete absence of errors, "
+"interruptions, or technical unavailability."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:269
+msgid ""
+"L’utilisateur demeure seul responsable de l’utilisation des informations et "
+"services accessibles sur la plateforme."
+msgstr ""
+"The user remains solely responsible for the use of the information and "
+"services accessible through the platform."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:287
+msgid "7. Réglementation applicable"
+msgstr "7. Applicable Regulations"
+
+#: site_web/templates/site_web/legal/mentions_legales.html:295
+msgid ""
+"ANTARES RH s’engage à traiter les données personnelles conformément à la "
+"législation applicable en République du Mali, notamment la Loi n°2013-015 du "
+"21 mai 2013 portant protection des données à caractère personnel ainsi "
+"qu’aux exigences de l’Autorité de Protection des Données à caractère "
+"Personnel (APDP)."
+msgstr ""
+"ANTARES RH undertakes to process personal data in accordance with the "
+"applicable legislation in the Republic of Mali, notably Law No. 2013-015 of "
+"May 21, 2013 on the protection of personal data, as well as the requirements "
+"of the Personal Data Protection Authority (APDP)."
+
+#: site_web/templates/site_web/legal/mentions_legales.html:309
+msgid "8. Contact"
+msgstr "8. Contact"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:5
+msgid "Politique de confidentialité | Antarès RH"
+msgstr "Privacy Policy | Antarès RH"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:31
+msgid "Politique de confidentialité"
+msgstr "Privacy Policy"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:37
+msgid ""
+"ANTARES SARL accorde une importance particulière à la protection des données "
+"à caractère personnel traitées dans le cadre de ses activités et de "
+"l’utilisation de la plateforme Antarès RH."
+msgstr ""
+"ANTARES SARL places particular importance on the protection of personal "
+"data processed as part of its activities and the use of the Antarès RH "
+"platform."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:41
+msgid "Dernière mise à jour : 01/05/2026 "
+msgstr "Last updated: 01/05/2026"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:57
+msgid "1. Introduction"
+msgstr "1. Introduction"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:65
+msgid ""
+"La présente politique de confidentialité a pour objet d’informer les "
+"utilisateurs sur les modalités de collecte, d’utilisation, de conservation "
+"et de protection de leurs données personnelles conformément à la législation "
+"applicable au Mali."
+msgstr ""
+"This privacy policy is intended to inform users about the methods of "
+"collection, use, retention, and protection of their personal data in "
+"accordance with the applicable legislation in Mali."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:69
+msgid ""
+"ANTARES RH s’engage à respecter les exigences de la Loi n°2013-015 du 21 mai "
+"2013 portant protection des données à caractère personnel ainsi que les "
+"principes établis par l’Autorité de Protection des Données à caractère "
+"Personnel (APDP)."
+msgstr ""
+"ANTARES RH undertakes to comply with the requirements of Law No. 2013-015 "
+"of May 21, 2013 on the protection of personal data, as well as the "
+"principles established by the Personal Data Protection Authority (APDP)."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:73
+msgid ""
+"Est considérée comme donnée personnelle toute information permettant "
+"d’identifier directement ou indirectement une personne physique."
+msgstr ""
+"Any information allowing the direct or indirect identification of a natural "
+"person is considered personal data."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:88
+msgid "2. Responsable du traitement"
+msgstr "2. Data Controller"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:104
+msgid "Hamdallaye – ACI Place CAN, Bamako, Mali"
+msgstr "Hamdallaye – ACI Place CAN, Bamako, Mali"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:129
+msgid "3. Données collectées"
+msgstr "3. Collected Data"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:141
+msgid "Données d’identification"
+msgstr "Identification Data"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:146
+msgid "Nom et prénom"
+msgstr "First and last name"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:147
+msgid "Adresse email"
+msgstr "Email address"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:159
+msgid "Données professionnelles"
+msgstr "Professional Data"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:164
+msgid "Curriculum vitae"
+msgstr "Curriculum vitae"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:165
+msgid "Expériences professionnelles"
+msgstr "Professional experience"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:166
+msgid "Secteur d’activité"
+msgstr "Business sector"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:167
+msgid "Informations liées aux compétences"
+msgstr "Skills-related information"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:178
+msgid "Données techniques"
+msgstr "Technical Data"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:183
+msgid "Adresse IP"
+msgstr "IP address"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:184
+msgid "Informations de session"
+msgstr "Session information"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:185
+msgid "Cookies techniques nécessaires"
+msgstr "Necessary technical cookies"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:186
+msgid "Journaux techniques et de sécurité"
+msgstr "Technical and security logs"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:204
+msgid "4. Finalités du traitement"
+msgstr "4. Purposes of Processing"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:212
+msgid "Gestion des demandes d’enrôlement"
+msgstr "Management of onboarding requests"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:214
+msgid "Vérification des profils consultants"
+msgstr "Verification of consultant profiles"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:216
+msgid "Traitement des candidatures"
+msgstr "Processing of applications"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:218
+msgid "Gestion des relations entreprises"
+msgstr "Management of company relationships"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:220
+msgid "Transmission des identifiants de connexion"
+msgstr "Transmission of login credentials"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:222
+msgid "Sécurisation de la plateforme"
+msgstr "Platform security"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:224
+msgid "Préparation des futures fonctionnalités RH"
+msgstr "Preparation of future HR features"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:238
+msgid "5. Conservation des données"
+msgstr "5. Data Retention"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:246
+msgid ""
+"Les données personnelles sont conservées pendant la durée nécessaire aux "
+"finalités pour lesquelles elles ont été collectées."
+msgstr ""
+"Personal data is retained for the period necessary to fulfill the purposes "
+"for which it was collected."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:250
+msgid ""
+"Les comptes inactifs peuvent être supprimés ou anonymisés après une période "
+"de 24 mois d’inactivité."
+msgstr ""
+"Inactive accounts may be deleted or anonymized after a period of 24 months "
+"of inactivity."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:265
+msgid "6. Hébergement et sécurité"
+msgstr "6. Hosting and Security"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:273
+msgid ""
+"Le site est actuellement hébergé sur une infrastructure mutualisée opérée "
+"par LWS."
+msgstr ""
+"The website is currently hosted on a shared infrastructure operated by LWS."
+
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:277
+msgid ""
+"Les données personnelles ne sont accessibles qu’aux personnels habilités "
+"d’ANTARES RH ainsi qu’aux intervenants autorisés dans le cadre de leurs "
+"missions."
+msgstr ""
+"Personal data is accessible only to authorized ANTARES RH personnel and "
+"authorized stakeholders within the scope of their duties."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:281
+msgid ""
+"Les échanges entre les utilisateurs et la plateforme peuvent être sécurisés "
+"au moyen de protocoles de chiffrement adaptés afin de protéger la "
+"confidentialité des informations transmises."
+msgstr ""
+"Communications between users and the platform may be secured using "
+"appropriate encryption protocols in order to protect the confidentiality "
+"of transmitted information."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:285
+msgid ""
+"Certaines données techniques peuvent transiter temporairement par des "
+"infrastructures situées hors du Mali, notamment en France."
+msgstr ""
+"Certain technical data may temporarily transit through infrastructures "
+"located outside Mali, notably in France."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:289
+msgid ""
+"ANTARES RH met en œuvre des mesures techniques et organisationnelles "
+"appropriées afin d’assurer la sécurité, l’intégrité et la confidentialité "
+"des données personnelles."
+msgstr ""
+"ANTARES RH implements appropriate technical and organizational measures to "
+"ensure the security, integrity, and confidentiality of personal data."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:304
+msgid "7. Cookies"
+msgstr "7. Cookies"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:311
+msgid ""
+"La plateforme utilise uniquement des cookies techniques nécessaires au "
+"fonctionnement du site, à la gestion des sessions et à l’authentification "
+"des utilisateurs."
+msgstr ""
+"The platform uses only technical cookies necessary for the operation of the "
+"website, session management, and user authentication."
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:335
+msgid "Droit à l’information"
+msgstr "Right to Information"
+
+#: site_web/templates/site_web/legal/politique_confidentialite.html:406
+msgid "9. Contact"
+msgstr "9. Contact"
+
 #: site_web/templates/site_web/partials/_footer.html:12
 msgid ""
 "Votre partenaire RH pour des solutions humaines innovantes et performantes."
@@ -1952,13 +2885,13 @@ msgstr "Recruitment"
 msgid "Gestion RH"
 msgstr "HR Management"
 
-#: site_web/templates/site_web/partials/_footer.html:79
-msgid "Mentions légales"
-msgstr "Legal Notice"
-
-#: site_web/templates/site_web/partials/_footer.html:80
+#: site_web/templates/site_web/partials/_footer.html:87
 msgid "Confidentialité"
 msgstr "Privacy Policy"
+
+#: site_web/templates/site_web/partials/_footer.html:88
+msgid "CGU"
+msgstr "Terms of Use"
 
 #: site_web/templates/site_web/partials/_navbar.html:19
 #: site_web/templates/site_web/partials/_navbar.html:93
@@ -2260,11 +3193,6 @@ msgstr "May 10, 2026"
 msgid "Analyste de Crédit Senior"
 msgstr "Senior Credit Analyst"
 
-#: site_web/views.py:67 site_web/views.py:95 site_web/views.py:109
-#: site_web/views.py:144 site_web/views.py:178
-msgid "Bamako, Mali"
-msgstr "Bamako, Mali"
-
 #: site_web/views.py:70
 msgid ""
 "Analyse de risques financiers pour les comptes entreprises et structuration "
@@ -2468,6 +3396,7 @@ msgstr "Please submit your complete application before the indicated deadline."
 #: site_web/views.py:212
 msgid "Cette offre n'existe pas."
 msgstr "This job opportunity does not exist."
+
 #: site_web/views.py:249
 msgid "Votre demande a bien été reçue."
 msgstr "Your request has been successfully received."
@@ -2496,16 +3425,15 @@ msgstr "Your consultant profile has been successfully submitted."
 msgid ""
 "Nos équipes procéderont à la vérification de votre expérience et de vos "
 "références professionnelles."
-msgstr ""
-"Our teams will verify your professional experience and references."
+msgstr "Our teams will verify your professional experience and references."
 
 #: site_web/views.py:312 site_web/views.py:364
 msgid ""
 "Après validation de votre dossier, vos identifiants de connexion vous seront "
 "envoyés par email."
 msgstr ""
-"After validation of your application, your login credentials will be sent "
-"to you by email."
+"After validation of your application, your login credentials will be sent to "
+"you by email."
 
 #: site_web/views.py:352
 msgid "Votre demande d’enrôlement entreprise a bien été enregistrée."
@@ -2519,7 +3447,6 @@ msgstr ""
 "An Antarès RH advisor will contact your organization shortly to assist you "
 "with your onboarding process."
 
-
 #~ msgid "Joindre mon CV"
 #~ msgstr "Upload My Resume"
 
@@ -2528,9 +3455,6 @@ msgstr ""
 
 #~ msgid "Raison sociale"
 #~ msgstr "Legal Entity Name"
-
-#~ msgid "Secteur d'activité"
-#~ msgstr "Industry Sector"
 
 #~ msgid "Poste occupé "
 #~ msgstr "Job Title"

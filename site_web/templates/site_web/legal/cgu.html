@@ -1,0 +1,601 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}
+{% trans "Conditions Générales d’Utilisation | Antarès RH" %}
+{% endblock %}
+
+{% block content %}
+
+<section class="bg-gradient-to-b from-slate-50 to-white py-20">
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+
+        <div class="text-center mb-16">
+
+            <div class="inline-flex items-center gap-2
+                        bg-primary/10 text-primary
+                        px-4 py-2 rounded-full
+                        text-sm font-medium mb-6">
+
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+
+                {% trans "Conditions d’utilisation" %}
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold
+                       text-slate-900 tracking-tight mb-6">
+
+                {% trans "Conditions Générales d’Utilisation" %}
+            </h1>
+
+            <p class="text-slate-600 text-lg
+                      leading-8 max-w-3xl mx-auto">
+
+                {% trans "Les présentes Conditions Générales d’Utilisation définissent les modalités d’accès et d’utilisation de la plateforme Antarès RH." %}
+            </p>
+
+            <p class="text-sm text-slate-500 mt-6">
+                {% trans "Dernière mise à jour : 01/05/2026" %}
+
+            </p>
+
+        </div>
+
+        <div class="space-y-8">
+
+            <!-- Objet -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "1. Objet" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "Les présentes Conditions Générales d’Utilisation ont pour objet de définir les conditions d’accès et d’utilisation de la plateforme Antarès RH accessible à l’adresse :" %}
+                        <strong>https://antares-rh.com</strong>
+                    </p>
+
+                    <p>
+                        {% trans "L’utilisation du site implique l’acceptation pleine et entière des présentes conditions." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Présentation -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "2. Présentation de la plateforme" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "ANTARES RH est une plateforme développée par ANTARES SARL dans le cadre de ses activités de recrutement, conseil RH, mise à disposition de personnel, accompagnement RH et gestion des talents." %}
+                    </p>
+
+                    <p>
+                        {% trans "La plateforme peut notamment permettre :" %}
+                    </p>
+
+                    <ul class="list-disc pl-6 space-y-3">
+
+                        <li>{% trans "L’enrôlement de candidats" %}</li>
+
+                        <li>{% trans "L’enrôlement de consultants" %}</li>
+
+                        <li>{% trans "L’enrôlement d’entreprises" %}</li>
+
+                        <li>{% trans "La gestion future d’espaces RH sécurisés" %}</li>
+
+                        <li>{% trans "Des fonctionnalités d’onboarding RH" %}</li>
+
+                        <li>{% trans "Des services RH numériques évolutifs" %}</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Accès -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "3. Accès au site" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "L’accès au site est ouvert à tout utilisateur disposant d’un accès internet." %}
+                    </p>
+
+                    <p>
+                        {% trans "Certaines fonctionnalités peuvent être réservées aux utilisateurs disposant d’un compte validé par ANTARES RH." %}
+                    </p>
+
+                    <p>
+                        {% trans "ANTARES RH se réserve le droit de suspendre, limiter ou interrompre l’accès à tout ou partie de la plateforme pour des raisons techniques, de sécurité, de maintenance ou d’organisation." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Comptes -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "4. Création et validation des comptes" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <div class="space-y-10">
+
+                    <!-- Candidats -->
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Candidats" %}
+                        </h3>
+
+                        <div class="space-y-4 text-slate-700 leading-8">
+
+                            <p>
+                                {% trans "Les candidats peuvent transmettre leurs informations professionnelles dans le cadre d’un enrôlement sur la plateforme." %}
+                            </p>
+
+                            <p>
+                                {% trans "Les identifiants d’accès peuvent être transmis après validation par ANTARES RH." %}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Consultants -->
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Consultants" %}
+                        </h3>
+
+                        <div class="space-y-4 text-slate-700 leading-8">
+
+                            <p>
+                                {% trans "Les consultants doivent justifier d’une expérience professionnelle suffisante conformément aux critères définis par ANTARES RH." %}
+                            </p>
+
+                            <p>
+                                {% trans "La validation des profils peut nécessiter l’analyse des CV et documents transmis." %}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Entreprises -->
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Entreprises" %}
+                        </h3>
+
+                        <p class="text-slate-700 leading-8">
+
+                            {% trans "Les entreprises peuvent être soumises à un processus d’onboarding et de vérification avant activation complète des services." %}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Obligations -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "5. Obligations des utilisateurs" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <p class="text-slate-700 leading-8 mb-6">
+
+                    {% trans "Les utilisateurs s’engagent à :" %}
+
+                </p>
+
+                <ul class="list-disc pl-6 space-y-4
+                           text-slate-700 leading-8">
+
+                    <li>{% trans "Fournir des informations exactes et à jour" %}</li>
+
+                    <li>{% trans "Ne pas transmettre de documents falsifiés" %}</li>
+
+                    <li>{% trans "Respecter les lois et réglementations applicables" %}</li>
+
+                    <li>{% trans "Préserver la confidentialité de leurs identifiants" %}</li>
+
+                    <li>{% trans "Ne pas porter atteinte à la sécurité du site" %}</li>
+
+                    <li>{% trans "Utiliser la plateforme de manière loyale et licite" %}</li>
+
+                </ul>
+
+                <p class="text-slate-700 leading-8 mt-8">
+
+                    {% trans "Toute utilisation frauduleuse, abusive ou contraire aux présentes CGU peut entraîner la suspension ou la suppression du compte concerné." %}
+
+                </p>
+
+            </div>
+
+            <!-- Documents -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "6. Documents et contenus transmis" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "Les utilisateurs demeurent responsables des documents et informations transmis via la plateforme." %}
+                    </p>
+
+                    <p>
+                        {% trans "Les CV, documents professionnels et autres contenus transmis doivent être authentiques, licites et conformes aux finalités prévues par ANTARES RH." %}
+                    </p>
+
+                    <p>
+                        {% trans "Les entreprises utilisatrices s’engagent à utiliser les informations et profils transmis uniquement dans le cadre des services RH concernés." %}
+                    </p>
+
+                    <p>
+                        {% trans "Toute extraction, diffusion ou réutilisation non autorisée des données ou profils est interdite." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Confidentialité -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "7. Confidentialité" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "ANTARES RH accorde une importance particulière à la confidentialité des informations traitées dans le cadre de ses activités." %}
+                    </p>
+
+                    <p>
+                        {% trans "Les collaborateurs et intervenants autorisés sont soumis à des engagements de confidentialité et de non-divulgation." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Données personnelles -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "8. Droits des personnes concernées" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <div class="space-y-10 text-slate-700 leading-8">
+
+                    <div>
+
+                        <p class="mb-5">
+                            {% trans "Conformément à la réglementation applicable, toute personne concernée dispose du droit d’être informée sur :" %}
+                        </p>
+
+                        <ul class="list-disc pl-6 space-y-3">
+
+                            <li>{% trans "L’identité du responsable du traitement" %}</li>
+
+                            <li>{% trans "Les finalités du traitement" %}</li>
+
+                            <li>{% trans "Les catégories de données collectées" %}</li>
+
+                            <li>{% trans "Les destinataires des données" %}</li>
+
+                            <li>{% trans "La durée de conservation" %}</li>
+
+                            <li>{% trans "Les éventuels transferts de données hors du Mali" %}</li>
+
+                            <li>{% trans "Le caractère obligatoire ou facultatif des informations demandées" %}</li>
+
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Droit d’opposition" %}
+                        </h3>
+
+                        <p>
+                            {% trans "Toute personne concernée peut s’opposer, pour des motifs légitimes, au traitement de ses données personnelles dans les limites prévues par la réglementation applicable." %}
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Droit d’accès et de rectification" %}
+                        </h3>
+
+                        <div class="space-y-4">
+
+                            <p>
+                                {% trans "Toute personne concernée peut demander l’accès aux données personnelles la concernant ainsi que leur rectification, mise à jour ou suppression lorsque cela est applicable." %}
+                            </p>
+
+                            <p>
+                                {% trans "ANTARES RH peut demander des informations complémentaires afin de vérifier l’identité du demandeur avant traitement de la demande." %}
+                            </p>
+
+                            <p>
+                                {% trans "Les demandes sont traitées dans les meilleurs délais conformément à la réglementation applicable." %}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Responsabilité -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "9. Responsabilité" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "ANTARES RH met en œuvre des moyens raisonnables afin d’assurer le bon fonctionnement de la plateforme." %}
+                    </p>
+
+                    <p>
+                        {% trans "Toutefois, ANTARES RH ne saurait être tenue responsable :" %}
+                    </p>
+
+                    <ul class="list-disc pl-6 space-y-3">
+
+                        <li>{% trans "Des interruptions temporaires du service" %}</li>
+
+                        <li>{% trans "Des incidents liés au réseau internet" %}</li>
+
+                        <li>{% trans "D’une mauvaise utilisation de la plateforme" %}</li>
+
+                        <li>{% trans "Des dommages indirects liés à l’utilisation des services" %}</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Suspension -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "10. Suspension ou suppression de compte" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "ANTARES RH se réserve le droit de suspendre ou supprimer tout compte :" %}
+                    </p>
+
+                    <ul class="list-disc pl-6 space-y-3">
+
+                        <li>{% trans "En cas de non-respect des présentes CGU" %}</li>
+
+                        <li>{% trans "En cas d’utilisation frauduleuse" %}</li>
+
+                        <li>{% trans "En cas de transmission de fausses informations" %}</li>
+
+                        <li>{% trans "Pour des raisons de sécurité ou de conformité" %}</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Évolution -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "11. Évolution de la plateforme" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <p class="text-slate-700 leading-8">
+
+                    {% trans "La plateforme Antarès RH étant en cours de développement et d’évolution, certaines fonctionnalités peuvent être ajoutées, modifiées ou supprimées à tout moment." %}
+
+                </p>
+
+            </div>
+
+            <!-- Droit applicable -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "12. Droit applicable" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "Les présentes conditions sont régies par les lois et réglementations applicables en République du Mali." %}
+                    </p>
+
+                    <p>
+                        {% trans "Tout litige relatif à l’utilisation de la plateforme relève des juridictions compétentes du Mali." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="bg-slate-900 text-white
+                        rounded-3xl p-8 md:p-10
+                        shadow-xl">
+
+                <h2 class="text-2xl font-bold mb-2">
+                    {% trans "13. Contact" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- Contact général -->
+
+                    <div class="bg-white/5 border border-white/10
+                                rounded-2xl p-6">
+
+                        <p class="text-sm uppercase tracking-wide
+                                  text-blue-200 mb-3">
+
+                            {% trans "Contact général" %}
+
+                        </p>
+
+                        <p class="text-lg font-medium">
+                            contact@antares-rh.com
+                        </p>
+
+                    </div>
+
+                    <!-- DPO -->
+
+                    <div class="bg-white/5 border border-white/10
+                                rounded-2xl p-6">
+
+                        <p class="text-sm uppercase tracking-wide
+                                  text-blue-200 mb-3">
+
+                            {% trans "Protection des données" %}
+
+                        </p>
+
+                        <p class="text-lg font-medium">
+                            dpo@antares-rh.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+{% endblock %}

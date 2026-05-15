@@ -415,6 +415,16 @@ def enrolement_success(request):
 
 
 
+def politique_confidentialite(request):
+    return render(request, 'site_web/legal/politique_confidentialite.html')
+
+def mentions_legales(request):
+    return render(request, 'site_web/legal/mentions_legales.html')
+
+def cgu(request):
+    return render(request, 'site_web/legal/cgu.html')
+
+
 
 def login_view(request):
    

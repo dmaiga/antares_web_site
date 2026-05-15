@@ -1,0 +1,455 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}
+{% trans "Politique de confidentialité | Antarès RH" %}
+{% endblock %}
+
+{% block content %}
+
+<section class="bg-slate-50 ">
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+
+        <div class="text-center mb-16">
+
+            <div class="inline-flex items-center gap-2
+                        bg-primary/10 text-primary
+                        px-4 py-2 rounded-full
+                        text-sm font-medium mb-6">
+
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+
+                {% trans "Protection des données" %}
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold
+                       text-slate-900 tracking-tight mb-6">
+
+                {% trans "Politique de confidentialité" %}
+            </h1>
+
+            <p class="text-slate-600 text-lg
+                      leading-8 max-w-3xl mx-auto">
+
+                {% trans "ANTARES SARL accorde une importance particulière à la protection des données à caractère personnel traitées dans le cadre de ses activités et de l’utilisation de la plateforme Antarès RH." %}
+            </p>
+
+            <p class="text-sm text-slate-500 mt-6">
+                {% trans "Dernière mise à jour : 01/05/2026 " %}
+                
+            </p>
+
+        </div>
+
+        <div class="space-y-8">
+
+            <!-- Introduction -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "1. Introduction" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "La présente politique de confidentialité a pour objet d’informer les utilisateurs sur les modalités de collecte, d’utilisation, de conservation et de protection de leurs données personnelles conformément à la législation applicable au Mali." %}
+                    </p>
+
+                    <p>
+                        {% trans "ANTARES RH s’engage à respecter les exigences de la Loi n°2013-015 du 21 mai 2013 portant protection des données à caractère personnel ainsi que les principes établis par l’Autorité de Protection des Données à caractère Personnel (APDP)." %}
+                    </p>
+
+                    <p>
+                        {% trans "Est considérée comme donnée personnelle toute information permettant d’identifier directement ou indirectement une personne physique." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Responsable -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "2. Responsable du traitement" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-3 text-slate-700 leading-8">
+
+                    <p>
+                        <strong>ANTARES SARL</strong>
+                    </p>
+
+                    <p>
+                        {% trans "Immeuble Boubacar Kanté, 1er étage" %}
+                    </p>
+
+                    <p>
+                        {% trans "Hamdallaye – ACI Place CAN, Bamako, Mali" %}
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Téléphone :" %}</strong>
+                        +223 20 29 20 40
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Email :" %}</strong>
+                        contact@antares-rh.com
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Données collectées -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "3. Données collectées" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <div class="space-y-10">
+
+                    <!-- Identification -->
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Données d’identification" %}
+                        </h3>
+
+                        <ul class="list-disc pl-6 space-y-3 text-slate-700 leading-8">
+
+                            <li>{% trans "Nom et prénom" %}</li>
+                            <li>{% trans "Adresse email" %}</li>
+                            <li>{% trans "Numéro de téléphone" %}</li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Professionnelles -->
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Données professionnelles" %}
+                        </h3>
+
+                        <ul class="list-disc pl-6 space-y-3 text-slate-700 leading-8">
+
+                            <li>{% trans "Curriculum vitae" %}</li>
+                            <li>{% trans "Expériences professionnelles" %}</li>
+                            <li>{% trans "Secteur d’activité" %}</li>
+                            <li>{% trans "Informations liées aux compétences" %}</li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- Techniques -->
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Données techniques" %}
+                        </h3>
+
+                        <ul class="list-disc pl-6 space-y-3 text-slate-700 leading-8">
+
+                            <li>{% trans "Adresse IP" %}</li>
+                            <li>{% trans "Informations de session" %}</li>
+                            <li>{% trans "Cookies techniques nécessaires" %}</li>
+                            <li>{% trans "Journaux techniques et de sécurité" %}</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Finalités -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "4. Finalités du traitement" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <ul class="list-disc pl-6 space-y-4
+                           text-slate-700 leading-8">
+
+                    <li>{% trans "Gestion des demandes d’enrôlement" %}</li>
+
+                    <li>{% trans "Vérification des profils consultants" %}</li>
+
+                    <li>{% trans "Traitement des candidatures" %}</li>
+
+                    <li>{% trans "Gestion des relations entreprises" %}</li>
+
+                    <li>{% trans "Transmission des identifiants de connexion" %}</li>
+
+                    <li>{% trans "Sécurisation de la plateforme" %}</li>
+
+                    <li>{% trans "Préparation des futures fonctionnalités RH" %}</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Conservation -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "5. Conservation des données" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "Les données personnelles sont conservées pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées." %}
+                    </p>
+
+                    <p>
+                        {% trans "Les comptes inactifs peuvent être supprimés ou anonymisés après une période de 24 mois d’inactivité." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Sécurité -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "6. Hébergement et sécurité" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "Le site est actuellement hébergé sur une infrastructure mutualisée opérée par LWS." %}
+                    </p>
+
+                    <p>
+                        {% trans "Les données personnelles ne sont accessibles qu’aux personnels habilités d’ANTARES RH ainsi qu’aux intervenants autorisés dans le cadre de leurs missions." %}
+                    </p>
+
+                    <p>
+                        {% trans "Les échanges entre les utilisateurs et la plateforme peuvent être sécurisés au moyen de protocoles de chiffrement adaptés afin de protéger la confidentialité des informations transmises." %}
+                    </p>
+
+                    <p>
+                        {% trans "Certaines données techniques peuvent transiter temporairement par des infrastructures situées hors du Mali, notamment en France." %}
+                    </p>
+
+                    <p>
+                        {% trans "ANTARES RH met en œuvre des mesures techniques et organisationnelles appropriées afin d’assurer la sécurité, l’intégrité et la confidentialité des données personnelles." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Cookies -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "7. Cookies" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <p class="text-slate-700 leading-8">
+
+                    {% trans "La plateforme utilise uniquement des cookies techniques nécessaires au fonctionnement du site, à la gestion des sessions et à l’authentification des utilisateurs." %}
+
+                </p>
+
+            </div>
+
+            <!-- Droits -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "8. Droits des personnes concernées" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <div class="space-y-10">
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Droit à l’information" %}
+                        </h3>
+
+                        <ul class="list-disc pl-6 space-y-3
+                                   text-slate-700 leading-8">
+
+                            <li>{% trans "L’identité du responsable du traitement" %}</li>
+
+                            <li>{% trans "Les finalités du traitement" %}</li>
+
+                            <li>{% trans "Les catégories de données collectées" %}</li>
+
+                            <li>{% trans "Les destinataires des données" %}</li>
+
+                            <li>{% trans "La durée de conservation" %}</li>
+
+                            <li>{% trans "Les éventuels transferts de données hors du Mali" %}</li>
+
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Droit d’opposition" %}
+                        </h3>
+
+                        <p class="text-slate-700 leading-8">
+
+                            {% trans "Toute personne concernée peut s’opposer, pour des motifs légitimes, au traitement de ses données personnelles dans les limites prévues par la réglementation applicable." %}
+
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="text-xl font-semibold text-primary mb-4">
+                            {% trans "Droit d’accès et de rectification" %}
+                        </h3>
+
+                        <div class="space-y-4 text-slate-700 leading-8">
+
+                            <p>
+                                {% trans "Toute personne concernée peut demander l’accès aux données personnelles la concernant ainsi que leur rectification, mise à jour ou suppression lorsque cela est applicable." %}
+                            </p>
+
+                            <p>
+                                {% trans "ANTARES RH peut demander des informations complémentaires afin de vérifier l’identité du demandeur avant traitement de la demande." %}
+                            </p>
+
+                            <p>
+                                {% trans "Les demandes sont traitées dans les meilleurs délais conformément à la réglementation applicable." %}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="bg-slate-900 text-white
+                        rounded-3xl p-8 md:p-10
+                        shadow-xl">
+
+                <h2 class="text-2xl font-bold mb-2">
+                    {% trans "9. Contact" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="bg-white/5 border border-white/10
+                                rounded-2xl p-6">
+
+                        <p class="text-sm uppercase tracking-wide
+                                  text-blue-200 mb-3">
+
+                            {% trans "Contact général" %}
+                        </p>
+
+                        <p class="text-lg font-medium">
+                            contact@antares-rh.com
+                        </p>
+
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10
+                                rounded-2xl p-6">
+
+                        <p class="text-sm uppercase tracking-wide
+                                  text-blue-200 mb-3">
+
+                            {% trans "Protection des données" %}
+                        </p>
+
+                        <p class="text-lg font-medium">
+                            dpo@antares-rh.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+{% endblock %}

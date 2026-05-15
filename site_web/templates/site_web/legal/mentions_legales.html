@@ -1,0 +1,365 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}
+{% trans "Mentions légales | Antarès RH" %}
+{% endblock %}
+
+{% block content %}
+
+<section class="bg-gradient-to-b from-slate-50 to-white py-20">
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header -->
+
+        <div class="text-center mb-16">
+
+            <div class="inline-flex items-center gap-2
+                        bg-primary/10 text-primary
+                        px-4 py-2 rounded-full
+                        text-sm font-medium mb-6">
+
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+
+                {% trans "Informations légales" %}
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold
+                       text-slate-900 tracking-tight mb-6">
+
+                {% trans "Mentions légales" %}
+            </h1>
+
+            <p class="text-slate-600 text-lg
+                      leading-8 max-w-3xl mx-auto">
+
+                {% trans "Informations relatives à l’édition, l’hébergement, la réglementation applicable et l’exploitation de la plateforme Antarès RH." %}
+            </p>
+
+            <p class="text-sm text-slate-500 mt-6">
+                {% trans "Dernière mise à jour : 01/05/2026" %}
+            </p>
+
+        </div>
+
+        <div class="space-y-8">
+
+            <!-- Éditeur -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+                    {% trans "1. Éditeur du site" %}
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-4 text-slate-700 leading-8">
+
+                    <p>
+                        <strong>ANTARES SARL</strong>
+                    </p>
+
+                    <p>
+                        {% trans "Cabinet spécialisé dans les Ressources Humaines, le recrutement, l’intérim, la sous-traitance, le conseil RH et la gestion externalisée des ressources humaines." %}
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Forme juridique :" %}</strong>
+                        SARL
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Année de création :" %}</strong>
+                        2007
+                    </p>
+
+                    <p>
+                        <strong>NIF :</strong>
+                        084110263G
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Adresse :" %}</strong><br>
+
+                        {% trans "Immeuble Boubacar Kanté, 1er étage" %}<br>
+
+                        {% trans "Hamdallaye – ACI Place CAN" %}<br>
+
+                        {% trans "Bamako, Mali" %}
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Téléphone :" %}</strong>
+                        +223 20 29 20 40
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Email :" %}</strong>
+                        contact@antares-rh.com
+                    </p>
+
+                    <p>
+                        <strong>{% trans "Site web :" %}</strong>
+                        https://antares-rh.com
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Responsable -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+
+                    {% trans "2. Responsable de publication" %}
+
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <p class="text-slate-700 leading-8">
+
+                    {% trans "Le responsable de publication du site est ANTARES SARL." %}
+
+                </p>
+
+            </div>
+
+            <!-- Hébergement -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+
+                    {% trans "3. Hébergement" %}
+
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "Le site Antarès RH est actuellement hébergé chez :" %}
+                    </p>
+
+                    <div class="bg-slate-50 border border-slate-200
+                                rounded-2xl p-6">
+
+                        <p class="text-lg font-semibold text-slate-900 mb-2">
+                            LWS (Ligne Web Services)
+                        </p>
+
+                        <p class="text-slate-700">
+                            <strong>{% trans "Type d’hébergement :" %}</strong>
+                            {% trans "Hébergement mutualisé" %}
+                        </p>
+
+                    </div>
+
+                    <p>
+                        {% trans "L’infrastructure technique peut évoluer vers une architecture VPS ou une infrastructure dédiée selon les besoins opérationnels et techniques de la plateforme." %}
+                    </p>
+
+                    <p>
+                        {% trans "Certaines données techniques peuvent être temporairement hébergées sur des infrastructures situées hors du Mali." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Développement -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+
+                    {% trans "4. Développement et maintenance" %}
+
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "Le développement, l’administration et la maintenance de la plateforme sont assurés en interne par les équipes d’ANTARES SARL." %}
+                    </p>
+
+                    <p>
+                        {% trans "Les collaborateurs intervenant sur les systèmes d’information et les données sont soumis à des obligations de confidentialité ainsi qu’à des engagements de non-divulgation." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Propriété intellectuelle -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+
+                    {% trans "5. Propriété intellectuelle" %}
+
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "L’ensemble des contenus présents sur le site Antarès RH, incluant notamment les textes, visuels, logos, illustrations, éléments graphiques, documents, marques et contenus techniques, est protégé par les dispositions applicables relatives à la propriété intellectuelle." %}
+                    </p>
+
+                    <p>
+                        {% trans "Toute reproduction, représentation, diffusion ou exploitation non autorisée, totale ou partielle, est interdite sauf autorisation écrite préalable d’ANTARES SARL." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Responsabilité -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+
+                    {% trans "6. Responsabilité" %}
+
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <div class="space-y-5 text-slate-700 leading-8">
+
+                    <p>
+                        {% trans "ANTARES SARL s’efforce de fournir des informations exactes et régulièrement mises à jour." %}
+                    </p>
+
+                    <p>
+                        {% trans "Toutefois, la société ne saurait garantir l’absence totale d’erreurs, d’interruptions ou d’indisponibilités techniques." %}
+                    </p>
+
+                    <p>
+                        {% trans "L’utilisateur demeure seul responsable de l’utilisation des informations et services accessibles sur la plateforme." %}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Réglementation -->
+
+            <div class="bg-white border border-slate-200/80
+                        rounded-3xl p-8 md:p-10
+                        shadow-sm hover:shadow-md
+                        transition-all duration-300">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">
+
+                    {% trans "7. Réglementation applicable" %}
+
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-6"></div>
+
+                <p class="text-slate-700 leading-8">
+
+                    {% trans "ANTARES RH s’engage à traiter les données personnelles conformément à la législation applicable en République du Mali, notamment la Loi n°2013-015 du 21 mai 2013 portant protection des données à caractère personnel ainsi qu’aux exigences de l’Autorité de Protection des Données à caractère Personnel (APDP)." %}
+
+                </p>
+
+            </div>
+
+                        <!-- Contact -->
+
+            <div class="bg-slate-900 text-white
+                        rounded-3xl p-8 md:p-10
+                        shadow-xl">
+
+                <h2 class="text-2xl font-bold mb-2">
+
+                    {% trans "8. Contact" %}
+
+                </h2>
+
+                <div class="w-14 h-1 bg-primary rounded-full mb-8"></div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- Contact général -->
+
+                    <div class="bg-white/5 border border-white/10
+                                rounded-2xl p-6">
+
+                        <p class="text-sm uppercase tracking-wide
+                                  text-blue-200 mb-3">
+
+                            {% trans "Contact général" %}
+
+                        </p>
+
+                        <p class="text-lg font-medium">
+                            contact@antares-rh.com
+                        </p>
+
+                    </div>
+
+                    <!-- DPO -->
+
+                    <div class="bg-white/5 border border-white/10
+                                rounded-2xl p-6">
+
+                        <p class="text-sm uppercase tracking-wide
+                                  text-blue-200 mb-3">
+
+                            {% trans "Protection des données" %}
+
+                        </p>
+
+                        <p class="text-lg font-medium">
+                            dpo@antares-rh.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+{% endblock %}
